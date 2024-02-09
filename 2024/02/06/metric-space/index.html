@@ -23,10 +23,14 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="度量空间外在 开集,相对开集 闭集,相对闭集  $E \subset Y \subset X$若E在Y中为开集,则E在X中不一定为开集若E在Y中为闭集,则E在X中不一定为闭集 内在 完备集 紧集合  $E \subset Y \subset X$若E在Y中为完备集 $\Leftrightarrow$ E在X中为完备集若E在Y中为紧集 $\Leftrightarrow$ E在X中为紧集 度量空间定义">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2024/02/06/metric-space/metric_space.png">
+<meta property="og:image" content="http://example.com/2024/02/06/metric-space/property.png">
 <meta property="article:published_time" content="2024-02-06T00:22:03.000Z">
-<meta property="article:modified_time" content="2024-02-06T00:24:29.348Z">
+<meta property="article:modified_time" content="2024-02-06T22:16:43.952Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="度量空间">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/2024/02/06/metric-space/metric_space.png">
   
   
   
@@ -219,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          505 字
+          214 字
         
       </span>
     
@@ -230,7 +234,7 @@
         
         
         
-          5 分钟
+          2 分钟
         
       </span>
     
@@ -282,11 +286,9 @@
 <li>紧集合</li>
 </ol>
 <p>$E \subset Y \subset X$<br>若E在Y中为完备集 $\Leftrightarrow$ E在X中为完备集<br>若E在Y中为紧集 $\Leftrightarrow$ E在X中为紧集</p>
-<h2 id="度量空间定义图"><a href="#度量空间定义图" class="headerlink" title="度量空间定义图"></a>度量空间定义图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">@startuml<br>(集合) ---&gt; (度量空间):度量公理<br>(度量空间) ---&gt; (开球)<br>(度量空间) ---&gt; (收敛子列)<br>(度量空间) ---&gt; (附着点)<br>(度量空间) ---&gt; (cauchy列)<br>(开球) ---&gt; (内部,外部,边界)<br>(内部,外部,边界) ---&gt; (开集):集合交边界等于空集，即集合等于集合的内部<br>(内部,外部,边界) ---&gt; (闭集):边界含于集合，即集合等于内部并边界<br>(内部,外部,边界) ---&gt; (闭包):闭包=内部并边界<br>(附着点) ---&gt; (闭包)<br>(闭包) ---&gt; (闭集):E中收敛的点列收敛到E中，即E=E的闭包<br>(cauchy列) ---&gt; (完备集):E中的柯西列收敛到E中<br>(开集) ---&gt; (紧集):有限开覆盖<br>(收敛子列) ---&gt; (紧集):E中任意点列序存在收敛到E的子列<br>(开集) ---  (闭集):闭集=补集为开集,开集=补集为闭集<br>(开集) ---&gt; (连通集)<br>@enduml<br></code></pre></td></tr></table></figure>
-<p>完美(perfect)集:不含孤立点的闭集</p>
-<h2 id="度量空间性质图"><a href="#度量空间性质图" class="headerlink" title="度量空间性质图"></a>度量空间性质图</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">@startuml<br>(完备集) ---&gt; (闭集)<br>(完备集) ---&gt; (闭子集是完备集)<br>(紧集) ---&gt; (完备集)<br>(紧集) ---&gt; (有界集)<br>(紧集) ---&gt; (闭子集是紧集)<br>(紧集) ---&gt; (有限交非空,则无限交非空)<br>(闭子集是紧集) ---&gt; (闭子集是完备集)<br>@enduml<br></code></pre></td></tr></table></figure>
-<p>R^n中非空完美集不可数<br>R中的连通集等价于区间</p>
-<h2 id="连续函数与度量空间"><a href="#连续函数与度量空间" class="headerlink" title="连续函数与度量空间"></a>连续函数与度量空间</h2><p>连续函数$\Leftrightarrow$开集的逆像开集<br>连续函数复合连续函数&#x3D;连续函数<br>紧集上的连续函数一致连续<br>连续函数将紧集映射到紧集<br>连续函数将连通集映射到连通集</p>
+<h2 id="度量空间定义图"><a href="#度量空间定义图" class="headerlink" title="度量空间定义图"></a>度量空间定义图</h2><p><img src="metric_space.png" srcset="/img/loading.gif" lazyload alt="open,close,compact,complete,perfect:define graph"><br>完美(perfect)集:不含孤立点的闭集</p>
+<h2 id="度量空间性质图"><a href="#度量空间性质图" class="headerlink" title="度量空间性质图"></a>度量空间性质图</h2><p><img src="property.png" srcset="/img/loading.gif" lazyload alt="property graph"><br>R^n中非空完美集不可数<br>R中的连通集等价于区间</p>
+<h2 id="连续函数与度量空间"><a href="#连续函数与度量空间" class="headerlink" title="连续函数与度量空间"></a>连续函数与度量空间</h2><p>连续函数$\Leftrightarrow$开集的逆像开集<br>连续函数复合连续函数=连续函数<br>紧集上的连续函数一致连续<br>连续函数将紧集映射到紧集<br>连续函数将连通集映射到连通集</p>
 
                 
               </div>
@@ -295,6 +297,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" class="category-chain-item">数学分析</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4/" class="print-no-link">#度量空间</a>
+      
+    </div>
   
 </div>
 
@@ -352,12 +382,6 @@
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/02/06/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" title="测试文章">
-                        <span class="hidden-mobile">测试文章</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
