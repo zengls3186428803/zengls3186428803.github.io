@@ -1,0 +1,1062 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="从维基百科和机器学习的书上整理、复制、粘贴了几个常见的集中不等式  Markov&#39;s inequality  statement intuition proof corollaries  Chebyshev&#39;s inequality  statement proof  Hoeffding&#39;s inequality  Hoeffding’s lemma  statement Proof  proof">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论-集中不等式">
+<meta property="og:url" content="http://example.com/2024/03/04/probability_inquality/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="从维基百科和机器学习的书上整理、复制、粘贴了几个常见的集中不等式  Markov&#39;s inequality  statement intuition proof corollaries  Chebyshev&#39;s inequality  statement proof  Hoeffding&#39;s inequality  Hoeffding’s lemma  statement Proof  proof">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-04T11:45:26.000Z">
+<meta property="article:modified_time" content="2024-10-29T06:20:20.247Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>概率论-集中不等式 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="概率论-集中不等式"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-04 19:45" pubdate>
+          2024年3月4日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">概率论-集中不等式</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>从维基百科和机器学习的书上整理、复制、粘贴了几个常见的集中不等式</p>
+<ul>
+<li><a href="#markovs-inequality">Markov's inequality</a>
+<ul>
+<li><a href="#statement">statement</a></li>
+<li><a href="#intuition">intuition</a></li>
+<li><a href="#proof">proof</a></li>
+<li><a href="#corollaries">corollaries</a></li>
+</ul></li>
+<li><a href="#chebyshevs-inequality">Chebyshev's inequality</a>
+<ul>
+<li><a href="#statement-1">statement</a></li>
+<li><a href="#proof-1">proof</a></li>
+</ul></li>
+<li><a href="#hoeffdings-inequality">Hoeffding's inequality</a>
+<ul>
+<li><a href="#hoeffdings-lemma">Hoeffding’s lemma</a>
+<ul>
+<li><a href="#statement-2">statement</a></li>
+<li><a href="#proof-2">Proof</a></li>
+</ul></li>
+<li><a href="#proof-3">proof</a></li>
+</ul></li>
+<li><a href="#mcdiarmids-inequality">McDiarmid’s inequality</a>
+<ul>
+<li><a href="#statement-3">statement</a></li>
+<li><a href="#definition--martingale-difference">Definition Martingale
+Difference</a></li>
+<li><a href="#lemma">Lemma</a></li>
+<li><a href="#theorem-azumas-inequality">Theorem Azuma's inequality</a>
+<ul>
+<li><a href="#proof-4">proof</a></li>
+</ul></li>
+<li><a href="#proof-5">proof</a></li>
+</ul></li>
+</ul>
+<h1 id="markovs-inequality">Markov's inequality</h1>
+<h2 id="statement">statement</h2>
+<p>If <span class="math inline">\(X\)</span> is a nonnegative random
+variable and <span class="math inline">\(a&gt;0\)</span>, then the
+probability that <span class="math inline">\(X\)</span> is at least
+<span class="math inline">\(a\)</span> is at most the expectation of
+<span class="math inline">\(X\)</span> divided by <span
+class="math inline">\(a\)</span> <span class="math display">\[
+\mathrm{P}(X \geq a) \leq \frac{\mathrm{E}(X)}{a}
+\]</span></p>
+<h2 id="intuition">intuition</h2>
+<p><span class="math inline">\(\mathrm{E}(X)=\mathrm{P}(X&lt;a) \cdot
+\mathrm{E}(X \mid X &lt; a)+\mathrm{P}(X \geq a) \cdot \mathrm{E}(X \mid
+X \geq a)\)</span></p>
+<p><span class="math inline">\(\mathrm{E}(X) \geq \mathrm{P}(X \geq a)
+\cdot \mathrm{E}(X \mid X \geq a) \geq a \cdot \mathrm{P}(X \geq
+a)\)</span></p>
+<p><span class="math inline">\(\mathrm{P}(X \geq a) \leq
+\frac{\mathrm{E}(X)}{a}\)</span></p>
+<h2 id="proof">proof</h2>
+<p>For any event <span class="math inline">\(E\)</span>, let <span
+class="math inline">\(I_E\)</span> be the indicator random variable of
+<span class="math inline">\(E\)</span>, that is, <span
+class="math inline">\(I_E=1\)</span> if <span
+class="math inline">\(E\)</span> occurs and <span
+class="math inline">\(I_E=0\)</span> otherwise. Using this notation, we
+have <span class="math inline">\(I_{(X \geq a)}=1\)</span> if the event
+<span class="math inline">\(X \geq a\)</span> occurs, and <span
+class="math inline">\(I_{(X \geq a)}=0\)</span> if <span
+class="math inline">\(X&lt;a\)</span>. Then, given <span
+class="math inline">\(a&gt;0\)</span>, <span class="math display">\[
+a I_{(X \geq a)} \leq X
+\]</span> which is clear if we consider the two possible values of <span
+class="math inline">\(X \geq a\)</span>. If <span
+class="math inline">\(X&lt;a\)</span>, then <span
+class="math inline">\(I_{(X \geq a)}=0\)</span>, and so <span
+class="math inline">\(a I_{(X \geq a)}=0 \leq X\)</span>. Otherwise, we
+have <span class="math inline">\(X \geq a\)</span>, for which <span
+class="math inline">\(I_{X \geq a}=1\)</span> and so <span
+class="math inline">\(a I_{X \geq a}=a \leq X\)</span>. Since <span
+class="math inline">\(\mathrm{E}\)</span> is a monotonically increasing
+function, taking expectation of both sides of an inequality cannot
+reverse it. Therefore, <span class="math display">\[
+\mathrm{E}\left(a I_{(X \geq a)}\right) \leq \mathrm{E}(X) .
+\]</span></p>
+<p>Now, using linearity of expectations, the left side of this
+inequality is the same as <span class="math display">\[
+a \mathrm{E}\left(I_{(X \geq a)}\right)=a(1 \cdot \mathrm{P}(X \geq a)+0
+\cdot \mathrm{P}(X&lt;a))=a \mathrm{P}(X \geq a) .
+\]</span></p>
+<p>Thus we have <span class="math display">\[
+a \mathrm{P}(X \geq a) \leq \mathrm{E}(X)
+\]</span> and since <span class="math inline">\(a&gt;0\)</span>, we can
+divide both sides by <span class="math inline">\(a\)</span>.</p>
+<h2 id="corollaries">corollaries</h2>
+<p><span class="math inline">\(\phi\)</span> is a nondecreasing
+nonnegative fundction <span class="math display">\[
+\mathrm{P}(|X| \geq a)=\mathrm{P}(\varphi(|X|) \geq \varphi(a))
+\stackrel{\mathrm{MI}}{\leq} \frac{\mathrm{E}(\varphi(|X|))}{\varphi(a)}
+\]</span></p>
+<h1 id="chebyshevs-inequality">Chebyshev's inequality</h1>
+<h2 id="statement-1">statement</h2>
+<p><span class="math display">\[
+\mathrm{P}(|X-\mathrm{E}(X)| \geq a) \leq
+\frac{\operatorname{Var}(X)}{a^2},
+\]</span></p>
+<h2 id="proof-1">proof</h2>
+<p>for any <span class="math inline">\(a&gt;0\)</span> <span
+class="math display">\[
+\operatorname{Var}(X)=\mathrm{E}\left[(X-\mathrm{E}(X))^2\right] .
+\]</span> because Markov's inequality <span class="math display">\[
+\mathrm{P}\left((X-\mathrm{E}(X))^2 \geq a^2\right) \leq
+\frac{\operatorname{Var}(X)}{a^2} .
+\]</span></p>
+<p>This argument can be summarized (where "MI" indicates use of Markov's
+inequality): <span class="math display">\[
+\mathrm{P}(|X-\mathrm{E}(X)| \geq a)=\mathrm{P}\left((X-\mathrm{E}(X))^2
+\geq a^2\right) \stackrel{\mathrm{MI}}{\leq}
+\frac{\mathrm{E}\left((X-\mathrm{E}(X))^2\right)}{a^2}=\frac{\operatorname{Var}(X)}{a^2}
+.
+\]</span></p>
+<h1 id="hoeffdings-inequality">Hoeffding's inequality</h1>
+<p>Let <span class="math inline">\(X_1, \ldots, X_m\)</span> be
+independent random variables with <span
+class="math inline">\(X_i\)</span> taking values in <span
+class="math inline">\(\left[a_i, b_i\right]\)</span> for all <span
+class="math inline">\(i \in[1, m]\)</span>. Then for any <span
+class="math inline">\(\epsilon&gt;0\)</span>, the following inequalities
+hold for <span class="math inline">\(S_m=\sum_{i=1}^m X_i\)</span> :
+<span class="math display">\[
+\begin{gathered}
+\operatorname{Pr}\left[S_m-\mathrm{E}\left[S_m\right] \geq
+\epsilon\right] \leq e^{-2 \epsilon^2 /
+\sum_{i=1}^m\left(b_i-a_i\right)^2} \\
+\operatorname{Pr}\left[S_m-\mathrm{E}\left[S_m\right]
+\leq-\epsilon\right] \leq e^{-2 \epsilon^2 /
+\sum_{i=1}^m\left(b_i-a_i\right)^2} .
+\end{gathered}
+\]</span></p>
+<h2 id="hoeffdings-lemma">Hoeffding’s lemma</h2>
+<h3 id="statement-2">statement</h3>
+<p>Let <span class="math inline">\(X\)</span> be a random variable with
+<span class="math inline">\(E[X]=0\)</span> and <span
+class="math inline">\(a \leq X \leq b\)</span> with <span
+class="math inline">\(b&gt;a\)</span>. Then, for any <span
+class="math inline">\(t&gt;0\)</span>, the following inequality holds:
+<span class="math display">\[
+\mathrm{E}\left[e^{t X}\right] \leq e^{\frac{t^2(b-a)^2}{8}} .
+\]</span></p>
+<h3 id="proof-2">Proof</h3>
+<p>By the convexity of <span class="math inline">\(x \mapsto
+e^x\)</span>, for all <span class="math inline">\(x \in[a, b]\)</span>,
+the following holds: <span class="math display">\[
+e^{t x} \leq \frac{b-x}{b-a} e^{t a}+\frac{x-a}{b-a} e^{t b} .
+\]</span> Thus, using <span
+class="math inline">\(\mathrm{E}[X]=0\)</span>, <span
+class="math display">\[
+\mathrm{E}\left[e^{t X}\right] \leq \mathrm{E}\left[\frac{b-X}{b-a} e^{t
+a}+\frac{X-a}{b-a} e^{t b}\right]=\frac{b}{b-a} e^{t a}+\frac{-a}{b-a}
+e^{t b}=e^{\phi(t)},
+\]</span> where, <span class="math display">\[
+\phi(t)=\log \left(\frac{b}{b-a} e^{t a}+\frac{-a}{b-a} e^{t b}\right)=t
+a+\log \left(\frac{b}{b-a}+\frac{-a}{b-a} e^{t(b-a)}\right) .
+\]</span> For any <span class="math inline">\(t&gt;0\)</span>, the first
+and second derivative of <span class="math inline">\(\phi\)</span> are
+given below: <span class="math display">\[
+\begin{aligned}
+\phi^{\prime}(t) &amp; =a-\frac{a
+e^{t(b-a)}}{\frac{b}{b-a}-\frac{a}{b-a}
+e^{t(b-a)}}=a-\frac{a}{\frac{b}{b-a} e^{-t(b-a)}-\frac{a}{b-a}}, \\
+\phi^{\prime \prime}(t) &amp; =\frac{-a b
+e^{-t(b-a)}}{\left[\frac{b}{b-a} e^{-t(b-a)}-\frac{a}{b-a}\right]^2} \\
+&amp; =\frac{\alpha(1-\alpha) e^{-t(b-a)}(b-a)^2}{\left[(1-\alpha)
+e^{-t(b-a)}+\alpha\right]^2} \\
+&amp; =\frac{\alpha}{\left[(1-\alpha) e^{-t(b-a)}+\alpha\right]}
+\frac{(1-\alpha) e^{-t(b-a)}}{\left[(1-\alpha)
+e^{-t(b-a)}+\alpha\right]}(b-a)^2 .
+\end{aligned}
+\]</span> where <span class="math inline">\(\alpha\)</span> denotes
+<span class="math inline">\(\frac{-a}{b-a}\)</span>. Note that <span
+class="math inline">\(\phi(0)=\phi^{\prime}(0)=0\)</span> and that <span
+class="math inline">\(\phi^{\prime \prime}(t)=u(1-u)(b-a)^2\)</span>
+where <span class="math inline">\(u=\frac{\alpha}{\left[(1-\alpha)
+e^{-t(b-a)}+\alpha\right]}\)</span>. Since <span
+class="math inline">\(u\)</span> is in <span
+class="math inline">\([0,1], u(1-u)\)</span> is upper bounded by <span
+class="math inline">\(1 / 4\)</span> and <span
+class="math inline">\(\phi^{\prime}(t) \leq \frac{(b-a)^2}{4}\)</span>.
+Thus, by the second order expansion of function <span
+class="math inline">\(\phi\)</span>, there exists <span
+class="math inline">\(\theta \in[0, t]\)</span> such that: <span
+class="math display">\[
+\phi(t)=\phi(0)+t \phi^{\prime}(0)+\frac{t^2}{2} \phi^{\prime
+\prime}(\theta) \leq t^2 \frac{(b-a)^2}{8},
+\]</span></p>
+<h2 id="proof-3">proof</h2>
+<p><span class="math inline">\(\begin{aligned}
+\operatorname{Pr}\left[S_m-\mathrm{E}\left[S_m\right] \geq
+\epsilon\right] &amp; \leq e^{-t \epsilon}
+\mathrm{E}\left[e^{t\left(S_m-\mathrm{E}\left[S_m\right]\right)}\right]
+\\ &amp; =\Pi_{i=1}^m e^{-t \epsilon}
+\mathrm{E}\left[e^{t\left(X_i-\mathrm{E}\left[X_i\right]\right)}\right]
+\\ &amp; \leq \Pi_{i=1}^m e^{-t \epsilon} e^{t^2\left(b_i-a_i\right)^2 /
+8} \\ &amp; =e^{-t \epsilon} e^{t^2 \sum_{i=1}^m\left(b_i-a_i\right)^2 /
+8} \\ &amp; \leq e^{-2 \epsilon^2 /
+\sum_{i=1}^m\left(b_i-a_i\right)^2},\end{aligned}\)</span></p>
+<h1 id="mcdiarmids-inequality">McDiarmid’s inequality</h1>
+<h2 id="statement-3">statement</h2>
+<p>Let <span class="math inline">\(X_1, \ldots, X_m \in
+\mathcal{X}^m\)</span> be a set of <span class="math inline">\(m \geq
+1\)</span> independent random variables and assume that there exist
+<span class="math inline">\(c_1, \ldots, c_m&gt;0\)</span> such that
+<span class="math inline">\(f: \mathcal{X}^m \rightarrow
+\mathbb{R}\)</span> satisfies the following conditions: <span
+class="math display">\[
+\left|f\left(x_1, \ldots, x_i, \ldots, x_m\right)-f\left(x_1, \ldots,
+x_i^{\prime}, \ldots x_m\right)\right| \leq c_i,
+\]</span> for all <span class="math inline">\(i \in[1, m]\)</span> and
+any points <span class="math inline">\(x_1, \ldots, x_m, x_i^{\prime}
+\in \mathcal{X}\)</span>. Let <span class="math inline">\(f(S)\)</span>
+denote <span class="math inline">\(f\left(X_1, \ldots,
+X_m\right)\)</span>, then, for all <span
+class="math inline">\(\epsilon&gt;0\)</span>, the following inequalities
+hold: <span class="math display">\[
+\begin{gathered}
+\operatorname{Pr}[f(S)-\mathrm{E}[f(S)] \geq \epsilon] \leq \exp
+\left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) \\
+\operatorname{Pr}[f(S)-\mathrm{E}[f(S)] \leq-\epsilon] \leq \exp
+\left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) .
+\end{gathered}
+\]</span></p>
+<h2 id="definition-martingale-difference">Definition Martingale
+Difference</h2>
+<p>A sequence of random variables <span class="math inline">\(V_1, V_2,
+\ldots\)</span> is a martingale difference sequence with respect to
+<span class="math inline">\(X_1, X_2, \ldots\)</span> if for all <span
+class="math inline">\(i&gt;0, V_i\)</span> is a function of <span
+class="math inline">\(X_1, \ldots, X_i\)</span> and <span
+class="math display">\[
+\mathrm{E}\left[V_{i+1} \mid X_1, \ldots, X_i\right]=0 .
+\]</span></p>
+<h2 id="lemma">Lemma</h2>
+<p>Let <span class="math inline">\(V\)</span> and <span
+class="math inline">\(Z\)</span> be random variables satisfying <span
+class="math inline">\(\mathrm{E}[V \mid Z]=0\)</span> and, for some
+function <span class="math inline">\(f\)</span> and constant <span
+class="math inline">\(c \geq 0\)</span>, the inequalities: <span
+class="math display">\[
+f(Z) \leq V \leq f(Z)+c .
+\]</span></p>
+<p>Then, for all <span class="math inline">\(t&gt;0\)</span>, the
+following upper bound holds: <span class="math display">\[
+\mathrm{E}\left[e^{t V} \mid Z\right] \leq e^{t^2 c^2 / 8} .
+\]</span></p>
+<h2 id="theorem-azumas-inequality">Theorem Azuma's inequality</h2>
+<p>Let <span class="math inline">\(V_1, V_2, \ldots\)</span> be a
+martingale difference sequence with respect to the random variables
+<span class="math inline">\(X_1, X_2, \ldots\)</span>, and assume that
+for all <span class="math inline">\(i&gt;0\)</span> there is a constant
+<span class="math inline">\(c_i \geq 0\)</span> and random variable
+<span class="math inline">\(Z_i\)</span>, which is a function of <span
+class="math inline">\(X_1, \ldots, X_{i-1}\)</span>, that satisfy <span
+class="math display">\[
+Z_i \leq V_i \leq Z_i+c_i .
+\]</span></p>
+<p>Then, for all <span class="math inline">\(\epsilon&gt;0\)</span> and
+<span class="math inline">\(m\)</span>, the following inequalities hold:
+<span class="math display">\[
+\begin{gathered}
+\operatorname{Pr}\left[\sum_{i=1}^m V_i \geq \epsilon\right] \leq \exp
+\left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) \\
+\operatorname{Pr}\left[\sum_{i=1}^m V_i \leq-\epsilon\right] \leq \exp
+\left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) .
+\end{gathered}
+\]</span></p>
+<h3 id="proof-4">proof</h3>
+<p>Proof For any <span class="math inline">\(k \in[1, m]\)</span>, let
+<span class="math inline">\(S_k=\sum_{i=1}^k V_k\)</span>. Then, using
+Chernoff's bounding technique, for any <span
+class="math inline">\(t&gt;0\)</span>, we can write <span
+class="math display">\[
+\begin{aligned}
+\operatorname{Pr}\left[S_m \geq \epsilon\right] &amp; \leq e^{-t
+\epsilon} \mathrm{E}\left[e^{t S_m}\right] \\
+&amp; =e^{-t \epsilon} \mathrm{E}\left[e^{t S_{m-1}}
+\mathrm{E}\left[e^{t \mathbf{V}_m} \mid X_1, \ldots,
+X_{m-1}\right]\right] \\
+&amp; \leq e^{-t \epsilon} \mathrm{E}\left[e^{t S_{m-1}}\right] e^{t^2
+c_m^2 / 8} \\
+&amp; \leq e^{-t \epsilon} e^{t^2 \sum_{i=1}^m c_i^2 / 8} \\
+&amp; =e^{-2 \epsilon^2 / \sum_{i=1}^m c_i^2}
+\end{aligned}
+\]</span> where we chose <span class="math inline">\(t=4 \epsilon /
+\sum_{i=1}^m c_i^2\)</span> to minimize the upper bound. This proves the
+first statement of the theorem, and the second statement is shown in a
+similar way. (<span class="math inline">\(if\ F1\subset F2,\ then\
+E[E[Y|F1]|F2] = E[E[Y|F2]|F1] = E[Y|F1]\)</span>)</p>
+<h2 id="proof-5">proof</h2>
+<p>Define a sequence of random variables <span
+class="math inline">\(V_k, k \in[1, m]\)</span>, as follows: <span
+class="math inline">\(V=f(S)-\mathrm{E}[f(S)], V_1=\mathrm{E}\left[V
+\mid X_1\right]-\mathrm{E}[V]\)</span>, and for <span
+class="math inline">\(k&gt;1\)</span>, <span class="math display">\[
+V_k=\mathrm{E}\left[V \mid X_1, \ldots, X_k\right]-\mathrm{E}\left[V
+\mid X_1, \ldots, X_{k-1}\right] .
+\]</span></p>
+<p>Note that <span class="math inline">\(V=\sum_{k=1}^m V_k\)</span>.
+Furthermore, the random variable <span
+class="math inline">\(\mathrm{E}\left[V \mid X_1, \ldots,
+X_k\right]\)</span> is a function of <span class="math inline">\(X_1,
+\ldots, X_k\)</span>. Conditioning on <span class="math inline">\(X_1,
+\ldots, X_{k-1}\)</span> and taking its expectation is therefore: <span
+class="math display">\[
+\mathrm{E}\left[\mathrm{E}\left[V \mid X_1, \ldots, X_k\right] \mid X_1,
+\ldots, X_{k-1}\right]=\mathrm{E}\left[V \mid X_1, \ldots,
+X_{k-1}\right],
+\]</span> which implies <span class="math inline">\(\mathrm{E}\left[V_k
+\mid X_1, \ldots, X_{k-1}\right]=0\)</span>. Thus, the sequence <span
+class="math inline">\(\left(V_k\right)_{k \in[1, m]}\)</span> is a
+martingale difference sequence. Next, observe that, since <span
+class="math inline">\(\mathrm{E}[f(S)]\)</span> is a scalar, <span
+class="math inline">\(V_k\)</span> can be expressed as follows: <span
+class="math display">\[
+V_k=\mathrm{E}\left[f(S) \mid X_1, \ldots,
+X_k\right]-\mathrm{E}\left[f(S) \mid X_1, \ldots, X_{k-1}\right] .
+\]</span></p>
+<p>Now define the random variables for each <span
+class="math inline">\(i\)</span> <span class="math display">\[
+\begin{aligned}
+U_i &amp; :=\sup _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
+\rightharpoondown(i-1)}, x, X_{(i+1) \rightharpoondown n}\right) \mid
+X_{1 \rightharpoondown(i-1)}, X_i=x\right]-\left[f\left(X_{1
+\rightharpoondown(i-1)}, X_{i \rightharpoondown n}\right) \mid X_{1
+\rightharpoondown(i-1)}\right], \\
+L_i &amp; :=\inf _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
+\rightharpoondown(i-1)}, x, X_{(i+1) \rightharpoondown n}\right) \mid
+X_{1 \rightharpoondown(i-1)}, X_i=x\right]-\left[f\left(X_{1
+\rightharpoondown(i-1)}, X_{i \rightharpoondown n}\right) \mid X_{1
+\rightharpoondown(i-1)}\right] .
+\end{aligned}
+\]</span></p>
+<p>Since <span class="math inline">\(X_i, \ldots, X_n\)</span> are
+independent of each other, conditioning on <span
+class="math inline">\(X_i=x\)</span> does not affect the probabilities
+of the other variables, so these are equal to the expressions <span
+class="math display">\[
+\begin{aligned}
+U_i &amp; =\sup _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
+\rightarrow(i-1)}, x, X_{(i+1) \rightharpoondown n}\right)-f\left(X_{1
+\rightharpoondown(i-1)}, X_{i \rightarrow n}\right) \mid X_{1
+\rightarrow(i-1)}\right], \\
+L_i &amp; =\inf _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
+\rightarrow(i-1)}, x, X_{(i+1) \rightharpoondown n}\right)-f\left(X_{1
+\rightarrow(i-1)}, X_{i \rightharpoondown n}\right) \mid X_{1
+\rightarrow(i-1)}\right] .
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+U_i-L_i &amp; =\sup _{u \in \mathcal{X}_i, \ell \in \mathcal{X}_i}
+\mathbb{E}\left[f\left(X_{1 \rightharpoondown(i-1)}, u, X_{(i+1)
+\rightharpoondown n}\right) \mid X_{1
+\rightharpoondown(i-1)}\right]-\mathbb{E}\left[f\left(X_{1
+\rightharpoondown(i-1)}, \ell, X_{(i+1) \rightharpoondown n}\right) \mid
+X_{1 \rightharpoondown(i-1)}\right] \\
+&amp; =\sup _{u \in \mathcal{X}_i, \ell \in \mathcal{X}_i}
+\mathbb{E}\left[f\left(X_{1 \rightarrow(i-1)}, u, X_{(i+1)
+\rightharpoondown n}\right)-f\left(X_{1 \rightarrow(i-1)}, l, X_{(i+1)
+\rightharpoondown n}\right) \mid X_{1 \rightharpoondown(i-1)}\right] \\
+&amp; \leq \sup _{x_u \in \mathcal{X}_i, x_l \in \mathcal{X}_i}
+\mathbb{E}\left[c_i \mid X_{1 \rightharpoondown(i-1)}\right] \\
+&amp; \leq c_i
+\end{aligned}
+\]</span> <span class="math inline">\(L_i\)</span> is a random variables
+about <span class="math inline">\(X_1,X2,...,X_{i-1}\)</span> thus,
+<span class="math inline">\(L_k \leq V_k \leq L_k+c_k\)</span>. In view
+of these inequalities, we can apply Azuma's inequality to <span
+class="math inline">\(V=\sum_{k=1}^m V_k\)</span></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/probability/" class="category-chain-item">probability</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>概率论-集中不等式</div>
+      <div>http://example.com/2024/03/04/probability_inquality/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/03/09/quantization/" title="quantization">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">quantization</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/02/18/%E7%88%B1%E6%98%AF%E4%BB%80%E4%B9%88/" title="爱是什么">
+                        <span class="hidden-mobile">爱是什么</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
