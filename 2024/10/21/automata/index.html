@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="DEFINITION 1.5(finite automaton) DEFINITION 1.16(regular language) DEFINITION 1.23(regular operations) DEFINITION 1.37(A nondeterministic finite automaton) THEOREM 1.39(DFA equivalent to NFA) DEFINIT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/10/29/hello-world/index.html">
+<meta property="og:title" content="《Introduction to the Theory of Computation》里的自动机部分的定义和定理。">
+<meta property="og:url" content="http://example.com/2024/10/21/automata/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="DEFINITION 1.5(finite automaton) DEFINITION 1.16(regular language) DEFINITION 1.23(regular operations) DEFINITION 1.37(A nondeterministic finite automaton) THEOREM 1.39(DFA equivalent to NFA) DEFINIT">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-29T06:18:46.561Z">
-<meta property="article:modified_time" content="2024-10-29T06:18:46.561Z">
+<meta property="article:published_time" content="2024-10-21T06:05:17.000Z">
+<meta property="article:modified_time" content="2024-10-29T21:42:49.230Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>《Introduction to the Theory of Computation》里的自动机部分的定义和定理。 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="《Introduction to the Theory of Computation》里的自动机部分的定义和定理。"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-29 14:18" pubdate>
-          2024年10月29日 下午
+        <time datetime="2024-10-21 14:05" pubdate>
+          2024年10月21日 下午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          312 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -270,34 +270,174 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">《Introduction to the Theory of Computation》里的自动机部分的定义和定理。</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <ul>
+<li><a href="#definition-15finite-automaton">DEFINITION 1.5(finite
+automaton)</a></li>
+<li><a href="#definition-116regular-language">DEFINITION 1.16(regular
+language)</a></li>
+<li><a href="#definition-123regular-operations">DEFINITION 1.23(regular
+operations)</a></li>
+<li><a
+href="#definition-137a-nondeterministic-finite-automaton">DEFINITION
+1.37(A nondeterministic finite automaton)</a></li>
+<li><a href="#theorem-139dfa-equivalent-to-nfa">THEOREM 1.39(DFA
+equivalent to NFA)</a></li>
+<li><a href="#definition-152regular-expression">DEFINITION 1.52(regular
+expression)</a></li>
+<li><a
+href="#theorem-154regular-language-is-equivalent-to-language-described-by-regular-expression">THEOREM
+1.54(regular language is equivalent to language described by regular
+expression)</a></li>
+<li><a
+href="#definition-164generalized-nondeterministic-finite-automaton">DEFINITION
+1.64(generalized nondeterministic finite automaton)</a></li>
+<li><a href="#theorem-170pumping-lemma">THEOREM 1.70(Pumping
+lemma)</a></li>
+</ul>
+<h2 id="definition-1.5finite-automaton">DEFINITION 1.5(finite
+automaton)</h2>
+<p>A finite automaton is a 5-tuple <span class="math inline">\(\left(Q,
+\Sigma, \delta, q_0, F\right)\)</span>, where</p>
+<ol type="1">
+<li><span class="math inline">\(Q\)</span> is a finite set called the
+states,</li>
+<li><span class="math inline">\(\Sigma\)</span> is a finite set called
+the alphabet,</li>
+<li><span class="math inline">\(\delta: Q \times \Sigma \longrightarrow
+Q\)</span> is the transition function</li>
+<li><span class="math inline">\(q_0 \in Q\)</span> is the start state,
+and</li>
+<li><span class="math inline">\(F \subseteq Q\)</span> is the set of
+accept states.</li>
+</ol>
+<p>A string w is accepted by M if M read w, enter accept states.</p>
+<p>If A is the set of all strings that machine M accepts, we say that A
+is the language of machine M and write L(M ) = A. We say that M
+recognizes A or that M accepts A.</p>
+<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pf">For every <span class="hljs-keyword">state</span> q <span class="hljs-keyword">in</span> Q and every a <span class="hljs-keyword">in</span> alphabet, exists a next <span class="hljs-keyword">state</span> q&#x27;<br>because domain of transition function is Cartesian product of Q and alphabet<br></code></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xquery">A<span class="hljs-built_in"> string</span> w <span class="hljs-literal">is</span> rejected iff w <span class="hljs-literal">is</span><span class="hljs-built_in"> not</span> accepted.<br></code></pre></td></tr></table></figure>
+<h2 id="definition-1.16regular-language">DEFINITION 1.16(regular
+language)</h2>
+<p>A language is called a regular language if some finite
+automatonrecognizes it.</p>
+<p>A language is regular if and only if some nondeterministic finite
+automaton recognizes it.</p>
+<h2 id="definition-1.23regular-operations">DEFINITION 1.23(regular
+operations)</h2>
+<p>Let <span class="math inline">\(A\)</span> and <span
+class="math inline">\(B\)</span> be languages. We define the regular
+operations union, concatenation, and star as follows:</p>
+<ul>
+<li>Union: <span class="math inline">\(A \cup B=\{x \mid x \in
+A\)</span> or <span class="math inline">\(x \in B\}\)</span>.</li>
+<li>Concatenation: <span class="math inline">\(A \circ B=\{x y \mid x
+\in A\)</span> and <span class="math inline">\(y \in B\}\)</span>.</li>
+<li>Star: <span class="math inline">\(A^*=\left\{x_1 x_2 \ldots x_k \mid
+k \geq 0\right.\)</span> and each <span class="math inline">\(\left.x_i
+\in A\right\}\)</span>.</li>
+</ul>
+<p>the collection of regular languages is closed under all three of the
+regular operations.</p>
+<h2 id="definition-1.37a-nondeterministic-finite-automaton">DEFINITION
+1.37(A nondeterministic finite automaton)</h2>
+<p>A nondeterministic finite automaton is a 5-tuple <span
+class="math inline">\(\left(Q, \Sigma, \delta, q_0, F\right)\)</span>,
+where</p>
+<ol type="1">
+<li><span class="math inline">\(Q\)</span> is a finite set of
+states,</li>
+<li><span class="math inline">\(\Sigma\)</span> is a finite
+alphabet,</li>
+<li><span class="math inline">\(\delta: Q \times \Sigma_{\varepsilon}
+\longrightarrow \mathcal{P}(Q)\)</span> is the transition function,</li>
+<li><span class="math inline">\(q_0 \in Q\)</span> is the start state,
+and</li>
+<li><span class="math inline">\(F \subseteq Q\)</span> is the set of
+accept states.</li>
+</ol>
+<h2 id="theorem-1.39dfa-equivalent-to-nfa">THEOREM 1.39(DFA equivalent
+to NFA)</h2>
+<p>Every nondeterministic finite automaton has an equivalent
+deterministic finite automaton.</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">two <span class="hljs-built_in">auto</span>maton <span class="hljs-keyword">is</span> equivalent iff they recogize same language<br></code></pre></td></tr></table></figure>
+<h2 id="definition-1.52regular-expression">DEFINITION 1.52(regular
+expression)</h2>
+<p>Say that <span class="math inline">\(R\)</span> is a regular
+expression if <span class="math inline">\(R\)</span> is</p>
+<ol type="1">
+<li><span class="math inline">\(a\)</span> for some <span
+class="math inline">\(a\)</span> in the alphabet <span
+class="math inline">\(\Sigma\)</span>,</li>
+<li><span class="math inline">\(\varepsilon\)</span>,</li>
+<li><span class="math inline">\(\emptyset\)</span>,</li>
+<li><span class="math inline">\(\left(R_1 \cup R_2\right)\)</span>,
+where <span class="math inline">\(R_1\)</span> and <span
+class="math inline">\(R_2\)</span> are regular expressions,</li>
+<li><span class="math inline">\(\left(R_1 \circ R_2\right)\)</span>,
+where <span class="math inline">\(R_1\)</span> and <span
+class="math inline">\(R_2\)</span> are regular expressions, or</li>
+<li><span class="math inline">\(\left(R_1^*\right)\)</span>, where <span
+class="math inline">\(R_1\)</span> is a regular expression.</li>
+</ol>
+<p>In items 1 and 2 , the regular expressions <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(\varepsilon\)</span> represent the languages <span
+class="math inline">\(\{a\}\)</span> and <span
+class="math inline">\(\{\varepsilon\}\)</span>, respectively. In item 3
+, the regular expres- sion <span
+class="math inline">\(\emptyset\)</span> represents the empty language.
+In items 4,5 , and 6 , the expressions represent the languages obtained
+by taking the union or concatenation of the languages <span
+class="math inline">\(R_1\)</span> and <span
+class="math inline">\(R_2\)</span>, or the star of the language <span
+class="math inline">\(R_1\)</span>, respectively.</p>
+<p>L(R) to be the language of R.</p>
+<h2
+id="theorem-1.54regular-language-is-equivalent-to-language-described-by-regular-expression">THEOREM
+1.54(regular language is equivalent to language described by regular
+expression)</h2>
+<p>A language is regular if and only if some regular expression
+describes it.</p>
+<h2
+id="definition-1.64generalized-nondeterministic-finite-automaton">DEFINITION
+1.64(generalized nondeterministic finite automaton)</h2>
+<p>A generalized nondeterministic finite automaton is a 5-tuple, <span
+class="math inline">\(\left(Q, \Sigma, \delta, q_{\text {start }},
+q_{\text {accept }}\right)\)</span>, where</p>
+<ol type="1">
+<li><span class="math inline">\(Q\)</span> is the finite set of
+states,</li>
+<li><span class="math inline">\(\Sigma\)</span> is the input
+alphabet,</li>
+<li><span class="math inline">\(\delta:\left(Q-\left\{q_{\text {accept
+}}\right\}\right) \times\left(Q-\left\{q_{\text {start }}\right\}\right)
+\longrightarrow \mathcal{R}\)</span> is the transition function,</li>
+<li><span class="math inline">\(q_{\text {start }}\)</span> is the start
+state, and</li>
+<li><span class="math inline">\(q_{\text {accept }}\)</span> is the
+accept state.</li>
+</ol>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">Notice</span> that <span class="hljs-keyword">domain</span> <span class="hljs-keyword">of</span> transition <span class="hljs-keyword">function</span> <span class="hljs-keyword">is</span> Cartesain product.<br></code></pre></td></tr></table></figure>
+<h2 id="theorem-1.70pumping-lemma">THEOREM 1.70(Pumping lemma)</h2>
+<p>Pumping lemma If <span class="math inline">\(A\)</span> is a regular
+language, then there is a number <span class="math inline">\(p\)</span>
+(the pumping length) where if <span class="math inline">\(s\)</span> is
+any string in <span class="math inline">\(A\)</span> of length at least
+<span class="math inline">\(p\)</span>, then <span
+class="math inline">\(s\)</span> may be divided into three pieces, <span
+class="math inline">\(s=x y z\)</span>, satisfying the following
+conditions:</p>
+<ol type="1">
+<li>for each <span class="math inline">\(i \geq 0, x y^i z \in
+A\)</span>,</li>
+<li><span class="math inline">\(|y|&gt;0\)</span>, and</li>
+<li><span class="math inline">\(|x y| \leq p\)</span>.</li>
+</ol>
 
                 
               </div>
@@ -305,6 +445,27 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
 </div>
@@ -315,8 +476,8 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2024/10/29/hello-world/</div>
+      <div>《Introduction to the Theory of Computation》里的自动机部分的定义和定理。</div>
+      <div>http://example.com/2024/10/21/automata/</div>
     </div>
     <div class="license-meta">
       
@@ -328,7 +489,7 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月29日</div>
+          <div>2024年10月21日</div>
         </div>
       
       
@@ -360,12 +521,18 @@ target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/10/21/coherence/" title="《ON THE GENERALIZATION MYSTERY IN DEEP LEARNING》里有关coherence的定义、性质、定理">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">《ON THE GENERALIZATION MYSTERY IN DEEP LEARNING》里有关coherence的定义、性质、定理</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/25/arch-chinese/" title="archlinux-kde 中文与中文输入 大致流程">
-                        <span class="hidden-mobile">archlinux-kde 中文与中文输入 大致流程</span>
+                      <a href="/2024/10/20/abstract_algebra/" title="《a first course in abstract algebra》里的定理和结论">
+                        <span class="hidden-mobile">《a first course in abstract algebra》里的定理和结论</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
