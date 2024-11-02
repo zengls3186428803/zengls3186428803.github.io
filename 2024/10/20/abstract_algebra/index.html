@@ -19,15 +19,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="binary operation isomorphism group subgroup and cyclic group permutations, coset, direct product homomorphism and factor groups group action on set rings and fields  binary operation binary operation">
+    <meta name="description" content="binary operation isomorphism group subgroup and cyclic group permutations, coset, direct product homomorphism and factor groups group action on set rings and fields 因子群，因子环  因子群同构 因子环同构   binary oper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《a first course in abstract algebra》里的定理和结论">
 <meta property="og:url" content="http://example.com/2024/10/20/abstract_algebra/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="binary operation isomorphism group subgroup and cyclic group permutations, coset, direct product homomorphism and factor groups group action on set rings and fields  binary operation binary operation">
+<meta property="og:description" content="binary operation isomorphism group subgroup and cyclic group permutations, coset, direct product homomorphism and factor groups group action on set rings and fields 因子群，因子环  因子群同构 因子环同构   binary oper">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-20T06:05:17.000Z">
-<meta property="article:modified_time" content="2024-10-29T21:33:52.680Z">
+<meta property="article:modified_time" content="2024-11-02T14:20:35.035Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          3.8k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          16 分钟
+          32 分钟
         
       </span>
     
@@ -287,12 +287,19 @@ direct product</a></li>
 groups</a></li>
 <li><a href="#group-action-on-set">group action on set</a></li>
 <li><a href="#rings-and-fields">rings and fields</a></li>
+<li><a href="#因子群因子环">因子群，因子环</a>
+<ul>
+<li><a href="#因子群同构">因子群同构</a></li>
+<li><a href="#因子环同构">因子环同构</a></li>
+</ul></li>
 </ul>
 <h2 id="binary-operation">binary operation</h2>
 <p>binary operation: a function mapping <span class="math inline">\(S
 \times S\)</span> to <span class="math inline">\(S\)</span></p>
 <ol type="1">
 <li>二元操作里的单位元唯一</li>
+<li>一个运算的单位元与这个运算的子运算不一定相等，除非子运算包含该运算的单位元</li>
+<li>二元操作里的逆元唯一</li>
 </ol>
 <h2 id="isomorphism">isomorphism</h2>
 <p>isomorphism: a bijective function <span class="math inline">\(\phi: S
@@ -499,6 +506,8 @@ N\}\)</span>是一个群，且是包含 N 和 H 的最小子群。</li>
 <li>若 H 和 K 是 G 的正规子群且 <span class="math inline">\(H\cap
 K={e}\)</span>,则<span class="math inline">\(hk=kh,\forall h \in
 H,\forall k \in K\)</span></li>
+<li>H 是 G 的一个子群，则<span class="math inline">\(aH=bH
+\Leftrightarrow b\in aH\)</span></li>
 </ol>
 <h2 id="group-action-on-set">group action on set</h2>
 <ol type="1">
@@ -515,7 +524,212 @@ g,gx_1=x_2\)</span>,是一种等价关系。</li>
 y \in Y\}\)</span>是 G 的一个子群。</li>
 </ol>
 <h2 id="rings-and-fields">rings and fields</h2>
-<p>ring: 加法交换群，乘法半群，乘法对加法有分配律。</p>
+<p>ring:</p>
+<ul>
+<li>加法交换群</li>
+<li>乘法半群</li>
+<li>乘法对加法有分配律。</li>
+</ul>
+<p>环同态：<span class="math inline">\(\phi(a+b)=\phi(a)+\phi(b),
+\phi(ab)=\phi(a)\phi(b)\)</span></p>
+<p>如果没有额外的说明，R 表示环，0 是 R 的加法单位元</p>
+<p>交换环：环中乘法有交换律</p>
+<p>整环：非零、有乘法单位元、无零因子、交换环</p>
+<p>除环:非零、有乘法单位元，每一个非 0 元素都有乘法逆元</p>
+<p>field：交换除环</p>
+<p>环的特征（charactristic）:环的特征（characteristic）: 对于环
+R，如果存在一个最小的正整数 n，使得对于所有 a ∈ R，都有 na = 0，则称 n
+为环 R 的特征。如果不存在这样的正整数 n，则称环 R 的特征为 0。</p>
+<p>有序环：一个环 R,一个 R 的非空子集 P,满足</p>
+<ul>
+<li><span class="math inline">\(a,b\in P,a+b\in P,ab\in P\)</span></li>
+<li><span class="math inline">\(a\in p,a=0,-a\in
+P\)</span>有且只有一个成立。</li>
+</ul>
+<ol type="1">
+<li>0a=a0=0</li>
+<li>a(-b)=(-a)b=-ab, (-a)(-b)=ab</li>
+<li>一个环的加法单位元等于乘法单位元<span
+class="math inline">\(\Longleftrightarrow\)</span> R={0}</li>
+<li>环同构是等价关系</li>
+<li>R 的所有有乘法逆元的元素构成一个群</li>
+<li>环有乘法交换律等价于环有平方差公式<span
+class="math inline">\(a^2-b^2=(a+b)(a-b)\)</span></li>
+<li>给一个交换群，对群中的所有元素规定乘法<span
+class="math inline">\(ab=0\)</span>，那么这个交换群和新规定的乘法构成一个环</li>
+<li>环中的乘法逆元是唯一的</li>
+<li>子环的交是子环，子域的交是子域</li>
+<li>环的乘法单位元不一定等于子环的乘法单位元，域中的乘法单位元等于子域中的乘法单位元。</li>
+<li>子环的等价定义：对与所有的<span class="math inline">\(a,b\in
+S\)</span>,有<span class="math inline">\((a-b) \in S; ab \in
+S\)</span></li>
+<li>线性方程组的解<span class="math inline">\(\{x\in
+R|ax=0\}\)</span>是一个 R 的子环</li>
+<li>加法群+非 0 元素构成乘法群+乘法对加法有分配律 <span
+class="math inline">\(\Longrightarrow\)</span> 除环</li>
+<li>如果一个环有幂等律<span
+class="math inline">\(a^2=a\)</span>(将这个环称为 Boolean
+ring),那么这个环是交换环</li>
+<li>一个集合上的幂集+对称差（加法）+交（乘法）<span
+class="math inline">\(\Longrightarrow\)</span> Boolean ring</li>
+<li>x 是<span class="math inline">\(Z_n\)</span>中的零因子<span
+class="math inline">\(\Longleftrightarrow\)</span>x 与 n 不互素.</li>
+<li><span class="math inline">\(Z_p\)</span>是无零因子环</li>
+<li>环无零因子<span
+class="math inline">\(\Longleftrightarrow\)</span>环有（乘法）消去律。</li>
+<li>域是整环</li>
+<li>有限整环是域</li>
+<li><span class="math inline">\(Z_p\)</span>是域</li>
+<li>一个非零环的特征只看乘法单位元就行。</li>
+<li>除环只有 0 和 1 两个幂等元</li>
+<li>整环的交是整环</li>
+<li>有限非零无零因子环是除环</li>
+<li>整环和除环的幂等元只有 0 和 1,即 1
+是整环和除环的唯一非零幂等元。因此整环和除环的乘法单位元等于子结构的乘法单位元</li>
+<li>整环的特征等于子结构的特征，除环的特征等于子结构的特征。</li>
+<li>整环的特征是 0 或素数</li>
+<li>费马小定理：<span class="math inline">\(a\in Z\)</span>,p is prime
+not dividing a, then <span class="math inline">\(a^{p-1} \equiv 1 \mod
+p\)</span>.</li>
+<li><span class="math inline">\(a^p \equiv a \mod p\)</span>, if p is
+prime</li>
+<li>Euler's Theorem: For any integer a and a positive integer n that is
+coprime to a, <span class="math inline">\(a^{\phi(n)} \equiv 1 \mod
+n\)</span>, where <span class="math inline">\(\phi\)</span> is Euler's
+totient function.</li>
+<li>一个整环同构于其商域的一个子环</li>
+<li>对于一个包含整环 D 的域 F,则 D 同构与 F 的一个子域</li>
+<li>一个环 R 上的多项式集合 R[x]仍然构成一个环，且如果 R 可交换，则
+R[x]也可交换,R 非零且有单位元，则 R[x]也有单位元.</li>
+<li>F 是 E 的一个子域，<span class="math inline">\(\alpha\)</span>是 E
+的一个元素，定义 evaluation 映射<span
+class="math inline">\(\Phi_\alpha:F[x]\rightarrow E\)</span>, <span
+class="math inline">\(\Phi_\alpha(f) =
+f(\alpha)\)</span>,估值映射是一个同态映射</li>
+<li>如果 D 是一个整环，则 D[x]也是一个整环。D[x]的乘法可逆元素只有<span
+class="math inline">\(1\)</span></li>
+<li>R 到 R 上的所有函数组成的集合,再定义加法和乘法：<span
+class="math inline">\((f+g)(r)=f(r)+g(r)\)</span>，<span
+class="math inline">\((f \cdot g)(r) = f(r) \cdot
+g(r)\)</span>,那么<span
+class="math inline">\(&lt;R^R,+,\cdot&gt;\)</span>是一个环</li>
+<li>域上多项式的带余数除法：f(x) = q(x)g(x) + r(x)，r(x)的阶小于
+g(x)的阶</li>
+<li><span class="math inline">\(a\in F\)</span>是<span
+class="math inline">\(f(x)\in F[x]\)</span>的零点 <span
+class="math inline">\(\Longleftrightarrow\)</span> (x-a)是
+f(x)的因子</li>
+<li>阶数为 n 非零多项式<span class="math inline">\(f(x)\in
+F[x]\)</span>至多有 n 个零点</li>
+<li>一个域 F 的非零元素构成的乘法群<span
+class="math inline">\(&lt;F^*,\cdot&gt;\)</span>的有限子群是循环群。</li>
+<li>阶数为 2 或 3 的<span class="math inline">\(f(x)\in
+F[x]\)</span>可约等价于 f(x)有零点</li>
+<li>有序环 R 中非零元素的平方为正值，R 的 characteristic is 0,R
+无零因子</li>
+<li>复数环上不能定义序，有限环上不能定义序</li>
+<li>序的等价定义：<span
+class="math inline">\(a&lt;b,a=b,a&gt;b\)</span>有且只有一个成立；
+如果<span class="math inline">\(a&lt;b\)</span>且<span
+class="math inline">\(b&lt;c\)</span>，则<span
+class="math inline">\(a&lt;c\)</span>；<span
+class="math inline">\(b&lt;c\)</span>，则 <span
+class="math inline">\(a+b&lt;a+c\)</span></li>
+<li>同构映射会诱导一个序</li>
+<li>D 是一个整环，P 是 D 上的正数集合，F 是 D 的商群，那么，<span
+class="math inline">\(P&#39;=\{x\in F|x=[(a,b)],a,b\in D,and\ ab\in
+P\}\)</span>是良定义的序，且<span
+class="math inline">\(P&#39;\)</span>是<span
+class="math inline">\(F\)</span>上的一个正数集合，且序与 D
+上的序一致，且 P'是唯一满足这中性质的序</li>
+<li>R 上定义一个正数集合，S 是 R 的子环，那么<span
+class="math inline">\(S\cap P\)</span>是子环 R 上的一个正数集合</li>
+<li>R 是一个有序环，P 是 R 里的正数集，根据 P 定义小于<span
+class="math inline">\(&lt;\)</span>，那么有
+<ul>
+<li><span class="math inline">\(a\in P,then\ 0 &lt; a\)</span></li>
+<li><span class="math inline">\(a,b \in P,ac=bd\)</span>,那么要么<span
+class="math inline">\(c=d=0\)</span>,要么<span
+class="math inline">\(cd\in P\)</span></li>
+<li><span class="math inline">\(a&lt;b\rightarrow -b
+&lt;-a\)</span></li>
+<li><span class="math inline">\(a&lt;0,0&lt;b,\rightarrow
+ab&lt;0\)</span></li>
+<li>如果 R 是域，那么<span
+class="math inline">\(0&lt;a,0&lt;b\rightarrow 0&lt;a/b\)</span></li>
+<li>如果 R 是域，那么<span class="math inline">\(0&lt;a&lt;1\rightarrow
+1&lt;1/a\)</span></li>
+<li>如果 R 是于，那么<span class="math inline">\(-1&lt;a&lt;0\rightarrow
+1/a&lt;-1\)</span></li>
+</ul></li>
+</ol>
+<h2 id="因子群因子环">因子群，因子环</h2>
+<p>良定义：因子群是良定义的，因子环待补充。</p>
+<h3 id="因子群同构">因子群同构</h3>
+<p><span class="math inline">\(\psi:G\rightarrow
+G&#39;\)</span>是群同态映射，即<span
+class="math inline">\(\psi(ab)=\psi(a)\psi(b)\)</span> <span
+class="math inline">\(H=Ker(\psi)\)</span>，则<span
+class="math inline">\(H\)</span>是<span
+class="math inline">\(G\)</span>的一个正规子群。 H 的所有陪集为<span
+class="math inline">\(G/H\)</span> 定义<span
+class="math inline">\(G/H\)</span>上的二元运算：(aH)(bH)=(ab)H
+验证这个<span class="math inline">\(G/H\)</span>上的二元运算是一个群</p>
+<ol type="1">
+<li><span class="math inline">\((aH)(bH)=(ab)H \in
+G/H\)</span>，封闭性</li>
+<li><span class="math inline">\((eH)(aH)=(aH)\)</span>, 所以 eH=H 是 G/H
+的单位元</li>
+<li><span
+class="math inline">\((a^{-1}H)(aH)=a^{-1}aH=eH=H\)</span>，所以每个陪集的逆元存在</li>
+</ol>
+<p>定义<span class="math inline">\(\phi(aH)=\psi(a)\)</span>,其中<span
+class="math inline">\(aH \in G/H\)</span> 验证<span
+class="math inline">\(\phi\)</span>是一个是<span
+class="math inline">\(G/H\rightarrow \psi(G)\)</span>的一个同构映射</p>
+<ol type="1">
+<li><span class="math inline">\(\phi\)</span>是双射</li>
+<li><span
+class="math inline">\(\phi((aH)(bH))=\phi((ab)H)=\psi(ab)=\psi(a)\psi(b)=\phi(aH)\phi(bH)\)</span></li>
+</ol>
+<h3 id="因子环同构">因子环同构</h3>
+<p>0 是 R 的加法单位元，0‘ 是 R‘的加法单位元 <span
+class="math inline">\(\psi:R\rightarrow
+R&#39;\)</span>是一个环同态映射,即<span
+class="math inline">\(\psi(a+b)=\psi(a)+\psi(b),
+\psi(ab)=\psi(a)\psi(b)\)</span> <span class="math inline">\(H =
+Ker(\psi)\)</span>，这个核是指加法单位元的在<span
+class="math inline">\(\psi\)</span>下的逆像，即<span
+class="math inline">\(Ker(\psi)=\psi^{-1}[0&#39;]\)</span> <span
+class="math inline">\(G/H=\{a + H | a ∈ R\}\)</span></p>
+<p>现在定义 G/H 上的乘法运算<span class="math inline">\((a+H)(b+H)=(ab +
+H)\)</span>,加法运算<span
+class="math inline">\((a+H)+(b+H)=(a+b)+H\)</span></p>
+<p>验证 G/H 是一个环</p>
+<ol type="1">
+<li>有群的讨论知：G/H 上的加法构成一个群</li>
+<li>因为&lt;R,+&gt;是交换群，所以<span
+class="math inline">\((a+H)+(b+H)=(a+b)+H=(b+a)+H=(b+H)+(a+H)\)</span>,所以&lt;G/H,+&gt;是交换群</li>
+<li><span class="math inline">\((a+H)(b+H)=(ab)+H \in
+G/H\)</span>,乘法的封闭性</li>
+<li><span
+class="math inline">\(((a+H)(b+H))(c+H)=(ab+H)(c+H)=(abc+H)=(a+H)(bc+H)=(a+H)((b+h)(c+H))\)</span>,结合律，所以<span
+class="math inline">\(&lt;G/H,\cdot&gt;\)</span>是一个半群</li>
+<li><span
+class="math inline">\((a+H)((b+H)+(c+H))=(a+H)((b+c)+H)=(a(b+c)+H)=((ab+ac)+H)=(ab+H)+(ac+H)=(a+H)(b+H)+(a+H)(c+H)\)</span>,分配律</li>
+</ol>
+<p>定义<span class="math inline">\(\phi(a+H)=\psi(a)\)</span>,其中<span
+class="math inline">\(a+H \in G/H\)</span>，验证<span
+class="math inline">\(\phi\)</span>是一个是<span
+class="math inline">\(G/H\rightarrow
+\psi(G)\)</span>的一个环同构映射</p>
+<ol type="1">
+<li><span class="math inline">\(\phi\)</span>是双射</li>
+<li><span
+class="math inline">\(\phi((a+H)+(b+H))=\phi((a+b)+H)=\psi(a+b)=\psi(a)+\psi(b)=\phi(a+H)+\phi(b+H)\)</span></li>
+<li><span
+class="math inline">\(\phi((a+H)(b+H))=\phi((ab)+H)=\psi(ab)=\psi(a)\psi(b)=\phi(a+H)\phi(b+H)\)</span></li>
+</ol>
 
                 
               </div>
@@ -599,9 +813,9 @@ y \in Y\}\)</span>是 G 的一个子群。</li>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/21/automata/" title="《Introduction to the Theory of Computation》里的自动机部分的定义和定理。">
+                      <a href="/2024/10/21/coherence/" title="《ON THE GENERALIZATION MYSTERY IN DEEP LEARNING》里有关coherence的定义、性质、定理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">《Introduction to the Theory of Computation》里的自动机部分的定义和定理。</span>
+                        <span class="hidden-mobile">《ON THE GENERALIZATION MYSTERY IN DEEP LEARNING》里有关coherence的定义、性质、定理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
