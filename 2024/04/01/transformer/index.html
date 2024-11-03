@@ -19,15 +19,15 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="transformer 结构 transformer的掩码 transformer中dropout出现的地方 transformer中layer_norm出现的地方 torch.nn.Transformer的mask使用 句子的处理流程  transformer 结构 1234567891011121314151617181920212223242526272829303132333435363">
+    <meta name="description" content="transformer 结构 transformer 的掩码 transformer 中 dropout 出现的地方 transformer 中 layer_norm 出现的地方 torch.nn.Transformer 的 mask 使用 句子的处理流程  transformer 结构  transformer 的掩码    注意力方式 掩码     自注意力 src_mask &#x3D; src_a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="transformer">
 <meta property="og:url" content="http://example.com/2024/04/01/transformer/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="transformer 结构 transformer的掩码 transformer中dropout出现的地方 transformer中layer_norm出现的地方 torch.nn.Transformer的mask使用 句子的处理流程  transformer 结构 1234567891011121314151617181920212223242526272829303132333435363">
+<meta property="og:description" content="transformer 结构 transformer 的掩码 transformer 中 dropout 出现的地方 transformer 中 layer_norm 出现的地方 torch.nn.Transformer 的 mask 使用 句子的处理流程  transformer 结构  transformer 的掩码    注意力方式 掩码     自注意力 src_mask &#x3D; src_a">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-04-01T01:49:15.000Z">
-<meta property="article:modified_time" content="2024-10-29T06:20:20.247Z">
+<meta property="article:modified_time" content="2024-11-03T08:10:16.641Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          521 字
+          231 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          5 分钟
+          2 分钟
         
       </span>
     
@@ -277,18 +277,18 @@
                 
                 <ul>
 <li><a href="#transformer-结构">transformer 结构</a></li>
-<li><a href="#transformer的掩码">transformer的掩码</a></li>
-<li><a
-href="#transformer中dropout出现的地方">transformer中dropout出现的地方</a></li>
-<li><a
-href="#transformer中layer_norm出现的地方">transformer中layer_norm出现的地方</a></li>
-<li><a
-href="#torchnntransformer的mask使用">torch.nn.Transformer的mask使用</a></li>
+<li><a href="#transformer-的掩码">transformer 的掩码</a></li>
+<li><a href="#transformer-中-dropout-出现的地方">transformer 中 dropout
+出现的地方</a></li>
+<li><a href="#transformer-中-layer_norm-出现的地方">transformer 中
+layer_norm 出现的地方</a></li>
+<li><a href="#torchnntransformer-的-mask-使用">torch.nn.Transformer 的
+mask 使用</a></li>
 <li><a href="#句子的处理流程">句子的处理流程</a></li>
 </ul>
 <h1 id="transformer-结构">transformer 结构</h1>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">@startuml<br>(src_word_embedding) --&gt; (src_position_embdedding)<br>rectangle EncoderBlock&#123;<br>(src_position_embdedding) --&gt; (src_in_dropout)<br>(src_in_dropout) --&gt; (src_add_att_embed)<br>(src_in_dropout) --&gt; (src_layer1_norm)<br>(src_layer1_norm) --&gt; (src_linear_q)<br>(src_layer1_norm) --&gt; (src_linear_k)<br>(src_layer1_norm) --&gt; (src_linear_v)<br>(src_linear_q) --&gt; (src_mult_q_k&#x27;)<br>(src_linear_k) --&gt; (src_mult_q_k&#x27;):transpose<br>(src_mult_q_k&#x27;) --&gt; (src_masking)<br>(src_masking) --&gt; (src_softmax)<br>(src_softmax) --&gt; (src_softmax_dropout)<br>(src_softmax_dropout) --&gt; (src_mult_att_v)<br>(src_linear_v) --&gt; (src_mult_att_v)<br>(src_mult_att_v) --&gt; (src_linear_att_out)<br>(src_linear_att_out) --&gt; (src_att_out_dropout)<br>(src_att_out_dropout) --&gt; (src_add_att_embed)<br><br>(src_add_att_embed) --&gt; (src_add_ff_embed)<br>(src_add_att_embed) --&gt; (src_layer2_norm)<br>(src_layer2_norm) --&gt; (src_feed_forward)<br>(src_feed_forward) --&gt; (src_add_ff_embed)<br>&#125;<br><br>(src_add_ff_embed) --&gt; (...EncoderBlock):...<br><br><br>(tgt_word_embedding) --&gt; (tgt_position_embdedding)<br>(tgt_position_embdedding) --&gt; (tgt_in_dropout)<br><br>rectangle DecoderBlock&#123;<br>rectangle target_attention-block&#123;<br>(tgt_in_dropout) --&gt; (tgt_add_att_embed)<br>(tgt_in_dropout) --&gt; (tgt_layer1_norm)<br>(tgt_layer1_norm) --&gt; (tgt_linear_q)<br>(tgt_layer1_norm) --&gt; (tgt_linear_k)<br>(tgt_layer1_norm) --&gt; (tgt_linear_v)<br>(tgt_linear_q) --&gt; (tgt_mult_q_k&#x27;)<br>(tgt_linear_k) --&gt; (tgt_mult_q_k&#x27;):transpose<br>(tgt_mult_q_k&#x27;) --&gt; (tgt_masking)<br>(tgt_masking) --&gt; (tgt_softmax)<br>(tgt_softmax) --&gt; (tgt_softmax_dropout)<br>(tgt_softmax_dropout) --&gt; (tgt_mult_att_v)<br>(tgt_linear_v) --&gt; (tgt_mult_att_v)<br>(tgt_mult_att_v) --&gt; (tgt_linear_att_out)<br>(tgt_linear_att_out) --&gt; (tgt_att_out_dropout)<br>(tgt_att_out_dropout) --&gt; (tgt_add_att_embed)<br>&#125;<br><br>rectangle memory-attention-block&#123;<br>(tgt_add_att_embed) --&gt; (mem_add_att_embed)<br>(tgt_add_att_embed) --&gt; (mem_layer1_norm)<br>(mem_layer1_norm) --&gt; (mem_linear_q)<br>(...EncoderBlock) --&gt; (mem_linear_k)<br>(...EncoderBlock) --&gt; (mem_linear_v)<br>(mem_linear_q) --&gt; (mem_mult_q_k&#x27;)<br>(mem_linear_k) --&gt; (mem_mult_q_k&#x27;):transpose<br>(mem_mult_q_k&#x27;) --&gt; (mem_masking)<br>(mem_masking) --&gt; (mem_softmax)<br>(mem_softmax) --&gt; (mem_softmax_dropout)<br>(mem_softmax_dropout) --&gt; (mem_mult_att_v)<br>(mem_linear_v) --&gt; (mem_mult_att_v)<br>(mem_mult_att_v) --&gt; (mem_linear_att_out)<br>(mem_linear_att_out) --&gt; (mem_att_out_dropout)<br>(mem_att_out_dropout) --&gt; (mem_add_att_embed)<br>&#125;<br><br>(mem_add_att_embed) --&gt; (mem_add_ff_embed)<br>(mem_add_att_embed) --&gt; (mem_layer2_norm)<br>(mem_layer2_norm) --&gt; (mem_feed_forward)<br>(mem_feed_forward) --&gt; (mem_add_ff_embed)<br>&#125;<br><br>(mem_add_ff_embed) --&gt; (...DecoderBlock):...<br><br>(...DecoderBlock) --&gt; (linear)<br>@enduml<br></code></pre></td></tr></table></figure>
-<h1 id="transformer的掩码">transformer的掩码</h1>
+<img  src=http://www.plantuml.com/plantuml/svg/ZPNDSi8W58NtUGftrKMSgKiNNNJQvyXWWauc2IZ1MAVZkpSOyVu0gKlE_RWGE2SiUrCM5ssgGdOxMLMrEgmMUVwnMBh2KVUrhRLonUfHpOmihL27LYw-LQahQJvRNJQ_MN86zAjLKHbzr6UxohW0bAYgGbWxxMWERCLLclT2QTCzCAmWhbPIcEBq2jIy0WqUyes1wCwjBKv5yqQH9efihH6g7yzCPgo2QD4tztCd8wZtUcyxyVEe-r5GPmVFLROxT_pi8uSv1Wd1OJaP5cOYklL9OVlaQj8bMKIay7vF79L2xnU_2KoruLROIpdsrEOYZ6z9fDJYDxJLfph1w_KQHsgr7OMHjWSRZwWhH2EQhC0y74KKwI-98msw5UOWxrSibMkQxnwXPxrW0PxY94XJp1N4GOh_XPfNeC53DCLEmYacRMC8JZ6j8FgPOZo2EgGOZu8wIaTCPRlp2INVFCC4AKOJ8SKH4TrwaEAOcdJ93NknavqsrppkkLXynmbHswLOwZok80wSnoCQGCqhqE2Neyvp4dOUQHj3iFDe1T5Fv-4HrC5vU1JKqOt6LBOxxohopJDCu3mq4PmN4T751ywBgKcZkDzoA5CSlI1pA7r1k08SUq42ARKutchuWk0_k7z1k3p1qr6k_W00>
+<h1 id="transformer-的掩码">transformer 的掩码</h1>
 <table>
 <thead>
 <tr class="header">
@@ -326,7 +326,8 @@ href="#torchnntransformer的mask使用">torch.nn.Transformer的mask使用</a></l
 </tr>
 <tr class="even">
 <td>*_att_mask</td>
-<td>为了让当前单词不注意到它“不该”注意到的单词。例如tgt_att_mask为上三角矩阵。</td>
+<td>为了让当前单词不注意到它“不该”注意到的单词。例如 tgt_att_mask
+为上三角矩阵。</td>
 </tr>
 </tbody>
 </table>
@@ -357,29 +358,29 @@ href="#torchnntransformer的mask使用">torch.nn.Transformer的mask使用</a></l
 </tr>
 </tbody>
 </table>
-<h1
-id="transformer中dropout出现的地方">transformer中dropout出现的地方</h1>
+<h1 id="transformer-中-dropout-出现的地方">transformer 中 dropout
+出现的地方</h1>
 <ol type="1">
 <li><p>位置嵌入之后。</p></li>
-<li><p>注意力softmax之后。</p></li>
+<li><p>注意力 softmax 之后。</p></li>
 <li><p>多头注意力之后的线性变换后。</p></li>
 <li><p>feed_forward 第二个线性层之后。</p></li>
 </ol>
-<h1
-id="transformer中layer_norm出现的地方">transformer中layer_norm出现的地方</h1>
+<h1 id="transformer-中-layer_norm-出现的地方">transformer 中 layer_norm
+出现的地方</h1>
 <ol type="1">
 <li><p>残差块之前（或之后）</p></li>
-<li><p>（最后一个Decoder之后）</p></li>
+<li><p>（最后一个 Decoder 之后）</p></li>
 </ol>
-<h1
-id="torch.nn.transformer的mask使用">torch.nn.Transformer的mask使用</h1>
+<h1 id="torch.nn.transformer-的-mask-使用">torch.nn.Transformer 的 mask
+使用</h1>
 <p>Binary and float masks are supported. For a binary mask, a
 <code>True</code> value indicates that the corresponding position is not
 allowed to attend. For a float mask, the mask values will be added to
 the attention weight. If both attn_mask and key_padding_mask are
 supplied, their types should match.</p>
 <h1 id="句子的处理流程">句子的处理流程</h1>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">(句子) ----&gt; (token序列（单词序列）):token_transform<br>(token序列（单词序列）) ----&gt; (整数序列（单词的在词典里的索引的序列）):vocab_transform<br>(整数序列（单词的在词典里的索引的序列）) ----&gt;(词嵌入序列):word embedding<br>(词嵌入序列) ----&gt; (融合句子语义的词嵌入序列):encoder<br></code></pre></td></tr></table></figure>
+<img  src=http://www.plantuml.com/plantuml/svg/qtZQl_JfsWcQ2hf0OAUWKPAVdPgdy7HN_zEEwU_tT3pjdVfYVI-Cswbf1PQFBobAp2jEoo_AvIAa0MRkiwbRdatTWARi-QoMftDMWDItxdZPtWFaFj-owEcUgI1nX9Lb-Sc9ISXMacyMn3KQ85LRUvwsBeN8Q5gLvnUbAAJc9gMcf6JcfNDXA83vuiMytgSJEY11zcBzsYSxEu76OvYMcfUSdv9Q1000>
 
                 
               </div>
