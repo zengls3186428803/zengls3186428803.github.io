@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="群环域定义图 群环域定义图  群环域定义图  群环域定义图 1234567891011121314151617181920212223242526(集合 S) --&gt; (二元运算 f):封闭 f:&lt;S,S&gt; -&gt; S(二元运算 f) --&gt; (半群 f):结合律(半群 f) --&gt; (幺半群 f):存在单位元(幺半群 f) --&gt; (群 f):存在逆元(">
+    <meta name="description" content="因子群 正规子群\(N\triangleleft G\)的陪集上定义的二元运算：\((aN)(bN)&#x3D;(ab)N\) 这个运算是良定义的。 正规子群的陪集上的二元运算的性质  \(G&#x2F;N\)上的二元运算会继承群的封闭性 \(G&#x2F;N\)上的二元运算会继承群的结合律 \(G&#x2F;N\)上的二元运算会继承群的单位元，即\(eN&#x3D;N\)是因子群的单位元 \(G&#x2F;N\)上的二元运算会继承群的逆元，即\((aN)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="抽象代数定义图">
-<meta property="og:url" content="http://example.com/2024/11/03/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0%E5%AE%9A%E4%B9%89%E5%9B%BE/index.html">
+<meta property="og:title" content="因子群，因子环">
+<meta property="og:url" content="http://example.com/2024/11/09/factor-algebra/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="群环域定义图 群环域定义图  群环域定义图  群环域定义图 1234567891011121314151617181920212223242526(集合 S) --&gt; (二元运算 f):封闭 f:&lt;S,S&gt; -&gt; S(二元运算 f) --&gt; (半群 f):结合律(半群 f) --&gt; (幺半群 f):存在单位元(幺半群 f) --&gt; (群 f):存在逆元(">
+<meta property="og:description" content="因子群 正规子群\(N\triangleleft G\)的陪集上定义的二元运算：\((aN)(bN)&#x3D;(ab)N\) 这个运算是良定义的。 正规子群的陪集上的二元运算的性质  \(G&#x2F;N\)上的二元运算会继承群的封闭性 \(G&#x2F;N\)上的二元运算会继承群的结合律 \(G&#x2F;N\)上的二元运算会继承群的单位元，即\(eN&#x3D;N\)是因子群的单位元 \(G&#x2F;N\)上的二元运算会继承群的逆元，即\((aN)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-03T06:57:17.000Z">
-<meta property="article:modified_time" content="2024-11-09T11:33:04.593Z">
+<meta property="article:published_time" content="2024-11-09T04:53:56.000Z">
+<meta property="article:modified_time" content="2024-11-09T11:32:16.590Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>抽象代数定义图 - Hexo</title>
+  <title>因子群，因子环 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="抽象代数定义图"></span>
+            <span id="subtitle" data-typed-text="因子群，因子环"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-03 14:57" pubdate>
-          2024年11月3日 下午
+        <time datetime="2024-11-09 12:53" pubdate>
+          2024年11月9日 下午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          253 字
+          731 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          3 分钟
+          7 分钟
         
       </span>
     
@@ -270,19 +270,101 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">抽象代数定义图</h1>
+            <h1 id="seo-header">因子群，因子环</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li><a href="#群环域定义图">群环域定义图</a></li>
-<li><a href="#群环域定义图-1">群环域定义图</a></li>
-</ul>
-<h2 id="群环域定义图">群环域定义图</h2>
-<img  src=http://www.plantuml.com/plantuml/svg/XPB1IiD054NtynLlsO25heDqwGSqls0pkcb1kXD1aSPgJGb8YP9gWsJX9jP5aJPY_PcynFaB9sQIoJHKj_UTU-VEcsampq9d18O6pMOR6d5qYyFBxoydVNN1r7Hyks1k2AQ-R-mPRU28GRQXt8dsJRe9Ca_wSSSZSJCcKXJCEf8OXlSuUq5x6d_QF8ueqvnNI7Pk_M9_DQPbOxgxCLKRKwMnSlna0HsDI52HU_r15qwEwT40-cQfKi356an8PjSuijZGJYTNEkds3Y7ZYS2Awa5YF-UAJZDBhkH5AY1xV6BUkm0x4A_iU1MTjivKYk-lpAejjmechi_ZqFCnT8IZAX6bcB1CbyKswkuQKkrR6vOr_xKrs4EmmoKdMyyW1pmDMi0ldovzlWkWV6zZlcFnZ-IJr6-BypaSP8MAiAhy0m00>
-<h2 id="群环域定义图-1">群环域定义图</h2>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">(集合 S) --&gt; (二元运算 f):封闭 f:&lt;S,S&gt; -&gt; S<br>(二元运算 f) --&gt; (半群 f):结合律<br>(半群 f) --&gt; (幺半群 f):存在单位元<br>(幺半群 f) --&gt; (群 f):存在逆元<br>(集合 S) --&gt; (二元运算 g):封闭 g:&lt;S,S&gt; -&gt; S<br>(二元运算 g) --&gt; (半群 g):结合律<br>(群 f) --&gt; (环 R)<br>(半群 g) --&gt; (环 R)<br>note right of (环 R)<br>g 对 f 有分配率<br>end note<br>(环 R) --&gt; (交换环 R):g 有交换律<br>(环 R) --&gt; (非零环 R):R 不为&#123;0&#125;<br>(环 R) --&gt; (幺环 R):g 存在单位元<br>(环 R) --&gt; (无零因子环 R):无零因子<br>(交换环 R) --&gt; (整环 R)<br>(无零因子环 R) --&gt; (整环 R)<br>(非零环 R) --&gt; (整环 R)<br>(幺环 R) --&gt; (整环 R)<br>(非零环 R) --&gt;(除环 R)<br>(幺环 R) --&gt; (除环 R)<br>note right of (除环 R)<br>非 0 元素在 g 下有逆元<br>end note<br>(交换环 R) --&gt; (域 F)<br>(除环 R) --&gt; (域 F)<br></code></pre></td></tr></table></figure>
+                <h3 id="因子群">因子群</h3>
+<p>正规子群<span class="math inline">\(N\triangleleft
+G\)</span>的陪集上定义的二元运算：<span
+class="math inline">\((aN)(bN)=(ab)N\)</span> 这个运算是良定义的。</p>
+<h4
+id="正规子群的陪集上的二元运算的性质">正规子群的陪集上的二元运算的性质</h4>
+<ol type="1">
+<li><span
+class="math inline">\(G/N\)</span>上的二元运算会继承群的封闭性</li>
+<li><span
+class="math inline">\(G/N\)</span>上的二元运算会继承群的结合律</li>
+<li><span
+class="math inline">\(G/N\)</span>上的二元运算会继承群的单位元，即<span
+class="math inline">\(eN=N\)</span>是因子群的单位元</li>
+<li><span
+class="math inline">\(G/N\)</span>上的二元运算会继承群的逆元，即<span
+class="math inline">\((aN)^{-1}=a^{-1}N\)</span>,所以每个陪集都有逆元</li>
+<li>如果 G 上有交换律，则<span
+class="math inline">\(G/N\)</span>上的二元运算也会继承群的交换律</li>
+</ol>
+<h3 id="因子群同构">因子群同构</h3>
+<p><span class="math inline">\(\psi:G\rightarrow
+G&#39;\)</span>是群同态映射，即<span
+class="math inline">\(\psi(ab)=\psi(a)\psi(b)\)</span> <span
+class="math inline">\(H=Ker(\psi)\)</span>，则<span
+class="math inline">\(H\)</span>是<span
+class="math inline">\(G\)</span>的一个正规子群。 H 的所有陪集为<span
+class="math inline">\(G/H\)</span> 定义<span
+class="math inline">\(G/H\)</span>上的二元运算：<span
+class="math inline">\((aH)(bH)=(ab)H\)</span>
+因为同态映射的核是正规子群，所以陪集上的运算是良定义的。 由<span
+class="math inline">\(G/H\)</span>上的二元运算的性质知，<span
+class="math inline">\(G/H\)</span>是一个群</p>
+<p>定义<span class="math inline">\(\phi(aH)=\psi(a)\)</span>,其中<span
+class="math inline">\(aH \in G/H\)</span> 验证<span
+class="math inline">\(\phi\)</span>是一个是<span
+class="math inline">\(G/H\rightarrow \psi(G)\)</span>的一个同构映射</p>
+<ol type="1">
+<li><span class="math inline">\(\phi\)</span>是双射</li>
+<li><span
+class="math inline">\(\phi((aH)(bH))=\phi((ab)H)=\psi(ab)=\psi(a)\psi(b)=\phi(aH)\phi(bH)\)</span></li>
+</ol>
+<h3 id="因子环同构">因子环同构</h3>
+<p>0 是 R 的加法单位元，0‘ 是 R‘的加法单位元</p>
+<p><span class="math inline">\(\psi:R\rightarrow
+R&#39;\)</span>是一个环同态映射,即<span
+class="math inline">\(\psi(a+b)=\psi(a)+\psi(b),
+\psi(ab)=\psi(a)\psi(b)\)</span></p>
+<p><span class="math inline">\(H =
+Ker(\psi)\)</span>，这个核是指加法单位元的在<span
+class="math inline">\(\psi\)</span>下的逆像，即<span
+class="math inline">\(Ker(\psi)=\psi^{-1}[0&#39;]\)</span></p>
+<p><span class="math inline">\(R/H=\{a + H | a ∈ R\}\)</span></p>
+<p>现在定义 <span class="math inline">\(G/H\)</span> 上的乘法运算<span
+class="math inline">\((a+H)(b+H)=(ab + H)\)</span>,加法运算<span
+class="math inline">\((a+H)+(b+H)=(a+b)+H\)</span>
+因为环同态映射的(加法)核是一个理想，所以陪集上的乘法是良定义的。 验证
+<span class="math inline">\(R/H\)</span> 是一个环</p>
+<ol type="1">
+<li>有群的讨论知：<span
+class="math inline">\(&lt;R/H,+&gt;\)</span>构成一个交换群</li>
+<li><span class="math inline">\((a+H)(b+H)=(ab)+H \in
+R/H\)</span>,乘法的封闭性</li>
+<li><span
+class="math inline">\(((a+H)(b+H))(c+H)=(ab+H)(c+H)=(abc+H)=(a+H)(bc+H)=(a+H)((b+h)(c+H))\)</span>,所以<span
+class="math inline">\(&lt;R/H,\cdot&gt;\)</span>是一个半群</li>
+<li><span
+class="math inline">\((a+H)((b+H)+(c+H))=(a+H)((b+c)+H)=(a(b+c)+H)=((ab+ac)+H)=(ab+H)+(ac+H)=(a+H)(b+H)+(a+H)(c+H)\)</span>,所以<span
+class="math inline">\(&lt;R/H,+,\cdot&gt;\)</span>是一个环</li>
+</ol>
+<p>定义<span class="math inline">\(\phi(a+H)=\psi(a)\)</span>,其中<span
+class="math inline">\(a+H \in R/H\)</span></p>
+<p>验证<span class="math inline">\(\phi\)</span>是一个是<span
+class="math inline">\(R/H\rightarrow
+\psi(R)\)</span>的一个环同构映射</p>
+<ol type="1">
+<li><span class="math inline">\(\phi\)</span>是双射</li>
+<li><span
+class="math inline">\(\phi((a+H)+(b+H))=\phi((a+b)+H)=\psi(a+b)=\psi(a)+\psi(b)=\phi(a+H)+\phi(b+H)\)</span></li>
+<li><span
+class="math inline">\(\phi((a+H)(b+H))=\phi((ab)+H)=\psi(ab)=\psi(a)\psi(b)=\phi(a+H)\phi(b+H)\)</span></li>
+</ol>
+<h4 id="因子环的的性质">因子环的的性质</h4>
+<ol type="1">
+<li>如果环有乘法交换律，那因子环也有乘法交换律</li>
+<li>如果环有乘法单位元，那因子环也有乘法单位元，<span
+class="math inline">\((1+H)(a+H)=(a1+H)=(a+H)\)</span></li>
+<li>如果环有乘法逆元，那因子环也有乘法逆元，<span
+class="math inline">\((a+H)(a^{-1}+H)=(1+H)\)</span></li>
+</ol>
 
                 
               </div>
@@ -321,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>抽象代数定义图</div>
-      <div>http://example.com/2024/11/03/抽象代数定义图/</div>
+      <div>因子群，因子环</div>
+      <div>http://example.com/2024/11/09/factor-algebra/</div>
     </div>
     <div class="license-meta">
       
@@ -334,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月3日</div>
+          <div>2024年11月9日</div>
         </div>
       
       
@@ -366,9 +448,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/06/kfa/" title="kfa">
+                      <a href="/2024/11/09/%E7%8E%AF%E5%92%8C%E5%9F%9F%E4%B8%8A%E7%9A%84%E5%A4%9A%E9%A1%B9%E5%BC%8F/" title="环和域上的多项式">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">kfa</span>
+                        <span class="hidden-mobile">环和域上的多项式</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -376,8 +458,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/29/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/11/08/homomorphism/" title="同态映射">
+                        <span class="hidden-mobile">同态映射</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
