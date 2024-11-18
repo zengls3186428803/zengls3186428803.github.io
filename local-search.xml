@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>conditional sampling</title>
+    <link href="/2024/11/18/text2image/"/>
+    <url>/2024/11/18/text2image/</url>
+    
+    <content type="html"><![CDATA[<h2 id="unconditional-sampling">Unconditional sampling</h2><h4 id="add-noise">Add noise</h4><p><span class="math display">\[P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2)\xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx\mathcal{N}(0, I)\\\]</span></p><p><span class="math display">\[x_t = a_t x_{t-1} + b_t \epsilon_t\]</span></p><h4 id="denoise">Denoise</h4><p><span class="math display">\[P(x_0) \xleftarrow{\epsilon_{\theta}(x_1,t)} P(x_1)\xleftarrow{\epsilon_{\theta}(x_2,t)} P(x_2)\xleftarrow{\epsilon_{\theta}(x_3,t)} \cdots\xleftarrow{\epsilon_{\theta}(x_T,t)} P(x_T) \approx \mathcal{N}(0, I)\]</span></p><p><span class="math display">\[x_{t-1} = \frac{x_t - b_t\epsilon_{\theta}(x_t,t)}{a_t}\]</span></p><h2 id="conditional-sampling">conditional sampling</h2><h4 id="add-noisesame-as-unconditional">Add noise(same asunconditional)</h4><p><span class="math display">\[P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2)\xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx\mathcal{N}(0, I)\\\]</span></p><p><span class="math display">\[x_t = a_t x_{t-1} + b_t \epsilon_t\]</span></p><h4 id="denoise-1">Denoise</h4><p>c represents the condition</p><p><span class="math display">\[P(x_0) \xleftarrow{\epsilon_{\theta}(x_1,t,c)} P(x_1)\xleftarrow{\epsilon_{\theta}(x_2,t,c)} P(x_2)\xleftarrow{\epsilon_{\theta}(x_3,t,c)} \cdots\xleftarrow{\epsilon_{\theta}(x_T,t,c)} P(x_T) \approx \mathcal{N}(0, I)\]</span></p><p><span class="math display">\[x_{t-1} = \frac{x_t - b_t\epsilon_{\theta}(x_t,t,c)}{a_t}\]</span></p><h2 id="latent-space-diffusion-vae">Latent Space Diffusion + VAE</h2><h4 id="train">Train</h4><ul><li>Get a image-text pair from the dataset</li><li>Sampling a time step t, and a gaussian noise</li><li>Use (pre-trained)VAE to encode the image to the latent space</li><li>Use (pre-trained)CLIP to encode the text to the latent space</li><li>Add noise to the latent space image</li><li>Denoise the latent space image with text as input of epsilonmodel</li><li>Backward</li></ul><h4 id="sampling">Sampling</h4><ul><li>Sampling a gaussian-noise-image in the latent space</li><li>Denoise the latent space gaussian-noise-image with text as input ofepsilon model</li><li>Decode the latent space image to the image space</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>machine learning</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>diffusion</title>
     <link href="/2024/11/15/diffusion/"/>
     <url>/2024/11/15/diffusion/</url>
