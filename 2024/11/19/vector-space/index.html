@@ -19,15 +19,15 @@
   <meta name="author" content="zengls">
   <meta name="keywords" content="">
   
-    <meta name="description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  欧几里得空间  欧几里得空间的性质   向量空间 F 是一个域，V 是一个交换群 定义数乘运算 \[ \sigma: F \times V \rightarrow V \] 将\(a \sigma v\)记作\(av\) 如果\(\sigma\)满足以下条件，则称 V 是 F 上的向量空间  \((a+b)v &#x3D; av">
+    <meta name="description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  内积空间  内积空间的性质  欧几里得空间  欧几里得空间的性质  Hilbert 空间  Hilbert 空间的性质   12345678910111213(集合) --&gt; (度量空间):定义度量(度量空间) --&gt; (完备度量空间):柯西列收敛(集合) --&gt; (域 F):定义抽象加法和抽象乘法(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="向量空间">
 <meta property="og:url" content="http://example.com/2024/11/19/vector-space/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  欧几里得空间  欧几里得空间的性质   向量空间 F 是一个域，V 是一个交换群 定义数乘运算 \[ \sigma: F \times V \rightarrow V \] 将\(a \sigma v\)记作\(av\) 如果\(\sigma\)满足以下条件，则称 V 是 F 上的向量空间  \((a+b)v &#x3D; av">
+<meta property="og:description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  内积空间  内积空间的性质  欧几里得空间  欧几里得空间的性质  Hilbert 空间  Hilbert 空间的性质   12345678910111213(集合) --&gt; (度量空间):定义度量(度量空间) --&gt; (完备度量空间):柯西列收敛(集合) --&gt; (域 F):定义抽象加法和抽象乘法(">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-19T10:21:55.000Z">
-<meta property="article:modified_time" content="2024-11-19T15:30:13.404Z">
+<meta property="article:modified_time" content="2024-11-21T15:57:24.125Z">
 <meta property="article:author" content="zengls">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.8k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          16 分钟
         
       </span>
     
@@ -285,11 +285,23 @@
 <ul>
 <li><a href="#赋范线性空间的性质">赋范线性空间的性质</a></li>
 </ul></li>
+<li><a href="#内积空间">内积空间</a>
+<ul>
+<li><a href="#内积空间的性质">内积空间的性质</a></li>
+</ul></li>
 <li><a href="#欧几里得空间">欧几里得空间</a>
 <ul>
 <li><a href="#欧几里得空间的性质">欧几里得空间的性质</a></li>
 </ul></li>
+<li><a href="#hilbert-空间">Hilbert 空间</a>
+<ul>
+<li><a href="#hilbert-空间的性质">Hilbert 空间的性质</a></li>
+</ul></li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">(集合) --&gt; (度量空间):定义度量<br>(度量空间) --&gt; (完备度量空间):柯西列收敛<br>(集合) --&gt; (域 F):定义抽象加法和抽象乘法<br>(集合) --&gt; (交换群 V):定义抽象加法<br>(域 F) --&gt; (向量空间)<br>(交换群 V) --&gt; (向量空间):定义F上的数乘<br>(向量空间) --&gt; (实线性空间): F=实数域<br>(实线性空间) --&gt; (欧几里得空间):定义内积<br>(实线性空间) --&gt; (赋范线性空间):定义范数<br>(赋范线性空间) --&gt; (巴拿赫空间): 范数诱导的度量完备<br>(向量空间) --&gt; (内积空间):定义内积<br>(内积空间) --&gt; (欧几里得空间): F=实数域<br>(欧几里得空间) --&gt; (Hilbert空间):内积诱导的范数诱导的度量完备<br></code></pre></td></tr></table></figure>
+<p>注：欧几里得空间和 Hilbert 空间的 F
+只要能定义绝对值即可，也可以是复数域。因为要需要度量，所以需要范数，范数的齐次性需要域里能取绝对值。</p>
+<img  src=http://www.plantuml.com/plantuml/svg/VP5HIiD048RVznJxs3xq0e8-1a_W0GGV19_40mXgKzE8RJ54McYgH8CeZSLMRT3cCfdPpIrSkflOZHiVT-R_vlzdbZJoKHjwdIPjjNPe0vB7tBvcJqdkpvjRC1rcoqjP8tfFoQSkXBOEOH3pXnGwFjwyepSY5OCWe5On6PrlFhi3Pu9l7WnS-SoMj-9PmR8anAjxjWhfdWacQgxowFL_yn2DDGZKE6hHxDDXmtFqNaK4eekATSSiIV4qAb1gROkQ88Gz-TEM4Bv4O4zosuMLNpbi-u95SHt75rtkdkb-aXDbOKbC2fNpOuxTb2-UovmIuV4CuY-ne_mn-NlcJTVHQk9kzkftr6zZK4Xqz_1e_-3uX9PUw-bbqd-2_m00>
 <h2 id="向量空间">向量空间</h2>
 <p>F 是一个域，V 是一个交换群 定义数乘运算</p>
 <p><span class="math display">\[
@@ -321,7 +333,7 @@ class="math inline">\(V\)</span>是有限维向量空间。</p>
 <p>对于<span class="math inline">\(U\sub V\)</span>,如果<span
 class="math inline">\(\sigma\)</span>限制在<span
 class="math inline">\(U\)</span>上后，<span
-class="math inline">\(U\)</span>仍然满足线性空间的定义，即<span
+class="math inline">\(U\)</span>仍然满足向量空间的定义，即<span
 class="math inline">\(\sigma:&lt;F,U&gt; \rightarrow
 U\)</span>,则称<span class="math inline">\(U\)</span>是<span
 class="math inline">\(V\)</span>的子空间。</p>
@@ -346,7 +358,7 @@ class="math inline">\(\phi[V] = V&#39;\)</span>, and furthermore</p>
 a\phi(\alpha)\]</span></p>
 <p>for all <span class="math inline">\(\alpha, \beta \in V\)</span> and
 all <span class="math inline">\(a \in F\)</span>.
-即两个同一个域上的线性空间上存在一个双射，且这个双射满足线性映射的定义，则称这两个线性空间同构。</p>
+即两个同一个域上的向量空间上存在一个双射，且这个双射满足线性映射的定义，则称这两个向量空间同构。</p>
 <p>线性变换的特征向量 <span class="math inline">\(v\not=0\)</span>,
 和特征值<span class="math inline">\(\lambda\)</span>：</p>
 <p><span class="math display">\[
@@ -417,7 +429,7 @@ x=y\)</span></li>
 d(x,z)+d(z,y)\)</span></li>
 </ul>
 <h2 id="赋范线性空间">赋范线性空间</h2>
-<p>实线性空间：实数域上的向量空间</p>
+<p>实线性(向量)空间：实数域上的向量空间</p>
 <p>在实线性空间<span class="math inline">\(V\)</span>上定义一个函数<span
 class="math inline">\(||.||:V \rightarrow
 R+\)</span>,满足以下条件，则称<span
@@ -440,13 +452,13 @@ class="math inline">\(V\)</span>是巴拿赫(Banach)空间。</p>
 class="math inline">\(d(v,w)=||v-w||\)</span></li>
 <li>赋范线性空间都是度量空间</li>
 </ol>
-<h2 id="欧几里得空间">欧几里得空间</h2>
-<p>内积：<span class="math inline">\(V\)</span>是实线性空间，<span
+<h2 id="内积空间">内积空间</h2>
+<p><span class="math inline">\(V\)</span>是向量空间，<span
 class="math inline">\(\langle .,. \rangle:V \times V \rightarrow
-R\)</span>，满足以下条件，则称<span class="math inline">\(\langle .,.
-\rangle\)</span>为<span class="math inline">\(V\)</span>上的内积，<span
-class="math inline">\((V,\langle .,.
-\rangle)\)</span>为欧几里得空间。</p>
+\mathbb{R}\)</span>，满足以下条件，则称<span
+class="math inline">\(\langle .,. \rangle\)</span>为<span
+class="math inline">\(V\)</span>上的内积，<span
+class="math inline">\((V,\langle .,. \rangle)\)</span>为内积空间。</p>
 <ul>
 <li>正定性：<span class="math inline">\(\langle v,v \rangle \geq
 0\)</span> and <span class="math inline">\(\langle v,v \rangle = 0
@@ -456,6 +468,26 @@ w,v \rangle\)</span></li>
 <li>线性性：<span class="math inline">\(\langle av+bw,z \rangle =
 a\langle v,z \rangle + b\langle w,z \rangle\)</span></li>
 </ul>
+<p>内积空间空间<span class="math inline">\(V\)</span>的子空间<span
+class="math inline">\(U\)</span>的正交补<span
+class="math inline">\(U^{\perp}=\{v \in V | \forall u \in U, \langle v,u
+\rangle = 0\}\)</span>是<span
+class="math inline">\(V\)</span>的子空间</p>
+<p>正交投影：<span class="math inline">\(V\)</span>是内积空间，<span
+class="math inline">\(U\)</span>是<span
+class="math inline">\(V\)</span>的子空间，<span class="math inline">\(v
+\in V\)</span>，若<span class="math inline">\(v=u+w\)</span>，其中<span
+class="math inline">\(u \in U\)</span>，<span class="math inline">\(w
+\in U^{\perp}\)</span>，则称<span
+class="math inline">\(u\)</span>为<span
+class="math inline">\(v\)</span>在<span
+class="math inline">\(U\)</span>上的正交投影。</p>
+<h4 id="内积空间的性质">内积空间的性质</h4>
+<ol type="1">
+<li>正交投影若存在则唯一</li>
+</ol>
+<h2 id="欧几里得空间">欧几里得空间</h2>
+<p>实数域上的内积空间为欧几里得空间。</p>
 <h4 id="欧几里得空间的性质">欧几里得空间的性质</h4>
 <ol type="1">
 <li>内积可以诱导范数<span class="math inline">\(||v||=\sqrt{\langle v,v
@@ -465,6 +497,7 @@ a\langle v,z \rangle + b\langle w,z \rangle\)</span></li>
 <li>在欧几里得空间中，柯西-施瓦茨不等式：<span
 class="math inline">\(|\langle v,w \rangle| \leq ||v|| \cdot
 ||w||\)</span></li>
+<li>有限维欧几里得空间可以通过施密特正交化得到正交基。</li>
 </ol>
 <p>柯西-施瓦茨不等式证明：</p>
 <p><span class="math display">\[
@@ -474,13 +507,21 @@ class="math inline">\(|\langle v,w \rangle| \leq ||v|| \cdot
 <p>然后关于<span class="math inline">\(a\)</span>的二次函数<span
 class="math inline">\(f(a)=\langle v,v \rangle + 2a\langle v,w \rangle +
 a^2\langle w,w \rangle\)</span>在<span class="math inline">\(a \in
-R\)</span>上非负，所以判别式小于等于 0，即</p>
+\mathbb{R}\)</span>上非负，所以判别式小于等于 0，即</p>
 <p><span class="math display">\[
 \langle v,w \rangle^2 - \langle v,v \rangle \langle w,w \rangle \leq 0
 \]</span></p>
-<p>在实线性空间上，内积<span
+<p>在实线性内积空间上，内积<span
 class="math inline">\(\xrightarrow{诱导}\)</span>范数<span
 class="math inline">\(\xrightarrow{诱导}\)</span>度量</p>
+<h2 id="hilbert-空间">Hilbert 空间</h2>
+<p><span class="math inline">\(\mathbb{R}\)</span>或<span
+class="math inline">\(\mathbb{C}\)</span>上的完备内积空间为 Hilbert
+空间。</p>
+<h4 id="hilbert-空间的性质">Hilbert 空间的性质</h4>
+<ol type="1">
+<li>Hilbert 的投影存在。</li>
+</ol>
 
                 
               </div>
