@@ -19,21 +19,21 @@
   <meta name="author" content="zengls">
   <meta name="keywords" content="">
   
-    <meta name="description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  内积空间  内积空间的性质  Hilbert 空间  Hilbert 空间的性质   1234567891011(集合) --&gt; (度量空间):定义度量(度量空间) --&gt; (完备度量空间):柯西列收敛(集合) --&gt; (域 F):定义抽象加法和抽象乘法(集合) --&gt; (交换群 V):定义抽象">
+    <meta name="description" content="实数域上多元向量值函数上的可微 定义抽象导数需要的结构  拓扑向量空间 可微 如何在拓扑向量空间中定义无穷小和高阶无穷小？  拓扑向量空间与可微  拓扑向量空间 可微  高阶无穷小   性质  目标：定义抽象导数 实数域上多元向量值函数上的可微 \(f:R^n \rightarrow R^m\) 可微\(\Leftrightarrow\) \(f(x+h) &#x3D; f(x) + L(h) + r(h">
 <meta property="og:type" content="article">
-<meta property="og:title" content="向量空间">
-<meta property="og:url" content="http://example.com/2024/11/19/vector-space/index.html">
+<meta property="og:title" content="拓扑向量空间">
+<meta property="og:url" content="http://example.com/2024/11/25/%E6%8B%93%E6%89%91%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="向量空间  向量空间的性质  度量空间 赋范线性空间  赋范线性空间的性质  内积空间  内积空间的性质  Hilbert 空间  Hilbert 空间的性质   1234567891011(集合) --&gt; (度量空间):定义度量(度量空间) --&gt; (完备度量空间):柯西列收敛(集合) --&gt; (域 F):定义抽象加法和抽象乘法(集合) --&gt; (交换群 V):定义抽象">
+<meta property="og:description" content="实数域上多元向量值函数上的可微 定义抽象导数需要的结构  拓扑向量空间 可微 如何在拓扑向量空间中定义无穷小和高阶无穷小？  拓扑向量空间与可微  拓扑向量空间 可微  高阶无穷小   性质  目标：定义抽象导数 实数域上多元向量值函数上的可微 \(f:R^n \rightarrow R^m\) 可微\(\Leftrightarrow\) \(f(x+h) &#x3D; f(x) + L(h) + r(h">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-19T10:21:55.000Z">
-<meta property="article:modified_time" content="2024-11-25T09:57:39.359Z">
+<meta property="article:published_time" content="2024-11-25T01:14:38.000Z">
+<meta property="article:modified_time" content="2024-11-25T09:56:35.041Z">
 <meta property="article:author" content="zengls">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>向量空间 - Hexo</title>
+  <title>拓扑向量空间 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="向量空间"></span>
+            <span id="subtitle" data-typed-text="拓扑向量空间"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-19 18:21" pubdate>
-          2024年11月19日 晚上
+        <time datetime="2024-11-25 09:14" pubdate>
+          2024年11月25日 上午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          1.2k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          15 分钟
+          10 分钟
         
       </span>
     
@@ -270,250 +270,216 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">向量空间</h1>
+            <h1 id="seo-header">拓扑向量空间</h1>
             
             
               <div class="markdown-body">
                 
                 <ul>
-<li><a href="#向量空间">向量空间</a>
+<li><a
+href="#实数域上多元向量值函数上的可微">实数域上多元向量值函数上的可微</a></li>
+<li><a href="#定义抽象导数需要的结构">定义抽象导数需要的结构</a>
 <ul>
-<li><a href="#向量空间的性质">向量空间的性质</a></li>
+<li><a href="#拓扑向量空间">拓扑向量空间</a></li>
+<li><a href="#可微">可微</a></li>
+<li><a
+href="#如何在拓扑向量空间中定义无穷小和高阶无穷小">如何在拓扑向量空间中定义无穷小和高阶无穷小？</a></li>
 </ul></li>
-<li><a href="#度量空间">度量空间</a></li>
-<li><a href="#赋范线性空间">赋范线性空间</a>
+<li><a href="#拓扑向量空间与可微">拓扑向量空间与可微</a>
 <ul>
-<li><a href="#赋范线性空间的性质">赋范线性空间的性质</a></li>
+<li><a href="#拓扑向量空间-1">拓扑向量空间</a></li>
+<li><a href="#可微-1">可微</a>
+<ul>
+<li><a href="#高阶无穷小">高阶无穷小</a></li>
 </ul></li>
-<li><a href="#内积空间">内积空间</a>
-<ul>
-<li><a href="#内积空间的性质">内积空间的性质</a></li>
 </ul></li>
-<li><a href="#hilbert-空间">Hilbert 空间</a>
-<ul>
-<li><a href="#hilbert-空间的性质">Hilbert 空间的性质</a></li>
-</ul></li>
+<li><a href="#性质">性质</a></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plantuml">(集合) --&gt; (度量空间):定义度量<br>(度量空间) --&gt; (完备度量空间):柯西列收敛<br>(集合) --&gt; (域 F):定义抽象加法和抽象乘法<br>(集合) --&gt; (交换群 V):定义抽象加法<br>(域 F) --&gt; (向量空间)<br>(交换群 V) --&gt; (向量空间):定义F上的数乘<br>(向量空间) --&gt; (实线性空间): F=实数域<br>(实线性空间) --&gt; (赋范线性空间):定义范数<br>(赋范线性空间) --&gt; (巴拿赫空间): 范数诱导的度量完备<br>(向量空间) --&gt; (内积空间):F=实数域或复数域，定义内积<br>(内积空间) --&gt; (Hilbert空间):内积诱导的范数诱导的度量完备<br></code></pre></td></tr></table></figure>
-<img  src=http://www.plantuml.com/plantuml/svg/VP71Ji9048Rl-nHxB0TUm4IFZK_00vXuCF5aV00I4Mef4OqL0eaLKo76X4e4bGRjotHcjoTUmGsphQust7Pc_s_-VtUiRDY4hbFXrUeUjo0UPwrByHHdlNbb1wQ3T7b1FMRUQVdKWx1bGXX4yZ41fuStR-WFcMKQ106tyydeVihP2DnxVFNXsgCoNVPL-GTBun0x3-8hvBKocEcvsgDxzPE76Mo9G8_ZDay_N35eeF-Y8Z1Jb3_tJiG9rYSvokrTrLE4icV_hWcIYxRqpaoEB5LReQnCeVtUvzXEvEAvy2D4HZE8LYeh_JnjeJnnyrnCeXp_bHQTMmWxT5wlFBtfZPgP50tQFpe-E3mvvSKBDf8Yo9PStm00>
-<h2 id="向量空间">向量空间</h2>
-<p>F 是一个域，V 是一个交换群 定义数乘运算</p>
-<p><span class="math display">\[
-\sigma: F \times V \rightarrow V
-\]</span></p>
-<p>将<span class="math inline">\(a \sigma v\)</span>记作<span
-class="math inline">\(av\)</span></p>
-<p>如果<span class="math inline">\(\sigma\)</span>满足以下条件，则称 V
-是 F 上的向量空间, 或称线性空间。</p>
-<ul>
-<li><span class="math inline">\((a+b)v = av + bv\)</span></li>
-<li><span class="math inline">\(a(bv) = (ab)v\)</span></li>
-<li><span class="math inline">\(a(u+v) = au + av\)</span></li>
-<li><span class="math inline">\(1v = v\)</span></li>
-</ul>
-<p>若对于<span class="math inline">\(S=\{v_i|i \in
-I\}\)</span>有：从<span class="math inline">\(S\)</span>中取 k
-个不同的向量，如果这 k 个向量的线性组合为 0,则这 k 个向量的系数全为
-0，则称<span class="math inline">\(S\)</span>线性无关。</p>
-<p>如果<span class="math inline">\(V\)</span>中任一向量都可以被<span
-class="math inline">\(S\sub V\)</span>中的有限个向量线性表出，则称<span
-class="math inline">\(V\)</span>有<span
-class="math inline">\(S\)</span>生成。如果<span
-class="math inline">\(S\)</span>线性无关，则称<span
-class="math inline">\(S\)</span>为<span
-class="math inline">\(V\)</span>的基。如果<span
-class="math inline">\(S\)</span>是一个有限集，则称<span
-class="math inline">\(V\)</span>是有限维向量空间。</p>
-<p>对于<span class="math inline">\(U\sub V\)</span>,如果<span
-class="math inline">\(\sigma\)</span>限制在<span
-class="math inline">\(U\)</span>上后，<span
-class="math inline">\(U\)</span>仍然满足向量空间的定义，即<span
-class="math inline">\(\sigma:&lt;F,U&gt; \rightarrow
-U\)</span>,则称<span class="math inline">\(U\)</span>是<span
-class="math inline">\(V\)</span>的子空间。</p>
-<p>对于同一个域 F 上的向量空间<span
-class="math inline">\(V\)</span>和<span
-class="math inline">\(V&#39;\)</span>,若<span class="math inline">\(L:V
-\rightarrow V&#39;\)</span>，满足<span
-class="math inline">\(L(av+bw)=aL(v)+bL(w)\)</span>，则称<span
-class="math inline">\(L\)</span>是线性映射。若<span
-class="math inline">\(V=V&#39;\)</span>，则称<span
-class="math inline">\(L\)</span>是<span
-class="math inline">\(V\)</span>上的线性变换。</p>
-<p>Let <span class="math inline">\(V\)</span> and <span
-class="math inline">\(V&#39;\)</span> be vector spaces over the same
-field <span class="math inline">\(F\)</span>. A map <span
-class="math inline">\(\phi: V \to V&#39;\)</span> is an <span
-class="math inline">\(\textbf{isomorphism}\)</span> if <span
-class="math inline">\(\phi\)</span> is a one-to-one map, <span
-class="math inline">\(\phi[V] = V&#39;\)</span>, and furthermore</p>
-<p><span class="math display">\[\phi(\alpha + \beta) = \phi(\alpha) +
-\phi(\beta) \quad \text{and} \quad \phi(a\alpha) =
-a\phi(\alpha)\]</span></p>
-<p>for all <span class="math inline">\(\alpha, \beta \in V\)</span> and
-all <span class="math inline">\(a \in F\)</span>.
-即两个同一个域上的向量空间上存在一个双射，且这个双射满足线性映射的定义，则称这两个向量空间同构。</p>
-<p>线性变换的特征向量 <span class="math inline">\(v\not=0\)</span>,
-和特征值<span class="math inline">\(\lambda\)</span>：</p>
-<p><span class="math display">\[
-L(v)=\lambda v \Leftrightarrow (L-\lambda I)(v)=0 \Leftrightarrow
-\text{Ker}(L-\lambda I) \neq \{0\}
-\]</span></p>
-<h4 id="向量空间的性质">向量空间的性质</h4>
+<p>目标：定义抽象导数</p>
+<h2
+id="实数域上多元向量值函数上的可微">实数域上多元向量值函数上的可微</h2>
+<p><span class="math inline">\(f:R^n \rightarrow R^m\)</span> 可微<span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(f(x+h) = f(x) + L(h) + r(h)\)</span></p>
+<p><span class="math inline">\(L\)</span> 是线性映射, <span
+class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(R^n\rightarrow R^m\)</span> 的函数，且 是 <span
+class="math inline">\(r(h)\in o(||h||)\)</span></p>
+<p><span class="math inline">\(lim_{||h||\rightarrow
+0}\frac{||r(h)||}{||h||} = 0\)</span>,分子为<span
+class="math inline">\(R^m\)</span>中的范数，分母为<span
+class="math inline">\(R^n\)</span>中的范数</p>
+<h2 id="定义抽象导数需要的结构">定义抽象导数需要的结构</h2>
+<p>设<span class="math inline">\(f:A\rightarrow B\)</span>,A,B
+目前是集合，为了定义导数，需要赋予 A,B 某些结构。</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>目标</th>
+<th>需要的结构</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 上有二元运算<span
+class="math inline">\(x+h\)</span>和<span class="math inline">\(f(x) +
+L(h) + r(h)\)</span></td>
+<td><span class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是交换群。</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L\)</span> 是线性映射。</td>
+<td><span class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是线性空间 over <span
+class="math inline">\(F\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(r(h)\)</span>需要能定义极限。</td>
+<td><span class="math inline">\(A\)</span> 和 <span
+class="math inline">\(B\)</span> 是拓扑空间</td>
+</tr>
+<tr class="even">
+<td>h 趋于 0 时，x+h 需要趋于 x</td>
+<td>加法在拓扑空间中连续</td>
+</tr>
+<tr class="odd">
+<td>怎么在没有度量的情况下定义无穷小和高阶无穷小？</td>
+<td>标量乘法在拓扑空间中连续</td>
+</tr>
+</tbody>
+</table>
+<h3 id="拓扑向量空间">拓扑向量空间</h3>
+<p>对于<span class="math inline">\(F\)</span>上的有拓扑<span
+class="math inline">\(\tau\)</span>的向量空间<span
+class="math inline">\((X,F,\tau)\)</span>，如果</p>
 <ol type="1">
-<li><span class="math inline">\(0v=0\)</span></li>
-<li><span class="math inline">\(a0=0\)</span></li>
-<li><span class="math inline">\((-a)v = -(av) = a(-v)\)</span></li>
-<li><span class="math inline">\(v_1,v_2,...,v_n \in
-V\)</span>线性无关<span class="math inline">\(\Leftrightarrow\)</span>
-不存在<span class="math inline">\(v_i\)</span>能被其余向量线性表出</li>
-<li><span class="math inline">\(v_1,v_2,...,v_n \in
-V\)</span>线性无关<span class="math inline">\(\Leftrightarrow\)</span>
-<span
-class="math inline">\(i\in[n],v_i\)</span>不能被其前面的向量线性表出</li>
-<li>若有限集<span class="math inline">\(S\)</span>生成了<span
-class="math inline">\(V\)</span>,则存在<span class="math inline">\(U\sub
-S\)</span>使得 U 是 V 的基。所一有限维向量空间有有限基</li>
-<li>若<span class="math inline">\(V\)</span>是一个有限维向量空间，<span
-class="math inline">\(S\sub V\)</span>为线性无关的有限集合，则 <span
-class="math inline">\(S\)</span>可以扩充为<span
-class="math inline">\(V\)</span>的基。且<span class="math inline">\(r
-&lt; n\)</span>,<span class="math inline">\(r=|S|\)</span> ,n 为 V
-的基的基数</li>
-<li>有限维向量空间的所有基的基数相同，因此把基的基数称为向量空间的维数，记作<span
-class="math inline">\(\dim(V)\)</span></li>
-<li>子空间的交仍然是子空间</li>
-<li>由集合 S 里的有限个元素的线性组合得到的集合是 V 的一个子空间</li>
-<li>在同一个域 F 上的向量空间的直和仍是 F 上的向量空间</li>
-<li>对于任意一个域<span class="math inline">\(F\)</span>,<span
-class="math inline">\(F^n\)</span>是<span
-class="math inline">\(F\)</span>上的向量空间，且<span
-class="math inline">\(\dim(F^n)=n\)</span></li>
-<li>B 是有限维向量空间的基 <span
-class="math inline">\(\Leftrightarrow\)</span> V 中的任意向量都可以被 B
-中的元素唯一线性表出</li>
-<li>任意有限维向量空间<span class="math inline">\(&lt;F,V&gt;\)</span>
-(在群意义上)都同构于 <span
-class="math inline">\(&lt;F,F^n&gt;\)</span></li>
-<li>线性映射 <span class="math inline">\(L:V\rightarrow V&#39;\)</span>
-的核是 V 的子空间，像<span class="math inline">\(L(V)\)</span>是<span
-class="math inline">\(V&#39;\)</span>的子空间。若<span
-class="math inline">\(V\)</span>是有限维的，则<span
-class="math inline">\(\dim(V)=\dim(\text{Ker}(L))+\dim(\text{Im}(L))\)</span>,其中<span
-class="math inline">\(\text{Im}(L)=L(V)\)</span></li>
-<li>线性映射的线性组合仍然是线性映射</li>
-<li>一个线性变换的不同特征值的特征向量是线性无关的</li>
-<li>若<span
-class="math inline">\(V\)</span>是有限维的，则一个线性变换<span
-class="math inline">\(\phi:V\rightarrow V\)</span>最多有<span
-class="math inline">\(n=\dim(V)\)</span>个不同的特征值</li>
+<li>向量空间的加法运算<span class="math inline">\(X+X:X\times
+X\rightarrow X\)</span>是连续的,即：对任意<span
+class="math inline">\(x+y\)</span>的任一邻域<span
+class="math inline">\(V_{x+y}\)</span>，存在<span
+class="math inline">\(x\)</span>的邻域<span
+class="math inline">\(V_x\)</span>和<span
+class="math inline">\(y\)</span>的邻域<span
+class="math inline">\(V_y\)</span>，使得<span
+class="math inline">\(V_x+V_y\)</span>包含于<span
+class="math inline">\(V_{x+y}\)</span>。</li>
+<li>向量空间的标量乘法运算<span class="math inline">\(aX:R\times
+X\rightarrow X\)</span>是连续的,即：对任意<span
+class="math inline">\(ax\)</span>的任一邻域<span
+class="math inline">\(V_{ax}\)</span>，存在<span
+class="math inline">\(a\)</span>的邻域<span
+class="math inline">\(V_a\)</span>和<span
+class="math inline">\(x\)</span>的邻域<span
+class="math inline">\(V_x\)</span>，使得<span
+class="math inline">\(V_aV_x\)</span>包含于<span
+class="math inline">\(V_{ax}\)</span>。</li>
 </ol>
-<h2 id="度量空间">度量空间</h2>
-<p>在集合<span class="math inline">\(X\)</span>上定义一个函数<span
-class="math inline">\(d:X \times X \rightarrow
-R+\)</span>,满足以下条件，则称<span
-class="math inline">\(d\)</span>为<span
-class="math inline">\(X\)</span>上的度量，<span
-class="math inline">\((X,d)\)</span>为度量空间。</p>
+<p>则称<span class="math inline">\((X,F,\tau)\)</span>为拓扑向量空间</p>
+<h3 id="可微">可微</h3>
+<p><span class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span> 是拓扑向量空间</p>
+<p><span class="math inline">\(f:X \rightarrow Y\)</span> 在 <span
+class="math inline">\(x\)</span> 处可微 <span
+class="math inline">\(\Leftrightarrow\)</span> 存在<span
+class="math inline">\(L和r\)</span>使得<span
+class="math inline">\(f(x+h) = f(x) + L(h) + r(h)\)</span></p>
+<p>其中，<span class="math inline">\(L\)</span> 是线性映射, <span
+class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(X\rightarrow Y\)</span> 的函数，且 是 <span
+class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(h\)</span> 的高阶无穷小</p>
+<h3
+id="如何在拓扑向量空间中定义无穷小和高阶无穷小">如何在拓扑向量空间中定义无穷小和高阶无穷小？</h3>
+<p>粗略地说</p>
+<p><span class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(h\)</span> 的高阶无穷小<span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(h\)</span> 趋于 0 时，<span
+class="math inline">\(r(h)\)</span> 更快地趋于 0</p>
+<p>在度量空间中可以通过距离定义无穷小，通过距离的比定义高阶无穷小。</p>
+<p>在拓扑空间中，因为可以通过邻域的定义收敛的概念，所以可以定义无穷小为收敛到
+0 的序列。</p>
+<p>但是怎么定义更快得收敛呢？更准确地说：怎么定义 <span
+class="math inline">\(r(h)\)</span> 比 <span
+class="math inline">\(h\)</span> 更快地趋于 0？可以通过 <span
+class="math inline">\(F\)</span> 上的高阶无穷小定义<span
+class="math inline">\((X,F,\tau)\)</span>上的高阶无穷小。</p>
+<p><span class="math inline">\(r(h)\)</span>是<span
+class="math inline">\(h\)</span>的高阶无穷小的定义如下：</p>
+<p><strong>对于 <span class="math inline">\(X\)</span> 里的 0 的任意邻域
+<span class="math inline">\(V_0\)</span>，<span
+class="math inline">\(r(tV_0) \subset o(t)V_0\)</span>，其中 <span
+class="math inline">\(t\)</span> 是 <span
+class="math inline">\(F\)</span> 里的元素,<span
+class="math inline">\(o(t)\)</span> 是 <span
+class="math inline">\(t\)</span> 的高阶无穷小。</strong></p>
+<p>即<span class="math inline">\(t\)</span>趋于 0
+时，通过集合的包含关系<span class="math inline">\(r(tV_0) \subset
+o(t)V_0\)</span>定义更快地趋于 0</p>
+<p>这里还有一个问题，怎么定义 <span class="math inline">\(o(t)\)</span>
+是 <span class="math inline">\(t\)</span> 的高阶无穷小？</p>
+<p>这时<span
+class="math inline">\(F\)</span>上又需要定义无穷小和高阶无穷小。<span
+class="math inline">\(F\)</span>上需要有拓扑。可预见地(事后诸葛地)，最终我们仍要需要使用<span
+class="math inline">\(\epsilon-\delta\)</span>语言来描述高阶无穷小，也就是说我们需要一个有拓扑结构的、有度量的数域。</p>
+<p>因此<span class="math inline">\(F\)</span>需要是<span
+class="math inline">\(\mathbb{C}\)</span>的子域，在复数域上可以通过模长来把<span
+class="math inline">\(F\)</span>转化到<span
+class="math inline">\(\mathbb{R}\)</span>上，然后在<span
+class="math inline">\(\mathbb{R}\)</span>上使用<span
+class="math inline">\(\epsilon-\delta\)</span>来描述无穷小和高阶无穷小。</p>
+<h2 id="拓扑向量空间与可微">拓扑向量空间与可微</h2>
+<h3 id="拓扑向量空间-1">拓扑向量空间</h3>
+<p>拓扑向量空间 <span class="math inline">\((X,F,\tau)\)</span></p>
 <ul>
-<li>正定性：<span class="math inline">\(d(x,y)=0 \Leftrightarrow
-x=y\)</span></li>
-<li>对称性：<span class="math inline">\(d(x,y)=d(y,x)\)</span></li>
-<li>三角不等式：<span class="math inline">\(d(x,y) \leq
-d(x,z)+d(z,y)\)</span></li>
+<li><span class="math inline">\((X,F)\)</span> 是向量空间</li>
+<li><span class="math inline">\((X,\tau)\)</span> 是拓扑空间</li>
+<li>加法 <span class="math inline">\(X+X:X\times X\rightarrow X\)</span>
+连续</li>
+<li>标量乘法 <span class="math inline">\(aX:F\times X\rightarrow
+X\)</span> 连续</li>
+<li><span class="math inline">\(F\)</span>是一个<span
+class="math inline">\(\mathbb{C}\)</span>的子域</li>
 </ul>
-<h2 id="赋范线性空间">赋范线性空间</h2>
-<p>实线性(向量)空间：实数域上的向量空间</p>
-<p>在实线性空间<span class="math inline">\(V\)</span>上定义一个函数<span
-class="math inline">\(||.||:V \rightarrow
-R+\)</span>,满足以下条件，则称<span
-class="math inline">\(||.||\)</span>为<span
-class="math inline">\(V\)</span>上的范数，<span
-class="math inline">\((V,||.||)\)</span>为赋范线性空间。</p>
-<ul>
-<li>正定性：<span class="math inline">\(||v||=0 \Leftrightarrow
-v=0\)</span></li>
-<li>齐次性：<span class="math inline">\(||av||=|a|||v||\)</span></li>
-<li>三角不等式：<span class="math inline">\(||v+w|| \leq
-||v||+||w||\)</span></li>
-</ul>
-<p>如果<span
-class="math inline">\(V\)</span>是赋范线性空间是完备的，则称<span
-class="math inline">\(V\)</span>是巴拿赫(Banach)空间。</p>
-<h4 id="赋范线性空间的性质">赋范线性空间的性质</h4>
+<h3 id="可微-1">可微</h3>
+<p><span class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span> 都是数域<span
+class="math inline">\(F\)</span>上的拓扑向量空间</p>
+<p><span class="math inline">\(f:X \rightarrow Y\)</span> 在 <span
+class="math inline">\(x\)</span> 处可微 <span
+class="math inline">\(\Leftrightarrow\)</span> 存在<span
+class="math inline">\(L和r\)</span>使得<span
+class="math inline">\(f(x+h) = f(x) + L(h) + r(h)\)</span></p>
+<p>其中，<span class="math inline">\(L\)</span> 是线性映射, <span
+class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(X\rightarrow Y\)</span> 的函数，且 是 <span
+class="math inline">\(r(h)\)</span> 是 <span
+class="math inline">\(h\)</span> 的高阶无穷小</p>
+<p><span class="math inline">\(f\)</span> 在 <span
+class="math inline">\(X\)</span> 上可微 <span
+class="math inline">\(\Leftrightarrow\)</span> 对任一<span
+class="math inline">\(x\in X\)</span>，存在<span
+class="math inline">\(L_x\)</span>和<span
+class="math inline">\(r_x\)</span>使得<span class="math inline">\(f(x+h)
+= f(x) + L_x(h) + r_x(h)\)</span></p>
+<h4 id="高阶无穷小">高阶无穷小</h4>
+<p>对于 <span class="math inline">\(X\)</span> 里的 0 的任意邻域 <span
+class="math inline">\(V_0\)</span>，<span class="math inline">\(r(tV_0)
+\subset o(t)V_0\)</span>，其中 <span class="math inline">\(t\)</span> 是
+<span class="math inline">\(F\)</span> 里的元素,<span
+class="math inline">\(o(t)\)</span> 是 <span
+class="math inline">\(t\)</span> 的高阶无穷小，即<span
+class="math inline">\(lim_{t\rightarrow 0}\frac{|r(t)|}{|t|} =
+0\)</span></p>
+<h2 id="性质">性质</h2>
 <ol type="1">
-<li>范数可以诱导度量<span
-class="math inline">\(d(v,w)=||v-w||\)</span></li>
-<li>赋范线性空间都是度量空间</li>
+<li><span class="math inline">\(L=D_xf\)</span> 是单射 <span
+class="math inline">\(\Leftrightarrow\)</span> <span
+class="math inline">\(rank(L) = dim(X)\)</span></li>
+<li>可微 <span class="math inline">\(\Longrightarrow\)</span> 连续</li>
 </ol>
-<h2 id="内积空间">内积空间</h2>
-<p>F 为<span class="math inline">\(\mathbb{R}\)</span>或<span
-class="math inline">\(\mathbb{C}\)</span>，<span
-class="math inline">\(V\)</span>是 F 上的向量空间，<span
-class="math inline">\(\langle .,. \rangle:V \times V \rightarrow
-\mathbb{F}\)</span>，满足以下条件，则称<span
-class="math inline">\(\langle .,. \rangle\)</span>为<span
-class="math inline">\(V\)</span>上的内积，<span
-class="math inline">\((V,\langle .,. \rangle)\)</span>为内积空间。</p>
-<ul>
-<li>共轭对称：<span class="math inline">\(\langle v,w \rangle =
-\overline{\langle w,v \rangle}\)</span></li>
-<li>正定性：<span class="math inline">\(\langle v,v \rangle \geq
-0\)</span> and <span class="math inline">\(\langle v,v \rangle = 0
-\Leftrightarrow v=0\)</span></li>
-<li>线性性：<span class="math inline">\(\langle av+bw,z \rangle =
-a\langle v,z \rangle + b\langle w,z \rangle\)</span></li>
-</ul>
-<p>内积空间空间<span class="math inline">\(V\)</span>的子空间<span
-class="math inline">\(U\)</span>的正交补<span
-class="math inline">\(U^{\perp}=\{v \in V | \forall u \in U, \langle v,u
-\rangle = 0\}\)</span>是<span
-class="math inline">\(V\)</span>的子空间</p>
-<p>正交投影：<span class="math inline">\(V\)</span>是内积空间，<span
-class="math inline">\(U\)</span>是<span
-class="math inline">\(V\)</span>的子空间，<span class="math inline">\(v
-\in V\)</span>，若<span class="math inline">\(v=u+w\)</span>，其中<span
-class="math inline">\(u \in U\)</span>，<span class="math inline">\(w
-\in U^{\perp}\)</span>，则称<span
-class="math inline">\(u\)</span>为<span
-class="math inline">\(v\)</span>在<span
-class="math inline">\(U\)</span>上的正交投影。</p>
-<h4 id="内积空间的性质">内积空间的性质</h4>
-<ol type="1">
-<li>正交投影若存在则唯一</li>
-<li>内积可以诱导范数<span class="math inline">\(||v||=\sqrt{\langle v,v
-\rangle}\)</span></li>
-<li>内积空间可以诱导赋范线性空间</li>
-<li>内积空间可以诱导度量空间</li>
-<li>有限维内积空间可以通过施密特正交化得到正交基。</li>
-<li>内积空间中，柯西-施瓦茨不等式：<span class="math inline">\(|\langle
-v,w \rangle| \leq ||v|| \cdot ||w||\)</span>,
-可通过正交分解来证明。</li>
-<li>正交 <span class="math inline">\(\Rightarrow\)</span> 线性无关</li>
-</ol>
-<p>在内积空间上，内积<span
-class="math inline">\(\xrightarrow{诱导}\)</span>范数<span
-class="math inline">\(\xrightarrow{诱导}\)</span>度量</p>
-<h2 id="hilbert-空间">Hilbert 空间</h2>
-<p>完备内积空间为 Hilbert 空间。</p>
-<h4 id="hilbert-空间的性质">Hilbert 空间的性质</h4>
-<ol type="1">
-<li>Hilbert 的投影存在。</li>
-</ol>
-<p><span class="math inline">\([K]=\{1,2,...,K\}\)</span> <span
-class="math inline">\(e_i \in \mathbb{R}^d,d&gt;K,i \in [K]\)</span>
-<span class="math inline">\(&lt;e_i,e_j&gt; = 0,i \not= j, e_i\)</span>
-Not necessarily an orthonormal basis <span
-class="math inline">\(\boldsymbol{S_E} =
-\text{span}\{(e_i-e_j)e_k^T|i,j,k \in [K]\}\)</span> <span
-class="math inline">\(W \in \mathbb{R}^{d \times d}\)</span>, <span
-class="math inline">\(U^{\perp}\)</span> is the orthogonal complement of
-<span class="math inline">\(U\)</span> please proof: for any <span
-class="math inline">\(j \in [K]\)</span>, there exists <span
-class="math inline">\(c_j \in \mathbb{R}\)</span> such that <span
-class="math inline">\(\boldsymbol{e}_i^\top
-\Pi_{\boldsymbol{S_E}^{\perp}}(\boldsymbol{W})\boldsymbol{e}_j =
-c_j\)</span> for <span class="math inline">\(i \in [K]\)</span>.</p>
 
                 
               </div>
@@ -552,8 +518,8 @@ c_j\)</span> for <span class="math inline">\(i \in [K]\)</span>.</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>向量空间</div>
-      <div>http://example.com/2024/11/19/vector-space/</div>
+      <div>拓扑向量空间</div>
+      <div>http://example.com/2024/11/25/拓扑向量空间/</div>
     </div>
     <div class="license-meta">
       
@@ -565,7 +531,7 @@ c_j\)</span> for <span class="math inline">\(i \in [K]\)</span>.</p>
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年11月19日</div>
+          <div>2024年11月25日</div>
         </div>
       
       
@@ -597,9 +563,9 @@ c_j\)</span> for <span class="math inline">\(i \in [K]\)</span>.</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/11/25/%E6%8B%93%E6%89%91%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4/" title="拓扑向量空间">
+                      <a href="/2024/11/25/%E6%B5%81%E5%BD%A2/" title="流形">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">拓扑向量空间</span>
+                        <span class="hidden-mobile">流形</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -607,8 +573,8 @@ c_j\)</span> for <span class="math inline">\(i \in [K]\)</span>.</p>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/11/18/text2image/" title="conditional sampling">
-                        <span class="hidden-mobile">conditional sampling</span>
+                      <a href="/2024/11/19/vector-space/" title="向量空间">
+                        <span class="hidden-mobile">向量空间</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
