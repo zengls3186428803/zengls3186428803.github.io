@@ -19,21 +19,21 @@
   <meta name="author" content="zengls">
   <meta name="keywords" content="">
   
-    <meta name="description" content="嵌入子流形 E 是一个 d 维的向量空间，M 是 E 的非空子集，如果下列条件之一成立，则成 M 为 E 的 n 维(光滑)嵌入子流形  \(n &#x3D; d\) and \(M\) is open in \(E\)，we also call this an open submanifold; or \(n &#x3D; d - k\) for some \(k \geq 1\) and, for each \(">
+    <meta name="description" content="拓扑流形 称拓扑空间\(M\)为 \(m\) 维（拓扑）流形(Manifold)，若\(M\)满足：  locally Euclidean（局部欧几里得）：对任意 \(x \in M\)，都有包含 \(x\) 的邻域 \(U_x\)，同胚于 \(\mathbb{R}^m\) 的某个开集 Hausdorff：\(M\) 是 Hausdorff 空间 Second countable：\(M\) 是第">
 <meta property="og:type" content="article">
-<meta property="og:title" content="流形">
-<meta property="og:url" content="http://example.com/2024/12/06/%E6%B5%81%E5%BD%A2/index.html">
+<meta property="og:title" content="拓扑流形">
+<meta property="og:url" content="http://example.com/2024/12/06/%E6%8B%93%E6%89%91%E6%B5%81%E5%BD%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="嵌入子流形 E 是一个 d 维的向量空间，M 是 E 的非空子集，如果下列条件之一成立，则成 M 为 E 的 n 维(光滑)嵌入子流形  \(n &#x3D; d\) and \(M\) is open in \(E\)，we also call this an open submanifold; or \(n &#x3D; d - k\) for some \(k \geq 1\) and, for each \(">
+<meta property="og:description" content="拓扑流形 称拓扑空间\(M\)为 \(m\) 维（拓扑）流形(Manifold)，若\(M\)满足：  locally Euclidean（局部欧几里得）：对任意 \(x \in M\)，都有包含 \(x\) 的邻域 \(U_x\)，同胚于 \(\mathbb{R}^m\) 的某个开集 Hausdorff：\(M\) 是 Hausdorff 空间 Second countable：\(M\) 是第">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-06T05:53:55.000Z">
-<meta property="article:modified_time" content="2024-12-06T12:30:11.828Z">
+<meta property="article:published_time" content="2024-12-06T15:16:38.000Z">
+<meta property="article:modified_time" content="2024-12-06T16:15:33.473Z">
 <meta property="article:author" content="zengls">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>流形 - Hexo</title>
+  <title>拓扑流形 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="流形"></span>
+            <span id="subtitle" data-typed-text="拓扑流形"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-12-06 13:53" pubdate>
-          2024年12月6日 下午
+        <time datetime="2024-12-06 23:16" pubdate>
+          2024年12月6日 晚上
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          365 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          11 分钟
+          4 分钟
         
       </span>
     
@@ -270,249 +270,82 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">流形</h1>
+            <h1 id="seo-header">拓扑流形</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="嵌入子流形">嵌入子流形</h2>
-<p>E 是一个 d 维的向量空间，M 是 E
-的非空子集，如果下列条件之一成立，则成 M 为 E 的 n
-维(光滑)嵌入子流形</p>
-<ol type="1">
-<li><span class="math inline">\(n = d\)</span> and <span
-class="math inline">\(M\)</span> is open in <span
-class="math inline">\(E\)</span>，we also call this an open submanifold;
-or</li>
-<li><span class="math inline">\(n = d - k\)</span> for some <span
-class="math inline">\(k \geq 1\)</span> and, for each <span
-class="math inline">\(x \in M\)</span>, there exists a neighborhood of
-<span class="math inline">\(x\)</span> in <span
-class="math inline">\(E\)</span> and a smooth function <span
-class="math inline">\(h : U \to \mathbb{R}^k\)</span> such that
-<ol type="a">
-<li>If <span class="math inline">\(y\)</span> is in <span
-class="math inline">\(U\)</span>, then <span class="math inline">\(h(y)
-= 0\)</span> if and only if <span class="math inline">\(y \in
-M\)</span>; and</li>
-<li><span class="math inline">\(\text{rank} Dh(x) = k\)</span>. Such a
-function <span class="math inline">\(h\)</span> is called a local
-defining function for <span class="math inline">\(M\)</span> at <span
-class="math inline">\(x\)</span>. If <span
-class="math inline">\(M\)</span> is a linear (sub)space, we also call it
-a linear manifold.</li>
-</ol></li>
-</ol>
-<p>以下内容是对其中一些名词的解释</p>
-<h4 id="群">群</h4>
-<p>称<span
-class="math inline">\((G,\cdot)\)</span>为一个群(Group)，若其满足以下性质：</p>
-<ul>
-<li>封闭性: <span class="math inline">\(\forall a,b \in G, a \cdot b \in
-G\)</span></li>
-<li>结合律: <span class="math inline">\(\forall a,b,c \in G, (a \cdot b)
-\cdot c = a \cdot (b \cdot c)\)</span></li>
-<li>单位元: <span class="math inline">\(\exists e \in G, \forall a \in
-G, e \cdot a = a \cdot e = a\)</span></li>
-<li>逆元: <span class="math inline">\(\forall a \in G, \exists b \in G,
-a \cdot b = b \cdot a = e\)</span></li>
-</ul>
-<p>交换群：有结合律的群</p>
-<h4 id="群同态映射homomorphism">(群)同态(映射)(Homomorphism):</h4>
-<p>称<span class="math inline">\(\phi: G \to
-G&#39;\)</span>为群同态(映射)(Homomorphism)，若其满足以下性质：</p>
-<ul>
-<li><span class="math inline">\(\phi(ab)=\phi(a)\phi(b)\)</span></li>
-</ul>
-<h4 id="同态映射的核kernel">(同态映射)的核(Kernel)</h4>
-<ul>
-<li><span class="math inline">\(\text{Ker}(\phi) = \{a \in G | \phi(a) =
-e&#39;\}\)</span></li>
-</ul>
-<h4 id="域">域</h4>
-<p>称<span
-class="math inline">\((F,+,\cdot)\)</span>为一个域(Field)，若其满足以下性质：</p>
-<ul>
-<li><span class="math inline">\((F,+)\)</span>构成一个交换群</li>
-<li><span class="math inline">\((F,\cdot)\)</span>封闭: <span
-class="math inline">\(\forall a,b \in F, a\cdot b \in F\)</span></li>
-<li><span class="math inline">\((F,\cdot)\)</span>有单位元: <span
-class="math inline">\(\exists 1 \in F, \forall a \in F, a\cdot 1=1\cdot
-a=a\)</span></li>
-<li><span class="math inline">\((F,\cdot)\)</span>有乘法逆元: <span
-class="math inline">\(\forall a \in F \wedge a \neq 0, \exists b \in F,
-a\cdot b=b\cdot a=1\)</span></li>
-<li><span class="math inline">\((F,\cdot)\)</span>可交换: <span
-class="math inline">\(\forall a,b \in F, a\cdot b=b\cdot a\)</span></li>
-</ul>
-<h4 id="向量空间">向量空间</h4>
-<p><span class="math inline">\(F\)</span> 是一个域，<span
-class="math inline">\(V\)</span> 是一个交换群 定义数乘运算</p>
-<p><span class="math display">\[
-\sigma: F \times V \rightarrow V
-\]</span></p>
-<p>将<span class="math inline">\(a \sigma v\)</span>记作<span
-class="math inline">\(av\)</span></p>
-<p>如果<span class="math inline">\(\sigma\)</span>满足以下条件，则称
-<span class="math inline">\(V\)</span> 是 <span
-class="math inline">\(F\)</span> 上的向量空间(Vector Space),
-或称线性空间(Linear Space)。</p>
-<ul>
-<li><span class="math inline">\((a+b)v = av + bv\)</span></li>
-<li><span class="math inline">\(a(bv) = (ab)v\)</span></li>
-<li><span class="math inline">\(a(u+v) = au + av\)</span></li>
-<li><span class="math inline">\(1v = v\)</span></li>
-</ul>
-<p>若对于<span class="math inline">\(S=\{v_i|i \in
-I\}\)</span>有：从<span class="math inline">\(S\)</span>中取 k
-个不同的向量，如果这 k 个向量的线性组合为 0,则这 k 个向量的系数全为
-0，则称<span class="math inline">\(S\)</span>线性无关。</p>
-<p>如果<span class="math inline">\(V\)</span>中任一向量都可以被<span
-class="math inline">\(S\sub V\)</span>中的有限个向量线性表出，则称<span
-class="math inline">\(V\)</span>有<span
-class="math inline">\(S\)</span>生成。如果<span
-class="math inline">\(S\)</span>线性无关，则称<span
-class="math inline">\(S\)</span>为<span
-class="math inline">\(V\)</span>的基。如果<span
-class="math inline">\(S\)</span>是一个有限集，则称<span
-class="math inline">\(V\)</span>是有限维向量空间。</p>
-<p>对于<span class="math inline">\(U\sub V\)</span>,如果<span
-class="math inline">\(\sigma\)</span>限制在<span
-class="math inline">\(U\)</span>上后，<span
-class="math inline">\(U\)</span>仍然满足向量空间的定义，即<span
-class="math inline">\(\sigma:&lt;F,U&gt; \rightarrow
-U\)</span>,则称<span class="math inline">\(U\)</span>是<span
-class="math inline">\(V\)</span>的子空间。</p>
-<p>对于同一个域 F 上的向量空间<span
-class="math inline">\(V\)</span>和<span
-class="math inline">\(V&#39;\)</span>,若<span class="math inline">\(L:V
-\rightarrow V&#39;\)</span>，满足<span
-class="math inline">\(L(av+bw)=aL(v)+bL(w)\)</span>，则称<span
-class="math inline">\(L\)</span>是线性映射。若<span
-class="math inline">\(V=V&#39;\)</span>，则称<span
-class="math inline">\(L\)</span>是<span
-class="math inline">\(V\)</span>上的线性变换。</p>
-<p>Let <span class="math inline">\(V\)</span> and <span
-class="math inline">\(V&#39;\)</span> be vector spaces over the same
-field <span class="math inline">\(F\)</span>. A map <span
-class="math inline">\(\phi: V \to V&#39;\)</span> is an <span
-class="math inline">\(\textbf{isomorphism}\)</span> if <span
-class="math inline">\(\phi\)</span> is a one-to-one map, <span
-class="math inline">\(\phi[V] = V&#39;\)</span>, and furthermore</p>
-<p><span class="math display">\[\phi(\alpha + \beta) = \phi(\alpha) +
-\phi(\beta) \quad \text{and} \quad \phi(a\alpha) =
-a\phi(\alpha)\]</span></p>
-<p>for all <span class="math inline">\(\alpha, \beta \in V\)</span> and
-all <span class="math inline">\(a \in F\)</span>.
-即两个同一个域上的向量空间上存在一个双射，且这个双射满足线性映射的定义，则称这两个向量空间同构。</p>
-<p>线性变换的特征向量 <span class="math inline">\(v\not=0\)</span>,
-和特征值<span class="math inline">\(\lambda\)</span>：</p>
-<p><span class="math display">\[
-L(v)=\lambda v \Leftrightarrow (L-\lambda I)(v)=0 \Leftrightarrow
-\text{Ker}(L-\lambda I) \neq \{0\}
-\]</span></p>
-<p>也就是说<span class="math inline">\(L-\lambda
-I\)</span>不是单射。</p>
-<p>注意到线性映射也是群同态，所以线性映射也有核。</p>
-<h4 id="内积空间">内积空间</h4>
-<p>F 为<span class="math inline">\(\mathbb{R}\)</span>或<span
-class="math inline">\(\mathbb{C}\)</span>，<span
-class="math inline">\(V\)</span>是 F 上的向量空间，<span
-class="math inline">\(\langle .,. \rangle:V \times V \rightarrow
-\mathbb{F}\)</span>，满足以下条件，则称<span
-class="math inline">\(\langle .,. \rangle\)</span>为<span
-class="math inline">\(V\)</span>上的内积，<span
-class="math inline">\((V,\langle .,. \rangle)\)</span>为内积空间。</p>
-<ul>
-<li>共轭对称(Conjugate Symmetry)：<span class="math inline">\(\langle
-v,w \rangle = \overline{\langle w,v \rangle}\)</span></li>
-<li>正定性(Positive Definiteness)：<span class="math inline">\(\langle
-v,v \rangle \geq 0\)</span> and <span class="math inline">\(\langle v,v
-\rangle = 0 \Leftrightarrow v=0\)</span></li>
-<li>线性性(Linearity)：<span class="math inline">\(\langle av+bw,z
-\rangle = a\langle v,z \rangle + b\langle w,z \rangle\)</span></li>
-</ul>
-<p>内积<span class="math inline">\(\rightarrow\)</span>赋范<span
-class="math inline">\(\rightarrow\)</span>度量</p>
-<h4 id="拓扑空间">拓扑空间</h4>
-<p>称<span
-class="math inline">\((X,\tau)\)</span>为一个拓扑空间(Topological
-Space)，若其满足以下性质，其中<span class="math inline">\(X\)</span>
-是一个集合，<span class="math inline">\(\tau\)</span> 是 <span
-class="math inline">\(X\)</span> 的子集族：</p>
-<ol type="1">
-<li><span class="math inline">\(\emptyset, X \in \tau\)</span></li>
-<li><span class="math inline">\(\tau\)</span>中元素任意并仍在<span
-class="math inline">\(\tau\)</span>中</li>
-<li><span class="math inline">\(\tau\)</span>中元素有限交仍在<span
-class="math inline">\(\tau\)</span>中</li>
-</ol>
-<p>邻域（Neighborhood）：<span class="math inline">\(U\)</span>是<span
-class="math inline">\(x\)</span>的邻域，若存在<span
-class="math inline">\(V \in \tau\)</span>，使得<span
-class="math inline">\(x \in V \subseteq U\)</span></p>
-<p>点集的收敛（Convergence）：<span
-class="math inline">\(x_n\)</span>收敛于<span
-class="math inline">\(x\)</span>，若对<span
-class="math inline">\(x\)</span>的任意邻域<span
-class="math inline">\(U\)</span>，存在<span
-class="math inline">\(N\)</span>，使得当<span
-class="math inline">\(n&gt;N\)</span>时，<span class="math inline">\(x_n
-\in U\)</span></p>
-<p>连续函数（Continuous Function）：<span class="math inline">\(f:X \to
-Y\)</span>，若<span class="math inline">\(f\)</span>的逆像<span
-class="math inline">\(f^{-1}(V)\)</span>是<span
-class="math inline">\(X\)</span>的开集，则称<span
-class="math inline">\(f\)</span>是连续的。</p>
-<p>同胚（Homeomorphism）：<span class="math inline">\(f:X \to
-Y\)</span>，若<span class="math inline">\(f\)</span>是双射，且<span
-class="math inline">\(f\)</span>和<span
-class="math inline">\(f^{-1}\)</span>都是连续的，则称<span
-class="math inline">\(f\)</span>是同胚。</p>
-<p>Hausdorff 空间：若对任意<span class="math inline">\(x,y \in
-X\)</span>，<span class="math inline">\(x \not= y\)</span>，存在<span
-class="math inline">\(U,V \in \tau\)</span>，使得<span
-class="math inline">\(x \in U\)</span>，<span class="math inline">\(y
-\in V\)</span>，且<span class="math inline">\(U \cap V =
-\emptyset\)</span>。</p>
-<h4 id="拓扑流形">拓扑流形</h4>
+                <h2 id="拓扑流形">拓扑流形</h2>
 <p>称拓扑空间<span class="math inline">\(M\)</span>为 <span
 class="math inline">\(m\)</span> 维（拓扑）流形(Manifold)，若<span
 class="math inline">\(M\)</span>满足：</p>
 <ul>
-<li><span class="math inline">\(M\)</span> 是 Hausdorff 空间</li>
-<li>对任意 <span class="math inline">\(x \in M\)</span>，都有包含 <span
+<li>locally Euclidean（局部欧几里得）：对任意 <span
+class="math inline">\(x \in M\)</span>，都有包含 <span
 class="math inline">\(x\)</span> 的邻域 <span
 class="math inline">\(U_x\)</span>，同胚于 <span
 class="math inline">\(\mathbb{R}^m\)</span> 的某个开集</li>
+<li>Hausdorff：<span class="math inline">\(M\)</span> 是 Hausdorff
+空间</li>
+<li>Second countable：<span class="math inline">\(M\)</span>
+是第二可数空间</li>
 </ul>
-<p>称<span class="math inline">\((U,\phi)\)</span>为坐标邻域(Coordinate
-Neighborhood),若<span class="math inline">\(U\)</span>是<span
+<p>称<span class="math inline">\((U,\phi)\)</span>为 卡(chart)
+或坐标邻域(Coordinate Neighborhood),若<span
+class="math inline">\(U\)</span>是<span
 class="math inline">\(M\)</span>的开集，<span
 class="math inline">\(U&#39;\)</span>是<span
 class="math inline">\(\mathbb{R}^m\)</span>的开集，<span
 class="math inline">\(\phi\)</span>是<span
 class="math inline">\(U\)</span>到<span
 class="math inline">\(U&#39;\)</span>的同胚映射。</p>
+<p>称两个 chart <span
+class="math inline">\((U_{a},\phi_{a})\)</span>和<span
+class="math inline">\((U_{b},\phi_{b})\)</span>是<span
+class="math inline">\(\mathcal{C}^r\)</span>兼容的(compatible,相容的)，若<span
+class="math inline">\(U_a \cap U_b \not= \emptyset \longrightarrow
+\phi_{a}\circ \phi_{b}^{-1}:\phi_{b}(U_a \cap U_b) \to \phi_{a}(U_a \cap
+U_b) \in \mathcal{C}^r\)</span></p>
 <p>称<span class="math inline">\(\mathcal{A}=\{(U_{i},\phi_{i})\mid i
 \in I\}\)</span>为<span
 class="math inline">\(M\)</span>的图册(Atlas)，其中<span
 class="math inline">\((U_{i},\phi_{i})\)</span>为<span
 class="math inline">\(m\)</span>维坐标邻域，若<span
-class="math inline">\(M \subseteq \bigcup \mathcal{A}\)</span></p>
-<h4 id="微分流形">微分流形</h4>
-<p>称<span class="math inline">\(M\)</span>为<span
-class="math inline">\(m\)</span>维微分流形(Differentiable
+class="math inline">\(M \subseteq \bigcup \mathcal{A}\)</span>，且<span
+class="math inline">\(\mathcal{A}\)</span>中 charts
+两两相容。若两两<span
+class="math inline">\(\mathcal{C}^r\)</span>兼容，则称<span
+class="math inline">\(\mathcal{A}\)</span>为<span
+class="math inline">\(C^r\)</span>图册。</p>
+<p>至此可以使用 atlas 来描述拓扑流形。 称拓扑空间<span
+class="math inline">\(M\)</span>为 <span
+class="math inline">\(m\)</span> 维（拓扑）流形(Manifold)，若<span
+class="math inline">\(M\)</span>满足：</p>
+<ul>
+<li><span class="math inline">\(M\)</span> 是 Hausdorff 和 second
+countable 的拓扑空间</li>
+<li><span class="math inline">\(M\)</span> 上存在<span
+class="math inline">\(C^0\)</span>图册 <span
+class="math inline">\(\mathcal{A}\)</span></li>
+</ul>
+<h4 id="拓扑流形的性质">拓扑流形的性质</h4>
+<ol type="1">
+<li>如果两个 chart <span class="math inline">\((V,\psi)\)</span> 和
+<span class="math inline">\((W,\sigma)\)</span> 都与某个 atlas <span
+class="math inline">\(\{(U_\alpha, \phi_\alpha)\}\)</span>
+相容，那么它们彼此也相容。</li>
+<li>存在一个包含 atlas <span
+class="math inline">\(\mathcal{A}\)</span>的极大 atlas<span
+class="math inline">\(\mathcal{A}&#39;\)</span></li>
+</ol>
+<h2 id="微分流形">微分流形</h2>
+<p>称<span class="math inline">\(M\)</span>为微分流形(Differentiable
 Manifold)，若<span class="math inline">\(M\)</span>满足：</p>
 <ul>
-<li><span class="math inline">\(M\)</span>为拓扑流形</li>
-<li><span class="math inline">\(M\)</span>上存在图册<span
-class="math inline">\(\mathcal{A}=\{(U_{i},\phi_{i})\mid i \in
-I\}\)</span></li>
-<li>对于任意<span class="math inline">\(i,j \in I\)</span>,若<span
-class="math inline">\(U_{i}\cap U_{j} \not= \emptyset\)</span>，则<span
-class="math inline">\(\phi_{i}\circ \phi_{j}^{-1}:\phi_{j}(U_{i}\cap
-U_{j}) \to \phi_{i}(U_{i}\cap U_{j}) \in \mathcal{C}^{r}\)</span></li>
+<li><span class="math inline">\(M\)</span> 是 Hausdorff 和 second
+countable 的拓扑流形</li>
+<li><span class="math inline">\(M\)</span> 上存在 <span
+class="math inline">\(C^r\)</span> 图册</li>
 </ul>
 <p>若<span class="math inline">\(r=\infty\)</span>，则称<span
 class="math inline">\(M\)</span>为光滑流形(Smooth Manifold)。</p>
@@ -524,27 +357,6 @@ class="math inline">\(M\)</span>为光滑流形(Smooth Manifold)。</p>
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%B0%E5%AD%A6/" class="category-chain-item">数学</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
   
 </div>
 
@@ -554,8 +366,8 @@ class="math inline">\(M\)</span>为光滑流形(Smooth Manifold)。</p>
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>流形</div>
-      <div>http://example.com/2024/12/06/流形/</div>
+      <div>拓扑流形</div>
+      <div>http://example.com/2024/12/06/拓扑流形/</div>
     </div>
     <div class="license-meta">
       
@@ -599,18 +411,12 @@ class="math inline">\(M\)</span>为光滑流形(Smooth Manifold)。</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/12/06/%E6%8B%93%E6%89%91%E6%B5%81%E5%BD%A2/" title="拓扑流形">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">拓扑流形</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/12/02/%E9%9B%86%E7%B1%BB/" title="集类">
-                        <span class="hidden-mobile">集类</span>
+                      <a href="/2024/12/06/%E6%B5%81%E5%BD%A2/" title="流形">
+                        <span class="hidden-mobile">流形</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>拓扑流形</title>
+    <link href="/2024/12/06/%E6%8B%93%E6%89%91%E6%B5%81%E5%BD%A2/"/>
+    <url>/2024/12/06/%E6%8B%93%E6%89%91%E6%B5%81%E5%BD%A2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="拓扑流形">拓扑流形</h2><p>称拓扑空间<span class="math inline">\(M\)</span>为 <spanclass="math inline">\(m\)</span> 维（拓扑）流形(Manifold)，若<spanclass="math inline">\(M\)</span>满足：</p><ul><li>locally Euclidean（局部欧几里得）：对任意 <spanclass="math inline">\(x \in M\)</span>，都有包含 <spanclass="math inline">\(x\)</span> 的邻域 <spanclass="math inline">\(U_x\)</span>，同胚于 <spanclass="math inline">\(\mathbb{R}^m\)</span> 的某个开集</li><li>Hausdorff：<span class="math inline">\(M\)</span> 是 Hausdorff空间</li><li>Second countable：<span class="math inline">\(M\)</span>是第二可数空间</li></ul><p>称<span class="math inline">\((U,\phi)\)</span>为 卡(chart)或坐标邻域(Coordinate Neighborhood),若<spanclass="math inline">\(U\)</span>是<spanclass="math inline">\(M\)</span>的开集，<spanclass="math inline">\(U&#39;\)</span>是<spanclass="math inline">\(\mathbb{R}^m\)</span>的开集，<spanclass="math inline">\(\phi\)</span>是<spanclass="math inline">\(U\)</span>到<spanclass="math inline">\(U&#39;\)</span>的同胚映射。</p><p>称两个 chart <spanclass="math inline">\((U_{a},\phi_{a})\)</span>和<spanclass="math inline">\((U_{b},\phi_{b})\)</span>是<spanclass="math inline">\(\mathcal{C}^r\)</span>兼容的(compatible,相容的)，若<spanclass="math inline">\(U_a \cap U_b \not= \emptyset \longrightarrow\phi_{a}\circ \phi_{b}^{-1}:\phi_{b}(U_a \cap U_b) \to \phi_{a}(U_a \capU_b) \in \mathcal{C}^r\)</span></p><p>称<span class="math inline">\(\mathcal{A}=\{(U_{i},\phi_{i})\mid i\in I\}\)</span>为<spanclass="math inline">\(M\)</span>的图册(Atlas)，其中<spanclass="math inline">\((U_{i},\phi_{i})\)</span>为<spanclass="math inline">\(m\)</span>维坐标邻域，若<spanclass="math inline">\(M \subseteq \bigcup \mathcal{A}\)</span>，且<spanclass="math inline">\(\mathcal{A}\)</span>中 charts两两相容。若两两<spanclass="math inline">\(\mathcal{C}^r\)</span>兼容，则称<spanclass="math inline">\(\mathcal{A}\)</span>为<spanclass="math inline">\(C^r\)</span>图册。</p><p>至此可以使用 atlas 来描述拓扑流形。 称拓扑空间<spanclass="math inline">\(M\)</span>为 <spanclass="math inline">\(m\)</span> 维（拓扑）流形(Manifold)，若<spanclass="math inline">\(M\)</span>满足：</p><ul><li><span class="math inline">\(M\)</span> 是 Hausdorff 和 secondcountable 的拓扑空间</li><li><span class="math inline">\(M\)</span> 上存在<spanclass="math inline">\(C^0\)</span>图册 <spanclass="math inline">\(\mathcal{A}\)</span></li></ul><h4 id="拓扑流形的性质">拓扑流形的性质</h4><ol type="1"><li>如果两个 chart <span class="math inline">\((V,\psi)\)</span> 和<span class="math inline">\((W,\sigma)\)</span> 都与某个 atlas <spanclass="math inline">\(\{(U_\alpha, \phi_\alpha)\}\)</span>相容，那么它们彼此也相容。</li><li>存在一个包含 atlas <spanclass="math inline">\(\mathcal{A}\)</span>的极大 atlas<spanclass="math inline">\(\mathcal{A}&#39;\)</span></li></ol><h2 id="微分流形">微分流形</h2><p>称<span class="math inline">\(M\)</span>为微分流形(DifferentiableManifold)，若<span class="math inline">\(M\)</span>满足：</p><ul><li><span class="math inline">\(M\)</span> 是 Hausdorff 和 secondcountable 的拓扑流形</li><li><span class="math inline">\(M\)</span> 上存在 <spanclass="math inline">\(C^r\)</span> 图册</li></ul><p>若<span class="math inline">\(r=\infty\)</span>，则称<spanclass="math inline">\(M\)</span>为光滑流形(Smooth Manifold)。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>流形</title>
     <link href="/2024/12/06/%E6%B5%81%E5%BD%A2/"/>
     <url>/2024/12/06/%E6%B5%81%E5%BD%A2/</url>
