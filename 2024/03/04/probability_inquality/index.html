@@ -27,7 +27,7 @@
 <meta property="og:description" content="从维基百科和机器学习的书上整理、复制、粘贴了几个常见的集中不等式  Markov&#39;s inequality  statement intuition proof corollaries  Chebyshev&#39;s inequality  statement proof  Hoeffding&#39;s inequality  Hoeffding’s lemma  statement Proof  proof">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-04T11:45:26.000Z">
-<meta property="article:modified_time" content="2024-10-29T06:20:20.247Z">
+<meta property="article:modified_time" content="2024-12-11T14:14:44.439Z">
 <meta property="article:author" content="zengls">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -301,7 +301,7 @@
 <li><a href="#mcdiarmids-inequality">McDiarmid’s inequality</a>
 <ul>
 <li><a href="#statement-3">statement</a></li>
-<li><a href="#definition--martingale-difference">Definition Martingale
+<li><a href="#definition-martingale-difference">Definition Martingale
 Difference</a></li>
 <li><a href="#lemma">Lemma</a></li>
 <li><a href="#theorem-azumas-inequality">Theorem Azuma's inequality</a>
@@ -318,7 +318,8 @@ variable and <span class="math inline">\(a&gt;0\)</span>, then the
 probability that <span class="math inline">\(X\)</span> is at least
 <span class="math inline">\(a\)</span> is at most the expectation of
 <span class="math inline">\(X\)</span> divided by <span
-class="math inline">\(a\)</span> <span class="math display">\[
+class="math inline">\(a\)</span></p>
+<p><span class="math display">\[
 \mathrm{P}(X \geq a) \leq \frac{\mathrm{E}(X)}{a}
 \]</span></p>
 <h2 id="intuition">intuition</h2>
@@ -341,9 +342,11 @@ have <span class="math inline">\(I_{(X \geq a)}=1\)</span> if the event
 <span class="math inline">\(X \geq a\)</span> occurs, and <span
 class="math inline">\(I_{(X \geq a)}=0\)</span> if <span
 class="math inline">\(X&lt;a\)</span>. Then, given <span
-class="math inline">\(a&gt;0\)</span>, <span class="math display">\[
+class="math inline">\(a&gt;0\)</span>,</p>
+<p><span class="math display">\[
 a I_{(X \geq a)} \leq X
-\]</span> which is clear if we consider the two possible values of <span
+\]</span></p>
+<p>which is clear if we consider the two possible values of <span
 class="math inline">\(X \geq a\)</span>. If <span
 class="math inline">\(X&lt;a\)</span>, then <span
 class="math inline">\(I_{(X \geq a)}=0\)</span>, and so <span
@@ -353,21 +356,26 @@ class="math inline">\(I_{X \geq a}=1\)</span> and so <span
 class="math inline">\(a I_{X \geq a}=a \leq X\)</span>. Since <span
 class="math inline">\(\mathrm{E}\)</span> is a monotonically increasing
 function, taking expectation of both sides of an inequality cannot
-reverse it. Therefore, <span class="math display">\[
+reverse it. Therefore,</p>
+<p><span class="math display">\[
 \mathrm{E}\left(a I_{(X \geq a)}\right) \leq \mathrm{E}(X) .
 \]</span></p>
 <p>Now, using linearity of expectations, the left side of this
-inequality is the same as <span class="math display">\[
+inequality is the same as</p>
+<p><span class="math display">\[
 a \mathrm{E}\left(I_{(X \geq a)}\right)=a(1 \cdot \mathrm{P}(X \geq a)+0
 \cdot \mathrm{P}(X&lt;a))=a \mathrm{P}(X \geq a) .
 \]</span></p>
-<p>Thus we have <span class="math display">\[
+<p>Thus we have</p>
+<p><span class="math display">\[
 a \mathrm{P}(X \geq a) \leq \mathrm{E}(X)
-\]</span> and since <span class="math inline">\(a&gt;0\)</span>, we can
-divide both sides by <span class="math inline">\(a\)</span>.</p>
+\]</span></p>
+<p>and since <span class="math inline">\(a&gt;0\)</span>, we can divide
+both sides by <span class="math inline">\(a\)</span>.</p>
 <h2 id="corollaries">corollaries</h2>
 <p><span class="math inline">\(\phi\)</span> is a nondecreasing
-nonnegative fundction <span class="math display">\[
+nonnegative fundction</p>
+<p><span class="math display">\[
 \mathrm{P}(|X| \geq a)=\mathrm{P}(\varphi(|X|) \geq \varphi(a))
 \stackrel{\mathrm{MI}}{\leq} \frac{\mathrm{E}(\varphi(|X|))}{\varphi(a)}
 \]</span></p>
@@ -378,15 +386,18 @@ nonnegative fundction <span class="math display">\[
 \frac{\operatorname{Var}(X)}{a^2},
 \]</span></p>
 <h2 id="proof-1">proof</h2>
-<p>for any <span class="math inline">\(a&gt;0\)</span> <span
-class="math display">\[
+<p>for any <span class="math inline">\(a&gt;0\)</span></p>
+<p><span class="math display">\[
 \operatorname{Var}(X)=\mathrm{E}\left[(X-\mathrm{E}(X))^2\right] .
-\]</span> because Markov's inequality <span class="math display">\[
+\]</span></p>
+<p>because Markov's inequality</p>
+<p><span class="math display">\[
 \mathrm{P}\left((X-\mathrm{E}(X))^2 \geq a^2\right) \leq
 \frac{\operatorname{Var}(X)}{a^2} .
 \]</span></p>
 <p>This argument can be summarized (where "MI" indicates use of Markov's
-inequality): <span class="math display">\[
+inequality):</p>
+<p><span class="math display">\[
 \mathrm{P}(|X-\mathrm{E}(X)| \geq a)=\mathrm{P}\left((X-\mathrm{E}(X))^2
 \geq a^2\right) \stackrel{\mathrm{MI}}{\leq}
 \frac{\mathrm{E}\left((X-\mathrm{E}(X))^2\right)}{a^2}=\frac{\operatorname{Var}(X)}{a^2}
@@ -399,8 +410,8 @@ class="math inline">\(X_i\)</span> taking values in <span
 class="math inline">\(\left[a_i, b_i\right]\)</span> for all <span
 class="math inline">\(i \in[1, m]\)</span>. Then for any <span
 class="math inline">\(\epsilon&gt;0\)</span>, the following inequalities
-hold for <span class="math inline">\(S_m=\sum_{i=1}^m X_i\)</span> :
-<span class="math display">\[
+hold for <span class="math inline">\(S_m=\sum_{i=1}^m X_i\)</span> :</p>
+<p><span class="math display">\[
 \begin{gathered}
 \operatorname{Pr}\left[S_m-\mathrm{E}\left[S_m\right] \geq
 \epsilon\right] \leq e^{-2 \epsilon^2 /
@@ -416,27 +427,33 @@ hold for <span class="math inline">\(S_m=\sum_{i=1}^m X_i\)</span> :
 <span class="math inline">\(E[X]=0\)</span> and <span
 class="math inline">\(a \leq X \leq b\)</span> with <span
 class="math inline">\(b&gt;a\)</span>. Then, for any <span
-class="math inline">\(t&gt;0\)</span>, the following inequality holds:
-<span class="math display">\[
+class="math inline">\(t&gt;0\)</span>, the following inequality
+holds:</p>
+<p><span class="math display">\[
 \mathrm{E}\left[e^{t X}\right] \leq e^{\frac{t^2(b-a)^2}{8}} .
 \]</span></p>
 <h3 id="proof-2">Proof</h3>
 <p>By the convexity of <span class="math inline">\(x \mapsto
 e^x\)</span>, for all <span class="math inline">\(x \in[a, b]\)</span>,
-the following holds: <span class="math display">\[
+the following holds:</p>
+<p><span class="math display">\[
 e^{t x} \leq \frac{b-x}{b-a} e^{t a}+\frac{x-a}{b-a} e^{t b} .
-\]</span> Thus, using <span
-class="math inline">\(\mathrm{E}[X]=0\)</span>, <span
-class="math display">\[
+\]</span></p>
+<p>Thus, using <span class="math inline">\(\mathrm{E}[X]=0\)</span>,</p>
+<p><span class="math display">\[
 \mathrm{E}\left[e^{t X}\right] \leq \mathrm{E}\left[\frac{b-X}{b-a} e^{t
 a}+\frac{X-a}{b-a} e^{t b}\right]=\frac{b}{b-a} e^{t a}+\frac{-a}{b-a}
 e^{t b}=e^{\phi(t)},
-\]</span> where, <span class="math display">\[
+\]</span></p>
+<p>where,</p>
+<p><span class="math display">\[
 \phi(t)=\log \left(\frac{b}{b-a} e^{t a}+\frac{-a}{b-a} e^{t b}\right)=t
 a+\log \left(\frac{b}{b-a}+\frac{-a}{b-a} e^{t(b-a)}\right) .
-\]</span> For any <span class="math inline">\(t&gt;0\)</span>, the first
-and second derivative of <span class="math inline">\(\phi\)</span> are
-given below: <span class="math display">\[
+\]</span></p>
+<p>For any <span class="math inline">\(t&gt;0\)</span>, the first and
+second derivative of <span class="math inline">\(\phi\)</span> are given
+below:</p>
+<p><span class="math display">\[
 \begin{aligned}
 \phi^{\prime}(t) &amp; =a-\frac{a
 e^{t(b-a)}}{\frac{b}{b-a}-\frac{a}{b-a}
@@ -449,8 +466,9 @@ e^{-t(b-a)}+\alpha\right]^2} \\
 \frac{(1-\alpha) e^{-t(b-a)}}{\left[(1-\alpha)
 e^{-t(b-a)}+\alpha\right]}(b-a)^2 .
 \end{aligned}
-\]</span> where <span class="math inline">\(\alpha\)</span> denotes
-<span class="math inline">\(\frac{-a}{b-a}\)</span>. Note that <span
+\]</span></p>
+<p>where <span class="math inline">\(\alpha\)</span> denotes <span
+class="math inline">\(\frac{-a}{b-a}\)</span>. Note that <span
 class="math inline">\(\phi(0)=\phi^{\prime}(0)=0\)</span> and that <span
 class="math inline">\(\phi^{\prime \prime}(t)=u(1-u)(b-a)^2\)</span>
 where <span class="math inline">\(u=\frac{\alpha}{\left[(1-\alpha)
@@ -461,8 +479,8 @@ class="math inline">\(1 / 4\)</span> and <span
 class="math inline">\(\phi^{\prime}(t) \leq \frac{(b-a)^2}{4}\)</span>.
 Thus, by the second order expansion of function <span
 class="math inline">\(\phi\)</span>, there exists <span
-class="math inline">\(\theta \in[0, t]\)</span> such that: <span
-class="math display">\[
+class="math inline">\(\theta \in[0, t]\)</span> such that:</p>
+<p><span class="math display">\[
 \phi(t)=\phi(0)+t \phi^{\prime}(0)+\frac{t^2}{2} \phi^{\prime
 \prime}(\theta) \leq t^2 \frac{(b-a)^2}{8},
 \]</span></p>
@@ -484,17 +502,19 @@ class="math display">\[
 1\)</span> independent random variables and assume that there exist
 <span class="math inline">\(c_1, \ldots, c_m&gt;0\)</span> such that
 <span class="math inline">\(f: \mathcal{X}^m \rightarrow
-\mathbb{R}\)</span> satisfies the following conditions: <span
-class="math display">\[
+\mathbb{R}\)</span> satisfies the following conditions:</p>
+<p><span class="math display">\[
 \left|f\left(x_1, \ldots, x_i, \ldots, x_m\right)-f\left(x_1, \ldots,
 x_i^{\prime}, \ldots x_m\right)\right| \leq c_i,
-\]</span> for all <span class="math inline">\(i \in[1, m]\)</span> and
-any points <span class="math inline">\(x_1, \ldots, x_m, x_i^{\prime}
-\in \mathcal{X}\)</span>. Let <span class="math inline">\(f(S)\)</span>
+\]</span></p>
+<p>for all <span class="math inline">\(i \in[1, m]\)</span> and any
+points <span class="math inline">\(x_1, \ldots, x_m, x_i^{\prime} \in
+\mathcal{X}\)</span>. Let <span class="math inline">\(f(S)\)</span>
 denote <span class="math inline">\(f\left(X_1, \ldots,
 X_m\right)\)</span>, then, for all <span
 class="math inline">\(\epsilon&gt;0\)</span>, the following inequalities
-hold: <span class="math display">\[
+hold:</p>
+<p><span class="math display">\[
 \begin{gathered}
 \operatorname{Pr}[f(S)-\mathrm{E}[f(S)] \geq \epsilon] \leq \exp
 \left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) \\
@@ -508,8 +528,8 @@ Difference</h2>
 \ldots\)</span> is a martingale difference sequence with respect to
 <span class="math inline">\(X_1, X_2, \ldots\)</span> if for all <span
 class="math inline">\(i&gt;0, V_i\)</span> is a function of <span
-class="math inline">\(X_1, \ldots, X_i\)</span> and <span
-class="math display">\[
+class="math inline">\(X_1, \ldots, X_i\)</span> and</p>
+<p><span class="math display">\[
 \mathrm{E}\left[V_{i+1} \mid X_1, \ldots, X_i\right]=0 .
 \]</span></p>
 <h2 id="lemma">Lemma</h2>
@@ -517,12 +537,13 @@ class="math display">\[
 class="math inline">\(Z\)</span> be random variables satisfying <span
 class="math inline">\(\mathrm{E}[V \mid Z]=0\)</span> and, for some
 function <span class="math inline">\(f\)</span> and constant <span
-class="math inline">\(c \geq 0\)</span>, the inequalities: <span
-class="math display">\[
+class="math inline">\(c \geq 0\)</span>, the inequalities:</p>
+<p><span class="math display">\[
 f(Z) \leq V \leq f(Z)+c .
 \]</span></p>
 <p>Then, for all <span class="math inline">\(t&gt;0\)</span>, the
-following upper bound holds: <span class="math display">\[
+following upper bound holds:</p>
+<p><span class="math display">\[
 \mathrm{E}\left[e^{t V} \mid Z\right] \leq e^{t^2 c^2 / 8} .
 \]</span></p>
 <h2 id="theorem-azumas-inequality">Theorem Azuma's inequality</h2>
@@ -532,13 +553,14 @@ martingale difference sequence with respect to the random variables
 for all <span class="math inline">\(i&gt;0\)</span> there is a constant
 <span class="math inline">\(c_i \geq 0\)</span> and random variable
 <span class="math inline">\(Z_i\)</span>, which is a function of <span
-class="math inline">\(X_1, \ldots, X_{i-1}\)</span>, that satisfy <span
-class="math display">\[
+class="math inline">\(X_1, \ldots, X_{i-1}\)</span>, that satisfy</p>
+<p><span class="math display">\[
 Z_i \leq V_i \leq Z_i+c_i .
 \]</span></p>
 <p>Then, for all <span class="math inline">\(\epsilon&gt;0\)</span> and
-<span class="math inline">\(m\)</span>, the following inequalities hold:
-<span class="math display">\[
+<span class="math inline">\(m\)</span>, the following inequalities
+hold:</p>
+<p><span class="math display">\[
 \begin{gathered}
 \operatorname{Pr}\left[\sum_{i=1}^m V_i \geq \epsilon\right] \leq \exp
 \left(\frac{-2 \epsilon^2}{\sum_{i=1}^m c_i^2}\right) \\
@@ -550,8 +572,8 @@ Z_i \leq V_i \leq Z_i+c_i .
 <p>Proof For any <span class="math inline">\(k \in[1, m]\)</span>, let
 <span class="math inline">\(S_k=\sum_{i=1}^k V_k\)</span>. Then, using
 Chernoff's bounding technique, for any <span
-class="math inline">\(t&gt;0\)</span>, we can write <span
-class="math display">\[
+class="math inline">\(t&gt;0\)</span>, we can write</p>
+<p><span class="math display">\[
 \begin{aligned}
 \operatorname{Pr}\left[S_m \geq \epsilon\right] &amp; \leq e^{-t
 \epsilon} \mathrm{E}\left[e^{t S_m}\right] \\
@@ -563,7 +585,8 @@ c_m^2 / 8} \\
 &amp; \leq e^{-t \epsilon} e^{t^2 \sum_{i=1}^m c_i^2 / 8} \\
 &amp; =e^{-2 \epsilon^2 / \sum_{i=1}^m c_i^2}
 \end{aligned}
-\]</span> where we chose <span class="math inline">\(t=4 \epsilon /
+\]</span></p>
+<p>where we chose <span class="math inline">\(t=4 \epsilon /
 \sum_{i=1}^m c_i^2\)</span> to minimize the upper bound. This proves the
 first statement of the theorem, and the second statement is shown in a
 similar way. (<span class="math inline">\(if\ F1\subset F2,\ then\
@@ -573,7 +596,8 @@ E[E[Y|F1]|F2] = E[E[Y|F2]|F1] = E[Y|F1]\)</span>)</p>
 class="math inline">\(V_k, k \in[1, m]\)</span>, as follows: <span
 class="math inline">\(V=f(S)-\mathrm{E}[f(S)], V_1=\mathrm{E}\left[V
 \mid X_1\right]-\mathrm{E}[V]\)</span>, and for <span
-class="math inline">\(k&gt;1\)</span>, <span class="math display">\[
+class="math inline">\(k&gt;1\)</span>,</p>
+<p><span class="math display">\[
 V_k=\mathrm{E}\left[V \mid X_1, \ldots, X_k\right]-\mathrm{E}\left[V
 \mid X_1, \ldots, X_{k-1}\right] .
 \]</span></p>
@@ -582,23 +606,25 @@ Furthermore, the random variable <span
 class="math inline">\(\mathrm{E}\left[V \mid X_1, \ldots,
 X_k\right]\)</span> is a function of <span class="math inline">\(X_1,
 \ldots, X_k\)</span>. Conditioning on <span class="math inline">\(X_1,
-\ldots, X_{k-1}\)</span> and taking its expectation is therefore: <span
-class="math display">\[
+\ldots, X_{k-1}\)</span> and taking its expectation is therefore:</p>
+<p><span class="math display">\[
 \mathrm{E}\left[\mathrm{E}\left[V \mid X_1, \ldots, X_k\right] \mid X_1,
 \ldots, X_{k-1}\right]=\mathrm{E}\left[V \mid X_1, \ldots,
 X_{k-1}\right],
-\]</span> which implies <span class="math inline">\(\mathrm{E}\left[V_k
-\mid X_1, \ldots, X_{k-1}\right]=0\)</span>. Thus, the sequence <span
+\]</span></p>
+<p>which implies <span class="math inline">\(\mathrm{E}\left[V_k \mid
+X_1, \ldots, X_{k-1}\right]=0\)</span>. Thus, the sequence <span
 class="math inline">\(\left(V_k\right)_{k \in[1, m]}\)</span> is a
 martingale difference sequence. Next, observe that, since <span
 class="math inline">\(\mathrm{E}[f(S)]\)</span> is a scalar, <span
-class="math inline">\(V_k\)</span> can be expressed as follows: <span
-class="math display">\[
+class="math inline">\(V_k\)</span> can be expressed as follows:</p>
+<p><span class="math display">\[
 V_k=\mathrm{E}\left[f(S) \mid X_1, \ldots,
 X_k\right]-\mathrm{E}\left[f(S) \mid X_1, \ldots, X_{k-1}\right] .
 \]</span></p>
 <p>Now define the random variables for each <span
-class="math inline">\(i\)</span> <span class="math display">\[
+class="math inline">\(i\)</span></p>
+<p><span class="math display">\[
 \begin{aligned}
 U_i &amp; :=\sup _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
 \rightharpoondown(i-1)}, x, X_{(i+1) \rightharpoondown n}\right) \mid
@@ -615,8 +641,8 @@ X_{1 \rightharpoondown(i-1)}, X_i=x\right]-\left[f\left(X_{1
 <p>Since <span class="math inline">\(X_i, \ldots, X_n\)</span> are
 independent of each other, conditioning on <span
 class="math inline">\(X_i=x\)</span> does not affect the probabilities
-of the other variables, so these are equal to the expressions <span
-class="math display">\[
+of the other variables, so these are equal to the expressions</p>
+<p><span class="math display">\[
 \begin{aligned}
 U_i &amp; =\sup _{x \in \mathcal{X}_i} \mathbb{E}\left[f\left(X_{1
 \rightarrow(i-1)}, x, X_{(i+1) \rightharpoondown n}\right)-f\left(X_{1
@@ -644,10 +670,11 @@ X_{1 \rightharpoondown(i-1)}\right] \\
 \mathbb{E}\left[c_i \mid X_{1 \rightharpoondown(i-1)}\right] \\
 &amp; \leq c_i
 \end{aligned}
-\]</span> <span class="math inline">\(L_i\)</span> is a random variables
-about <span class="math inline">\(X_1,X2,...,X_{i-1}\)</span> thus,
-<span class="math inline">\(L_k \leq V_k \leq L_k+c_k\)</span>. In view
-of these inequalities, we can apply Azuma's inequality to <span
+\]</span></p>
+<p><span class="math inline">\(L_i\)</span> is a random variables about
+<span class="math inline">\(X_1,X2,...,X_{i-1}\)</span> thus, <span
+class="math inline">\(L_k \leq V_k \leq L_k+c_k\)</span>. In view of
+these inequalities, we can apply Azuma's inequality to <span
 class="math inline">\(V=\sum_{k=1}^m V_k\)</span></p>
 
                 
@@ -667,7 +694,7 @@ class="math inline">\(V=\sum_{k=1}^m V_k\)</span></p>
     
       <span class="category-chain">
         
-  <a href="/categories/probability/" class="category-chain-item">probability</a>
+  <a href="/categories/%E6%B5%8B%E5%BA%A6%E8%AE%BA%E4%B8%8E%E6%A6%82%E7%8E%87%E8%AE%BA/" class="category-chain-item">测度论与概率论</a>
   
   
 
