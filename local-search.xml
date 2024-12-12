@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Advanced Group Theory</title>
+    <link href="/2024/12/12/group-theory/"/>
+    <url>/2024/12/12/group-theory/</url>
+    
+    <content type="html"><![CDATA[<h2 id="同构定理isomorphism-theorems">同构定理(IsomorphismTheorems)</h2><h4 id="第一同构定理first-isomorphism-theorem">第一同构定理(FirstIsomorphism Theorem)</h4><p>设 <span class="math inline">\(\phi: G \to G&#39;\)</span> 是群 <spanclass="math inline">\(G\)</span> 到 <spanclass="math inline">\(G&#39;\)</span> 的同态，则<spanclass="math inline">\(G/\ker [\phi] \cong \phi(G)\)</span></p><h4 id="引理-1">引理 1</h4><p><span class="math inline">\(N\triangleleft G, \gamma: G \toG/N\)</span>为经典同态映射，<spanclass="math inline">\(A=\{L\triangleleft G \mid N \leq L\},B=\{L&#39;\triangleleft (G/N)\}\)</span>，则<span class="math inline">\(\phi: A\to B = \gamma[L]\)</span>为双射</p><h4 id="引理-2">引理 2</h4><p><span class="math inline">\(HN = \{hn \mid h \in H, n \inN\}\)</span> <span class="math inline">\(H\vee N = \bigcap \{E\leq G\mid HN \subseteq E\}\)</span>,<span class="math inline">\(H\veeN\)</span>为包含<span class="math inline">\(HN\)</span>的最小子群</p><p><span class="math inline">\(N\triangleleft G,H\leq G\)</span>,则<spanclass="math inline">\(H\vee N = HN = NH\)</span>，且若<spanclass="math inline">\(H\triangleleft G\)</span>，则<spanclass="math inline">\(H\vee N = HN = NH \triangleleft G\)</span></p><h4 id="第二同构定理second-isomorphism-theorem">第二同构定理(SecondIsomorphism Theorem)</h4><p><span class="math inline">\(N \triangleleft G,H\leqG\)</span>,则<span class="math inline">\((HN)/N \cong H/(H\capN)\)</span></p><h4 id="第三同构定理third-isomorphism-theorem">第三同构定理(ThirdIsomorphism Theorem)</h4><p><span class="math inline">\(K \triangleleft H \triangleleftG\)</span>,则<span class="math inline">\(G/H \cong(G/K)/(H/K)\)</span></p><h4 id="一些性质">一些性质</h4><p><span class="math inline">\(N\triangleleft G,H\leq G \Rightarrow(H\cap N) \triangleleft H\)</span></p><h2 id="series-of-groups">Series of Groups</h2><p>称<span class="math inline">\(\mathcal{G}=\{G_i \mid i \in I \wedgeG_i \leq G_{i+1} \wedge G_0 = \{e\} \wedge G_n = G\}\)</span>为<spanclass="math inline">\(G\)</span>的群列(Series of Groups)</p><p>称<span class="math inline">\(\mathcal{G}=\{G_i \mid i \in I \wedgeG_i \triangleleft G_{i+1} \wedge G_0 = \{e\} \wedge G_n =G\}\)</span>为<spanclass="math inline">\(G\)</span>的次正规群列(Subnormal Series ofGroups)</p><p>称<span class="math inline">\(\mathcal{G}=\{G_i \mid i \in I \wedgeG_i \triangleleft G \wedge G_0 = \{e\} \wedge G_n = G\}\)</span>为<spanclass="math inline">\(G\)</span>的正规群列(Normal Series of Groups)</p><p>若<span class="math inline">\(\mathcal{G_1} \subseteq\mathcal{G_2}\)</span>，则称<spanclass="math inline">\(\mathcal{G_2}\)</span>为<spanclass="math inline">\(\mathcal{G_1}\)</span>的加细(Refinement)</p><p>称两个次正规群列<spanclass="math inline">\(\mathcal{G}=\{G_i\}\)</span>和<spanclass="math inline">\(\mathcal{H}=\{H_i\}\)</span>是同构的，若存在双射<spanclass="math inline">\(\sigma: I \to I\)</span>，使得<spanclass="math inline">\(H_{i}/H_{i-1} \cong G_{\sigma(i)}/G_{\sigma(i) -1}\)</span></p><h4 id="zassenhaus-引理butterfly-lemma">zassenhaus 引理(butterflylemma)</h4><p><span class="math inline">\(H^*\)</span> 为 <spanclass="math inline">\(H\)</span> 的正规子群，<spanclass="math inline">\(K^*\)</span> 为 <spanclass="math inline">\(K\)</span> 的正规子群，则有</p><ul><li><span class="math inline">\(H^*(K\cap H) / H^*(H\cap K^*) \congK^*(H\cap K) / K^*(H^*\cap K) \cong (H\cap K)/(H^* \cap K) (H \capK^*)\)</span></li></ul><p><img src="./group-theory/butterfly.jpg" /></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>抽象代数</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>域拓展</title>
     <link href="/2024/12/11/extension-fields/"/>
     <url>/2024/12/11/extension-fields/</url>
