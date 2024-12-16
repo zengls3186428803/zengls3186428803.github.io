@@ -98,7 +98,7 @@ subgroup H of $S_A$ is transitive if for any $a, b \in A$, there exists $\sigma 
 10. $\sigma \in S_n, \tau=(i,j)$,则$\tau \sigma$和$\sigma$的 orbits 数差 1
 11. $S_n$的奇置换和偶置换等势
 12. 若 H 为$S_n$的子群，则：H 里全是偶置换 或者 H 里的奇置换数量等于偶置换的数量。
-13. $a\sim_L b\iff a^{-1}b\in H 是一个等价关系$
+13. $a\sim_L b\iff a^{-1}b\in H$ 是一个等价关系
 14. lagrange 定理：若 G 为有限群，H 为 G 的子群，则 |H|整除|G|
 15. 素数阶的群都为循环群。
 16. $K\leq H \leq G$,(G:K) = (G:H) \* (H:K)
@@ -123,7 +123,7 @@ a map $\phi$ of group G into G' is a homomorphism if for all $a, b \in G$, $\phi
 6. 群同态的核的左陪集等于右陪集，因此可以简称为陪集。
 7. $\phi$是一个群同态，$\phi^{-1}[{\phi(a)}]=aH=Ha$,H 为$\phi$的核。
 8. 群同态是单射 $\rightleftarrows$ $Ker(\phi)={e}$
-9. $\phi(G)的势等于G的核的陪集的集合$。
+9. $\phi(G)$的势等于$G$的核的陪集的集合。
 10. 如果 G 是一个有限群，则$|\phi(G)|$整除$|G|$
 11. 如果 G’是一个有限群，则$|\phi(G)|$整除$|G'|$
 12. 循环群的群同态完全由生成元决定。

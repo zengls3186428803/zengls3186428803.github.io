@@ -81,7 +81,7 @@ $$
   \begin{aligned}
   \epsilon &= x_Q - x_R\\
            &= round((x_R-a)(\frac{1}{s}))s + a - x_R\\
-           &= ((x_R-a)(\frac{1}{s}) + \delta)s + a - x_R, 其中\delta \sim U(-0.5,0.5) 均匀分布\\
+           &= ((x_R-a)(\frac{1}{s}) + \delta)s + a - x_R, \text{其中}\delta \sim U(-0.5,0.5) \text{均匀分布}\\
            &= s\delta
   \end{aligned}
 $$
@@ -155,7 +155,7 @@ $$
   \begin{aligned}
   \epsilon &= x_Q - x_R\\
            &= round((x_R)(\frac{1}{s}))s - x_R\\
-           &= ((\frac{x_R}{s}) + \delta)s - x_R, 其中\delta \sim U(-0.5,0.5) 均匀分布\\
+           &= ((\frac{x_R}{s}) + \delta)s - x_R, \text{其中}\delta \sim U(-0.5,0.5) \text{均匀分布}\\
            &= s\delta
   \end{aligned}
 $$

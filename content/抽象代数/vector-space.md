@@ -135,7 +135,7 @@ F 为$\mathbb{R}$或$\mathbb{C}$，$V$是 F 上的向量空间，$\langle .,. \r
 6. 内积空间中，柯西-施瓦茨不等式：$|\langle v,w \rangle| \leq ||v|| \cdot ||w||$, 可通过正交分解来证明。
 7. 正交 $\Rightarrow$ 线性无关
 
-在内积空间上，内积$\xrightarrow{诱导}$范数$\xrightarrow{诱导}$度量
+在内积空间上，内积$\xrightarrow{induce}$范数$\xrightarrow{induce}$度量
 
 ## Hilbert 空间
 

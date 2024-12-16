@@ -6,10 +6,8 @@ tags:
 
 ## 同态映射
 
-$$
-\phi:A\rightarrow A'\\
-\phi(ab) = \phi(a)\phi(b)
-$$
+$\phi:A\rightarrow A'$
+$\phi(ab) = \phi(a)\phi(b)$
 
 ### 同态映射的性质
 
@@ -31,10 +29,8 @@ $$
 
 ## 群同态映射
 
-$$
-\phi:G\rightarrow G'\\
-\phi(ab) = \phi(a)\phi(b)
-$$
+$\phi:G\rightarrow G'$
+$\phi(ab) = \phi(a)\phi(b)$
 
 1. 群同态映射把子群映射到子群
    $H \leq G \Rightarrow \phi[H] \leq G'$
@@ -51,11 +47,9 @@ $$
 
 ### 环同态映射
 
-$$
-\phi:R\rightarrow R'\\
-\phi(a+b) = \phi(a)+\phi(b)\\
-\phi(ab) = \phi(a)\phi(b)
-$$
+$\phi:R\rightarrow R'$
+$\phi(a+b) = \phi(a)+\phi(b)$
+$\phi(ab) = \phi(a)\phi(b)$
 
 1. 环同态映射把子环映射到子环
    $H \leq R \Rightarrow \phi[H] \leq R'$

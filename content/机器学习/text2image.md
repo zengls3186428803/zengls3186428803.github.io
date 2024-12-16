@@ -9,7 +9,7 @@ tags: 扩散
 #### Add noise
 
 $$
-P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2) \xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx \mathcal{N}(0, I)\\
+P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2) \xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx \mathcal{N}(0, I)
 $$
 
 $$
@@ -31,7 +31,7 @@ $$
 #### Add noise(same as unconditional)
 
 $$
-P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2) \xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx \mathcal{N}(0, I)\\
+P(x_0) \xrightarrow{\epsilon_1} P(x_1) \xrightarrow{\epsilon_2}  P(x_2) \xrightarrow{\epsilon_3} \cdots \xrightarrow{\epsilon_T} P(x_T) \approx \mathcal{N}(0, I)
 $$
 
 $$

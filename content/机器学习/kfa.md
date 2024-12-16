@@ -129,7 +129,10 @@ $$
 ## Useful formula
 
 $$
-(A+bc^T)^{-1} = A^{-1} + \frac{A^{-1}bc^TA^{-1}}{1-c^TA^{-1}b}\\
+(A+bc^T)^{-1} = A^{-1} + \frac{A^{-1}bc^TA^{-1}}{1-c^TA^{-1}b}
+$$
+
+$$
 (A+bc^T)^{-1}d= A^{-1}d + \frac{A^{-1}bc^TA^{-1}d}{1-c^TA^{-1}b}
 $$
 

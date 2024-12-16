@@ -24,7 +24,7 @@ tags: archlinux
 
 ## 格式化磁盘分区（得到文件系统）
 
-使用 mkfs.\*，其中 EFI 分区要格式化为 FAT 格式（mkfs.fat -F 32 /device/path）
+使用 `mkfs.\*`，其中 EFI 分区要格式化为 FAT 格式（mkfs.fat -F 32 /device/path）
 
 ## 挂载文件系统
 

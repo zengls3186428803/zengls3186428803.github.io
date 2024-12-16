@@ -152,7 +152,7 @@ $$
 因此我们的最小化目标为
 
 $$
-E_{\epsilon}[||\phi(\epsilon)||^2]=E_{\epsilon}[(||\frac{b_t}{\bar{b}_{t}}\epsilon - \epsilon_{\theta}(\bar{a}_tx_0 + \bar{b}_t\epsilon,t))||^2]\\
+E_{\epsilon}[||\phi(\epsilon)||^2]=E_{\epsilon}[(||\frac{b_t}{\bar{b}_{t}}\epsilon - \epsilon_{\theta}(\bar{a}_tx_0 + \bar{b}_t\epsilon,t))||^2]
 $$
 
 所以损失函数设计为

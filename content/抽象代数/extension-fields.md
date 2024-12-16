@@ -6,9 +6,9 @@ tags: 域
 
 ## 定义
 
-$F和E$是两个域，且$F\leq E$，$F[x]$是$F$上的多项式环
+$F$和$E$是两个域，且$F\leq E$，$F[x]$是$F$上的多项式环
 
-$\phi_a:F[x]\rightarrow E，a\in E,\phi_a(f(x))=f(a)$为估值同态映射
+$\phi_a:F[x]\rightarrow E,a\in E,\phi_a(f(x))=f(a)$为估值同态映射
 
 若$\phi_a(f(x))=f(a)=0$,则称$a$是$f(x)$的零点
 
