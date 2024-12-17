@@ -27,6 +27,9 @@ tags: 数学分析
     - [有理数中定义范数(绝对值)、距离度量](#有理数中定义范数绝对值距离度量)
 - [实数](#实数)
     - [有理数中的柯西列](#有理数中的柯西列)
+    - [实数加法](#实数加法)
+    - [实数乘法](#实数乘法)
+    - [有序域](#有序域-1)
 
 ## 皮亚诺公理(Peano Axioms)
 
@@ -266,6 +269,8 @@ $[a,b] + [c,d] = [a+c,b+d]$
 
 因此$<\mathcal{A},+>$构成一个交换群
 
+note: 需要验证加法逆元的良定义性，若$[a,b]=[c,d]$,则$[b,a]=[d,c]$,即若两个数表示的等价类相等，则它们的加法逆元表示的等价类也相等
+
 #### 整数乘法
 
 在等价类上定义乘法
@@ -429,6 +434,8 @@ $[a,b] + [c,d] = [ad+bc,bd]$
 
 因此$<\mathcal{B},+>$构成一个交换群
 
+note: 需要验证逆元的良定义性，即若两个数表示的等价类相等，则它们的逆元表示的等价类也相等
+
 #### 有理数乘法
 
 在等价类上定义乘法
@@ -446,6 +453,8 @@ $[a,b] \times [c,d] = [ac,bd]$
 - 乘法对加法的分配律
 
 因此$<\mathcal{B},+,\times>$构成一个交换除环，即域。
+
+note: 需要验证逆元的良定义性，即若两个数表示的等价类相等，则它们的逆元表示的等价类也相等
 
 $\textbf{Definition}$. 令$i(n):N \to \mathcal{A}$，$i(n)=[n,1]$
 
@@ -563,3 +572,176 @@ $\textbf{Definition}$. (Cauchy sequences). A sequence $(a_n)_{n=m}$ of rational 
 $\textbf{Definition}$. (Bounded sequences). Let $M \geq 0$ be rational. A finite sequence $a_1, a_2, \cdots, a_n$ is bounded by $M$ iff $|a_i| \leq M$ for all $1 \leq i \leq n$. An infinite sequence $(a_n)_{n=m}$ is bounded by $M$ iff $|a_i| \leq M$ for all $i \geq m$.
 
 $\textbf{Lemma}$. Finite sequences are bounded
+
+$\textbf{Lemma}$. $|x-y|<=M \Rightarrow |x|<=|y|+M$
+
+$\textbf{Lemma}$. (Cauchy sequences are bounded). Every Cauchy sequence $(a_n)_{n=m}$ is bounded.
+
+$\textbf{Lemma}$. $n \in \mathbb{N} \wedge x \in \mathbb{Q} \Rightarrow nx=\sum_{i=1}^{n}x$, 提示：自然数到整数的同构映射、整数到有理数的同构映射、数学归纳法
+
+令$C=\{x \in \prod_{i\in \mathbb{N}} \mathbb{Q} \mid x_i \text{ is a Cauchy sequence}\}$，即由$\mathbb{N}$索引的$\mathbb{Q}$的笛卡尔积。
+
+定义$C$上的一种关系$\sim_c$，$x \sim_c y$当且仅当对于任意$\epsilon \in \mathbb{Q} \wedge \epsilon > 0$，存在$N \in \mathbb{N}$，使得对于任意$n \geq N$，有$|x_n-y_n| \leq \epsilon$
+
+$\textbf{Lemma}$. $\sim_c$是等价关系
+
+$\sim_c$在$C$上的所有等价类所构成的集合为 $\mathcal{C}$，$\mathcal{C}$中的元素记作$[(a_n)_{n=0}]$，简记为$[a_n]$
+
+#### 实数加法
+
+$\textbf{Lemma}$. if $(a_n)_{n=0}$ and $(b_n)_{n=0}$ are Cauchy sequences, then $(a_n+b_n)_{n=0}$ is also a Cauchy sequence
+
+在$\mathcal{C}$上定义**加法**
+
+$[(a_n)_{n=0}]+[(b_n)_{n=0}]=[(a_n+b_n)_{n=0}]$
+
+简记为$[a_n]+[b_n]=[a_n+b_n]$
+
+容易验证上述定义的加法是良定义的
+
+上述定义的加法具有以下性质
+
+- 加法交换律
+- 加法结合律
+- 加法单位元$[0_n]$，$0_n$为$\mathbb{Q}$中的零序列
+- 加法逆元$[(a_n)_{n=0}]+[(-a_n)_{n=0}]=[(a_n-a_n)_{n=0}]=[0_n]$
+
+因此$<\mathcal{C},+>$构成一个交换群
+
+note: 需要验证逆元的良定义性，即若两个数表示的等价类相等，则它们的逆元表示的等价类也相等
+
+#### 实数乘法
+
+$\textbf{Lemma}$. if $(a_n)_{n=0}$ and $(b_n)_{n=0}$ are Cauchy sequences, then $(a_n b_n)_{n=0}$ is also a Cauchy sequence
+
+证明：by definition
+
+任取一个$\epsilon \in \mathbb{Q} \wedge \epsilon > 0$
+
+因为柯西列都是有界，所以$|a_n| \leq M_1$，$|b_n| \leq M_2$，因此它们有共同上界$M = max(M_1,M_2)$
+
+对于$\epsilon_a= \epsilon/(2M)$，存在$N_a$，使得对于任意$n,m \geq N_a$，有$|a_n - a_m| \leq \epsilon_a$
+
+对于$\epsilon_b= \epsilon/(2M)$，存在$N_b$，使得对于任意$n,m \geq N_b$，有$|b_n - b_m| \leq \epsilon_b$
+
+取$N = max(N_a,N_b)$，对于任意$n,m \geq N$，有
+
+$|a_n b_n - a_m b_m| = |a_n b_n - a_n b_m + a_n b_m - a_m b_m| = |a_n||b_n - b_m| + |b_m||a_n - a_m|\leq M|b_n - b_m| + M|a_n - a_m| \leq \epsilon_a + \epsilon_b = \epsilon$
+
+在$\mathcal{C}$上定义**乘法**
+
+$[(a_n)_{n=0}] \times [(b_n)_{n=0}] = [(a_n b_n)_{n=0}]$
+
+简记为$[a_n] \times [b_n] = [a_n b_n]$
+
+容易验证上述定义的乘法是良定义的
+
+$\textbf{Definition}$. (Sequences bounded away from zero). A sequence $(a_n)_{n=0}$ of rational numbers is said to be bounded away from zero iff there exists a rational number $c > 0$ such that $|a_n| \geq c$ for all $n \geq 0$.
+
+$\textbf{Lemma}$. Let $x$ be a non-zero real number. Then $x = [(a_n)_{n=0}]$ for some Cauchy sequence $(a_n)_{n=0}$ which is bounded away from zero.
+
+证明：
+由$x = [b_n] \not = [0_n]$,存在$\epsilon \in \mathbb{Q} \wedge \epsilon > 0$，使得对于任意$N$, 都存在$n_0>N$,使得$|b_{n_0}| \geq \epsilon$
+
+因为$x$是柯西列，所以存在$N_1$，使得对于任意$n,m \geq N_1$，有$|b_n - b_m| \leq \epsilon/2$
+
+取$N=max(N_1,n_0)$，对于任意$n \geq N$，有$|b_{n_0} - b_n| \leq \epsilon/2$，因此$|b_n| \geq |b_{n_0}| - |b_{n_0} - b_n| \geq \epsilon - \epsilon/2 = \epsilon/2$
+
+构造一个新的数列$a_i=b_{n_0},i<n_0$，$a_i=b_i,i\geq n_0$
+
+易得$[a_n]=[b_n]=x$,且$|a_n| \geq \epsilon/2$
+
+即$(a_n)_{n=0}$是bounded away from zero的cauchy sequence
+
+$\textbf{Lemma}$. 若$a_n$是bounded away from zero的cauchy sequence，则$1/a_n$也是cauchy sequence. 按柯西列的定义证明
+
+$\textbf{Lemma}$. 若$a_n \sim_{c} b_n$，且$a_n,b_n$都是bounded away from zero的cauchy sequence，则$1/a_n \sim_{c} 1/b_n$，即逆元是良定义的。
+
+上述定义的乘法具有以下性质
+
+- 乘法交换律
+- 乘法结合律
+- 乘法单位元$[1_n]$，$1_n$为$\mathbb{Q}$中的单位序列
+- 乘法逆元，若$[a_n] \not= [0_n]$，且$(a_n)_{n=0}$是bounded away from zero的cauchy sequence，则$[a_n]$有乘法逆元$[b_n]$，其中$b_n = \frac{1}{a_n}$
+- 乘法对加法的分配律
+
+因此$<\mathcal{C},+,\times>$构成一个交换除环，即域
+
+$\textbf{Definition}$. $i(n): \mathbb{Q} \to \mathcal{C}$，$i(q)=[q_n]$，$\forall q_i=q$
+
+$i(q_1 + q_2) = [(q_1+q_2)_n]=[(q_1)_n] + [(q_2)_n]$
+
+$i(q_1q_2)$ = $[(q_1q_2)_n]=[(q_1)_n] [(q_2)_n]$
+
+若$i(q_1) = i(q_2)$，$[(q_1)_n] = [(q_2)_n] \Rightarrow q_1 = q_2$，因此$i$是单射
+
+因此$i$是$\mathbb{Q}$到$\mathcal{C}$的同构映射
+
+#### 有序域
+
+$\textbf{Definition}$. Let $(a_n)_{n=0}$ be a sequence of rationals. We say that this sequence is positively bounded away from zero iff we have a positive rational $c > 0$ such that $a_n \geq c$ for all $n \geq 0$ (in particular, the sequence is entirely positive). The sequence is negatively bounded away from zero iff we have a positive rational $c > 0$ such that $a_n \leq -c$ for all $n \geq 0$ (in particular, the sequence is entirely negative).
+
+$\textbf{Definition}$. A real number $x$ is said to be positive iff it can be written as $x = [(a_n)_{n=0}]$ for some Cauchy sequence $(a_n)_{n=0}$ which is positively bounded away from zero. （$x$ is said to be negative iff it can be written as $x = [(a_n)_{n=0}]$ for some Cauchy sequence $(a_n)_{n=0}$ which is negatively bounded away from zero.）
+
+$P = \{x \in \mathcal{C} \mid x \text{ is positive}\}$
+
+可以验证$P$满足如下性质
+
+- $\forall x,y \in P, x+y \in P,xy \in P$
+- $\forall x \in \mathcal{C}, x \in P, x=0 , -x \in P$三者有且只有一个成立
+
+因此$<\mathcal{C},+,\times>$构成一个有序域，即$<\mathbb{R},+,\times>$
+
+可以定义$<$为$x<y \Leftrightarrow y-x \in P$
+
+(抽象代数)有序域(环)上的性质对$<\mathcal{C},+,\times>$都成立
+
+- Trichotomy: $x < y, x=y, x>y$三者有且只有一个成立
+- Transitivity: $x<y,y<z \Rightarrow x<z$
+- Addition preservation: $x<y \Rightarrow x+z<y+z$
+- Multiplication preservation: $x<y,z>0 \Rightarrow xz<yz$
+- Negation reverses order: $a > b \Rightarrow -a < -b$
+- $a>0 \Leftrightarrow a^{-1}>0$
+- $0<a,0<b\rightarrow 0<a/b$
+- $0<a<1\rightarrow 1<1/a$
+- $-1<a<0\rightarrow 1/a<-1$
+
+$\textbf{lemma}$. $x,y \in \mathbb{Q} \wedge x<y \Rightarrow i(x)<i(y)$,即$i(q)=[(q_n)_n]$是从$\mathbb{Q}$到$\mathcal{C}$的一个子集的序同构
+
+至此将$<\mathcal{C},+,\times>$记作$<\mathbb{R},+,\times>$,简记为$\mathbb{R}$
+
+$\textbf{Proposition}$. Let $a_0,a_1,a_2,...$ be a Cauchy sequence of non-negative rational numbers. Then $[(a_n)_{n=0}]$ is a non-negative real number.
+
+$\textbf{Corollary}$. Let $(a_n)_{n=0}$ and $(b_n)_{n=0}$ be Cauchy sequences of rationals such that $a_n \geq b_n$ for all $n \geq 0$. Then $[(a_n)_{n=0}] \geq [(b_n)_{n=0}]$.
+
+$\textbf{Proposition}$. Let $x$ be a positive real number. Then there exists a positive rational number $q$ such that $q \leq x$, and there exists a positive integer $N$ such that $x \leq N$.
+
+$\textbf{Corollary}$. Let $x$ be a real number, and let $\epsilon$ be a positive real number. Then there exists a positive integer $M$ such that $M\epsilon > x$.
+
+$\textbf{Proposition}$. Given any two real numbers $x < y$, we can find a rational number $q$ such that $x < q < y$.
+
+$\textbf{Definition}$. $|x|=x$ if $x \geq 0$, else $|x|=-x$
+
+(抽象代数)有序环上的绝对值有以下性质
+
+1. $|x| \geq 0$
+2. $|-x|=|x|$
+3. $|x|=0 \Leftrightarrow x=0$
+4. $x<|x|$
+5. $|x+y| \leq |x|+|y|$
+6. $|xy|=|x||y|$
+
+用绝对值定义距离$d(x,y)=|x-y|$，则有以下性质
+
+1. $d(x, y) \geq 0$. Also, $d(x, y) = 0$ if and only if $x = y.$
+2. $d(x, y) = d(y, x)$.
+3. $d(x, z) \geq d(x, y) + d(y, z)$.
+
+$\textbf{Definition}$. (Upper bound). Let $E$ be a subset of $\mathbb{R}$, and let $M$ be a real number. We say that $M$ is an upper bound for $E$, iff we have $x \leq M$ for every element $x$ in $E$.
+
+$\textbf{Definition}$. (Least upper bound). Let $E$ be a subset of $\mathbb{R}$, and $M$ be a real number. We say that $M$ is a least upper bound for $E$ iff (a) $M$ is an upper bound for $E$, and also (b) any other upper bound $M$ for $E$ must be larger than or equal to $M$.
+
+$\textbf{Proposition}$. Let $E$ be a subset of $\mathbb{R}$. Then $E$ can have at most one least upper bound.
+
+$\textbf{Theorem}$. (Existence of least upper bound). Let $E$ be a non-empty subset of $\mathbb{R}$. If $E$ has an upper bound, (i.e., $E$ has some upper bound $M$), then it must have exactly one least upper bound.
+

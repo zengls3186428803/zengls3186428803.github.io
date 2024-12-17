@@ -253,6 +253,7 @@ field：交换除环
     - 如果 R 是域，那么$0<a,0<b\rightarrow 0<a/b$
     - 如果 R 是域，那么$0<a<1\rightarrow 1<1/a$
     - 如果 R 是域，那么$-1<a<0\rightarrow 1/a<-1$
+50. 在一个全序集上，若每个有上界的子集都有最小上界，则每个有下界的子集都有最大下界。
 
 ## ideal and factor ring
 

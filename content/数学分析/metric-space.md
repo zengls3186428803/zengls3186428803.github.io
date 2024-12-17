@@ -12,7 +12,9 @@ tags: 度量空间
 2. 闭集,相对闭集
 
 $E \subset Y \subset X$
+
 若 E 在 Y 中为开集,则 E 在 X 中不一定为开集
+
 若 E 在 Y 中为闭集,则 E 在 X 中不一定为闭集
 
 ## 内在
@@ -21,7 +23,9 @@ $E \subset Y \subset X$
 2. 紧集合
 
 $E \subset Y \subset X$
+
 若 E 在 Y 中为完备集 $\Leftrightarrow$ E 在 X 中为完备集
+
 若 E 在 Y 中为紧集 $\Leftrightarrow$ E 在 X 中为紧集
 
 ## 度量空间定义图
@@ -32,13 +36,19 @@ $E \subset Y \subset X$
 ## 度量空间性质图
 
 ![property graph](property.png)
+
 R^n 中非空完美集不可数
+
 R 中的连通集等价于区间
 
 ## 连续函数与度量空间
 
 连续函数$\Leftrightarrow$开集的逆像开集
+
 连续函数复合连续函数=连续函数
+
 紧集上的连续函数一致连续
+
 连续函数将紧集映射到紧集
+
 连续函数将连通集映射到连通集
