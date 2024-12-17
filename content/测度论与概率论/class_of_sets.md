@@ -28,7 +28,7 @@ tags: 测度论
 
 称$(X,\sigma(\tau),\tau)$为 可测拓扑空间，若$\sigma(\tau)$为$X$上的 Borel $\sigma$代数，$\tau$为$X$上的拓扑
 
-![class_of_sets](./class_of_sets/sigma.png)
+![class_of_sets](sigma.png)
 
 ### 性质
 

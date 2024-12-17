@@ -53,8 +53,7 @@ $H^*$ 为 $H$ 的正规子群，$K^*$ 为 $K$ 的正规子群，则有
 
 - $H^*(K\cap H) / H^*(H\cap K^*) \cong K^*(H\cap K) / K^*(H^*\cap K) \cong (H\cap K)/(H^* \cap K) (H \cap K^*)$
 
-![](./group-theory/butterfly.jpg)
-![](butterfly.jpg)
+![butterfly](butterfly.jpg)
 
 #### Schreier 定理
 

@@ -31,7 +31,7 @@ $E \subset Y \subset X$
 
 ## 度量空间性质图
 
-![property graph](./metric-space/property.png)
+![property graph](property.png)
 R^n 中非空完美集不可数
 R 中的连通集等价于区间
 

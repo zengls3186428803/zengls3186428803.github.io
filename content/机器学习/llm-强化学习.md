@@ -183,7 +183,7 @@ trainer.train()
 
 ### Margin(optional)
 
-![margin-reward](./llm-强化学习/reward_margin.png)
+![margin-reward](reward_margin.png)
 
 ## PPO 优化
 
