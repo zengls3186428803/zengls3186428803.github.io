@@ -1,8 +1,10 @@
 ---
-title: 《Introduction to the Theory of Computation》里的自动机部分的定义和定理。
+title: 有限自动机(FA)
 date: 2024-10-21 14:05:17
 tags: 可计算性与计算复杂性
 ---
+
+《Introduction to the Theory of Computation》里的自动机部分的定义和定理。
 
 - [Finite automaton](#finite-automaton)
 - [Nondeterministic finite automaton](#nondeterministic-finite-automaton)
