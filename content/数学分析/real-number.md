@@ -1,5 +1,5 @@
 ---
-title: 实数构造与度量空间完备化
+title: 实数构造
 date: 2024-12-15 14:32:59
 tags: 数学分析
 ---
@@ -30,6 +30,7 @@ tags: 数学分析
     - [实数加法](#实数加法)
     - [实数乘法](#实数乘法)
     - [有序域](#有序域-1)
+- [拓展实数域](#拓展实数域)
 
 ## 皮亚诺公理(Peano Axioms)
 
@@ -737,6 +738,8 @@ $\textbf{Definition}$. $|x|=x$ if $x \geq 0$, else $|x|=-x$
 2. $d(x, y) = d(y, x)$.
 3. $d(x, z) \geq d(x, y) + d(y, z)$.
 
+$\textbf{Lemma}$. Let $(a_n)_{n=0}$ be a Cauchy sequence of rationals, and let $x$ be a real number. Show that if $a_n \leq x$ for all $n \geq 0$, then $[a_n] \leq x$. Similarly, show that if $a_n \geq x$ for all $n \geq 0$, then $[a_n] \geq x$.
+
 $\textbf{Definition}$. (Upper bound). Let $E$ be a subset of $\mathbb{R}$, and let $M$ be a real number. We say that $M$ is an upper bound for $E$, iff we have $x \leq M$ for every element $x$ in $E$.
 
 $\textbf{Definition}$. (Least upper bound). Let $E$ be a subset of $\mathbb{R}$, and $M$ be a real number. We say that $M$ is a least upper bound for $E$ iff (a) $M$ is an upper bound for $E$, and also (b) any other upper bound $M$ for $E$ must be larger than or equal to $M$.
@@ -745,3 +748,43 @@ $\textbf{Proposition}$. Let $E$ be a subset of $\mathbb{R}$. Then $E$ can have a
 
 $\textbf{Theorem}$. (Existence of least upper bound). Let $E$ be a non-empty subset of $\mathbb{R}$. If $E$ has an upper bound, (i.e., $E$ has some upper bound $M$), then it must have exactly one least upper bound.
 
+目标：构造一个实数(有理数的cauchy列$(a_n)_{n=0}$)，使得其为最小上界
+
+从非空集$E$中取一个元素$x_0$
+
+对于每一个$n \in \mathbb{N}$
+
+- 从有理数的archimedean性，可以找到一个整数$U_n$，使得$U_n(1/(1+n)) > M$
+- 同理可以找到一个整数$L_n$，使得$L_n(1/(1+n)) < x_0$
+
+对于每个$n$,$S_n=\{i\in \mathbb{Z}|i/(1+n) \text{ is an upper bound of } E\}$,有最小元，记作$K_n$
+
+- $a_n = K_n/(1+n)$的每一项都是$E$的上界
+- $b_n = (K_n-1)/(1+n)$的每一项都不是$E$的上界
+
+接下来要证明$a_n$和$b_n$是cauchy列，且它们是cauchy等价的，即$[a_n]=[b_n]$
+
+$a_n - a_{n'}=K_n/(1+n) - K_{n'}/(1+n') \geq K_n/(1+n) - (K_n-1)/(1+n) \geq 1/(1+n)$
+
+$a_n - b_{n'} = K_n/(1+n) - K_{n'}/(1+n') \leq (K_{n'}-1)/(1+n') - K_{n'}/(1+n') \leq -1/(1+n')$
+
+因此对于任意的$\epsilon \in \mathbb{Q} \wedge \epsilon > 0$，存在$N\in \mathbb{N} \wedge N > 1/\epsilon$，使得对于任意$n,n' \geq N$，有$|a_n - a_{n'}| \leq 1/N \leq \epsilon$，即$a_n$是cauchy列
+
+容易证明$a_n \sim_{c} b_n$；$b_n$也是cauchy列;因此$[a_n]=[b_n]$
+
+因为$a_n$的每一项都是$E$的上界，所以$[(a_n)_{n=0}]$是$E$的上界
+
+因为$b_n$的每一项都不是$E$的上界，所以$[(b_n)_{n=0}]$小于$E$的每一个上界
+
+$s=[a_n] = [b_n]$满足最小上界性质，即$s$是$E$的最小上界
+
+## 拓展实数域
+
+$\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty,+\infty\}$
+其中$-\infty$和$+\infty$是两个新的元素，且满足$-\infty < x < +\infty$对所有$x \in \mathbb{R}$成立
+
+$\textbf{Definition}$. (上确界) if E has a upper bound, then the least upper bound of $E$ is the supremum of $E$,denoted by $sup(E)$, if E not has a upper bound, then the supremum of $E$ is $+\infty$
+
+因为有最小上界属性的全序集都有最大下界属性，因此可以定义下确界
+
+$\textbf{Definition}$. (下确界) if E has a lower bound, then the greatest lower bound of $E$ is the infimum of $E$,denoted by $inf(E)$, if E not has a lower bound, then the infimum of $E$ is $-\infty$
