@@ -51,7 +51,7 @@ of all orders $j \leq k$ exist and are continuous at $p$. The function $f: U \to
 
 只需证明 chart 的$\mathcal{C}^0$兼容性。因为连续映射复合连续映射为连续映射，所以$\phi_a \circ \phi_b^{-1}:\phi_b(U_a \cap U_b) \to \phi_a(U_a \cap U_b)$为$\mathbb{R}^m$中的同胚映射，因此$\phi_a \circ \phi_b^{-1} \in \mathcal{C}^0$的。
 
-$\mathcal{C}^r$ map $F : N \to M$ is **locally invertible** or a **local diffeomorphism** at $p \in N$ if $p$ has a neighborhood $U$ on which $F| U : U \to F(U)$ is a diffeomorphism.
+$\mathcal{C}^r$ map $F : N \to M$ is **locally invertible** or a **local diffeomorphism** at $p \in N$ if $p$ has a open neighborhood $U$ on which $F| U : U \to F(U)$ is a diffeomorphism.
 
 注意：$\mathcal{C}^r$映射并没有要求$F$为双射，locally invertible(local diffeomorphism)要求$F$在局部是双射，且$F^{-1}$在局部是$\mathcal{C}^r$映射。
 
