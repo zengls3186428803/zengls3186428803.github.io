@@ -47,6 +47,10 @@ $$
 
 设$f \in \overline{\mathcal{L}}^+(\Omega, \mathcal{F})$，令$A_t=\{f \geq t\}$,则$\mu(A_t) \leq \frac{1}{t} \int f I_{A_t} d\mu \leq \frac{1}{t} \int f d\mu, \forall t \in \mathbb{R}^+$。
 
+> [!note]
+> **另一种版本的定义**: 设 $f \in \overline{\mathcal{L}}^+(\Omega, \mathcal{F})$, 则
+> $$\int f \mathrm{d}\mu = \sup \left\{ \int g \mathrm{d}\mu : 0 \leqslant g \leqslant f, g \text{ 为简单可测函数} \right\}.$$
+
 ## 一般可测函数的$L$积分
 
 设$f \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$，若$f^+,f^-$至少有一个的积分不是$+\infty$，则称$f$的$L$积分存在(即，不出现$\infty-\infty$的无意义情况)，并规定$f$的积分为
@@ -108,3 +112,11 @@ $\mathbf{f}$可积 $\iff$ $Re\mathbf{f},Im\mathbf{f}$都可积$\iff |\mathbf{f}|
     - $\sum_{i=1}^{\infty} \mu(|f| \geq n) < +\infty$
 15. 若设$f \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$ 的积分存在，且恒非负（或恒非正），$c \in \overline{\mathbb{R}}$,则$cf$积分存在，且$\int cf=c\int f$
 16. $A \in \mathcal{F}, \int I_A=\mu(A)$
+17. 若简单可测函数 $f = \sum_{i=1}^n a_i I_{A_i}$ 的积分存在, 则 $\int f \mathrm{d}\mu = \sum_{i=1}^n a_i \mu(A_i)$.
+18. 设 $f = \sum_{i=1}^{n} a_i I_{A_i}$，$a_1, a_2, \cdots, a_n \in \overline{\mathbb{R}}$，$\{A_1, A_2, \cdots, A_n\} \subset \mathcal{F}$ 是 $\Omega$ 的有限划分. 若 $f$ 的积分存在，则 $\int f \mathrm{d}\mu = \sum_{i=1}^{n} a_i \mu(A_i)$.
+19. 如果实值函数 $f$ 能够表示成
+    $$f = \sum_{n=1}^{\infty} a_n I_{A_n}$$
+    的形式，其中 $a_1, a_2, \cdots \in \mathbb{R}$，$\{A_n, n \geq 1\} \subset \mathcal{F}$ 是 $\Omega$ 的可数划分，那么称 $f$ 为**初等函数**. 则：
+    (1) $f$ 是可测函数；
+    (2) 若 $f$ 的积分存在，则 $\int f \mathrm{d}\mu = \sum_{n=1}^{\infty} a_n \mu(A_n)$；
+    (3) $f$ 可积当且仅当 $\sum_{n=1}^{\infty} |a_n| \mu(A_n) < \infty$.
