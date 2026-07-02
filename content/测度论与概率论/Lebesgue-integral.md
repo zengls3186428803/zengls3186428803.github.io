@@ -120,3 +120,6 @@ $\mathbf{f}$可积 $\iff$ $Re\mathbf{f},Im\mathbf{f}$都可积$\iff |\mathbf{f}|
     (1) $f$ 是可测函数；
     (2) 若 $f$ 的积分存在，则 $\int f \mathrm{d}\mu = \sum_{n=1}^{\infty} a_n \mu(A_n)$；
     (3) $f$ 可积当且仅当 $\sum_{n=1}^{\infty} |a_n| \mu(A_n) < \infty$.
+20. 积分存在可以传递到任意可测子集：若 $\int_{\Omega} f d\mu$ 存在，则对任意 $A \in \mathcal{F}$，$\int_{A} f d\mu$ 也存在。
+21. 可积性也可以传递到任意可测子集：若 $f$ 在 $\Omega$ 上可积，则对任意 $A \in \mathcal{F}$，$f$ 在 $A$ 上也可积。
+22. 设 $\nu$ 为 $\mathcal{F}$ 上的符号测度，$f \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$，若 $f$ 关于 $\nu$ 的积分存在（相应地，可积），则 $\forall A \in \mathcal{F}$，$f I_A$ 关于 $\nu$ 的积分也存在（相应地，可积）。
