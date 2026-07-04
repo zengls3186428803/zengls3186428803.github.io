@@ -6,7 +6,7 @@ title: Lebesgue 积分（L积分）
 
 本节的积分都表示$L$积分
 
-两个广义实数相加有意义的意思为不会同为$+\infty$或同为$-\infty$。
+两个广义实数 $a,b \in \overline{\mathbb{R}}$ 相加有意义（良定义），当且仅当不同时一个为 $+\infty$、另一个为 $-\infty$。
 
 ## 前置
 
