@@ -57,12 +57,13 @@ $$(g \circ f)'(z) = g'(f(z))f'(z) \quad \text{for all } z \in \Omega.$$
 > the ratio is:
 >
 > $$
-> \begin{aligned}
-> \frac{(L g(z_0)^2 - L g(z)g(z_0))(z - z_0) + A(z)g(z_0) - f(z_0)B(z)}{g(z)g(z_0)}\\
-> = \frac{(L g(z_0)(g(z_0) - g(z)))(z - z_0) + A(z)g(z_0) - f(z_0)B(z)}{g(z)g(z_0)}
-> \end{aligned}
+>  \begin{aligned}
+>  \frac{(L g(z_0)^2 - L g(z)g(z_0))(z - z_0) + A(z)g(z_0) - f(z_0)B(z)}{g(z)g(z_0)}\\
+>  = \frac{(L g(z_0)(g(z_0) - g(z)))(z - z_0) + A(z)g(z_0) - f(z_0)B(z)}{g(z)g(z_0)}
+>  \end{aligned}
 > $$
->
+
+$$
 > It is easy to see that the numerator tends to 0 as $z \to z_0$ and the denominator tends to $g(z_0)^2$.
 
 ## 2. Holomorphic Function
@@ -78,34 +79,38 @@ if $f$ is holomorphic in all of $\mathbb{C}$ we say that $f$ is **entire**.
 Let $z,z_0 \in \Omega$, $z = x + iy$,$z_0 = x_0 + iy_0$,
 if $f(x+iy) = u(x,y) + iv(x,y)$ be holomorphic in $\Omega$. Then
 
+
 $$
+
 \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}
+
 $$
 
 > proof:
 >
-> $$
+$$
+
 > \begin{aligned}
-> f(z)' &= \lim_{x=x_0,y \to y_0} \frac{f(x+iy) - f(x_0+iy_0)}{(x-x_0) + i(y-y_0)}\\
-> &=\lim_{x=x_0,y \to y_0} \frac{u(x_0,y) + iv(x_0,y) - u(x_0,y_0) - iv(x_0,y_0)}{(x_0-x_0) + i(y-y_0)}\\
-> &= \lim_{x=x_0,y \to y_0} \frac{u(x_0,y) - u(x_0,y_0)}{(x_0-x_0) + i(y-y_0)} + i \lim_{x=x_0,y \to y_0} \frac{v(x_0,y) - v(x_0,y_0)}{(x_0-x_0) + i(y-y_0)}\\
+> f(z)' &= \lim*{x=x_0,y \to y_0} \frac{f(x+iy) - f(x_0+iy_0)}{(x-x_0) + i(y-y_0)}\\
+> &=\lim*{x=x*0,y \to y_0} \frac{u(x_0,y) + iv(x_0,y) - u(x_0,y_0) - iv(x_0,y_0)}{(x_0-x_0) + i(y-y_0)}\\
+> &= \lim*{x=x*0,y \to y_0} \frac{u(x_0,y) - u(x_0,y_0)}{(x_0-x_0) + i(y-y_0)} + i \lim*{x=x_0,y \to y_0} \frac{v(x_0,y) - v(x_0,y_0)}{(x_0-x_0) + i(y-y_0)}\\
 > &= \frac{1}{i}\frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}\\
 > &= -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}
 > \end{aligned}
-> $$
 >
+> $$
 > similarly,
->
 > $$
+>
 > \begin{aligned}
-> f(z)' &= \lim_{y=y_0,x \to x_0} \frac{f(x+iy) - f(x_0+iy_0)}{(x-x_0) + i(y-y_0)}\\
+> f(z)' &= \lim\_{y=y_0,x \to x_0} \frac{f(x+iy) - f(x_0+iy_0)}{(x-x_0) + i(y-y_0)}\\
 > &= \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x}
 > \end{aligned}
-> $$
 >
+> $$
 > Becuase The two limits above are both equal to $f'(z_0)$, we have
->
 > $$
+>
 > \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}, \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}
 > $$
 

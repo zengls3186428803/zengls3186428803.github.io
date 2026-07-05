@@ -119,39 +119,41 @@ $$\int \text{Re}\,\mathbf{f} d\mu = \int \text{Re}\,\mathbf{g} d\mu \quad \text{
 
 ### 模长三角不等式
 
-<!-- #! TODO (待证：e的定义与性质) -->
-
 **欲证**：$\left| \int \mathbf{f} d\mu \right| \le \int |\mathbf{f}| d\mu$
 
 **证明**：
 设复数积分值 $z = \int \mathbf{f} d\mu \in \mathbb{C}$。
 
 - 若 $z = 0$，则左式 $|0| = 0$。由于 $|\mathbf{f}| \ge 0$，其积分非负，不等式 $0 \le \int |\mathbf{f}| d\mu$ 显然成立。
-- 若 $z \neq 0$，我们可以将 $z$ 写为极坐标形式：$z = |z|e^{i\theta}$，其中 $\theta \in [0, 2\pi)$。
+- 若 $z \neq 0$，令 $\lambda = \frac{\overline{z}}{|z|}$。则 $|\lambda| = 1$，且
+
+$$
+\lambda z = \frac{\overline{z}z}{|z|} = |z|
+$$
 
 由此可得：
 
-$$|z| = z \cdot e^{-i\theta} = e^{-i\theta} \int \mathbf{f} d\mu$$
+$$|z| = \lambda z = \lambda \int \mathbf{f} d\mu$$
 
-利用上面刚刚证明的复齐次性，将复常数 $e^{-i\theta}$ 移入积分号内部：
+利用上面刚刚证明的复齐次性，将复常数 $\lambda$ 移入积分号内部：
 
-$$|z| = \int \left( e^{-i\theta} \mathbf{f} \right) d\mu$$
+$$|z| = \int \lambda \mathbf{f} d\mu$$
 
 注意：因为 $|z|$ 是一个**纯实数**，所以它的值必然等于它自身的实部。因此：
 
-$$|z| = \text{Re} \left( \int e^{-i\theta} \mathbf{f} d\mu \right)$$
+$$|z| = \text{Re} \left( \int \lambda \mathbf{f} d\mu \right)$$
 
 根据复值积分定义，积分的实部等于实部的积分：
 
-$$|z| = \int \text{Re} \left( e^{-i\theta} \mathbf{f} \right) d\mu$$
+$$|z| = \int \text{Re} \left( \lambda \mathbf{f} \right) d\mu$$
 
 对任何复数 $w$，显然有 $\text{Re}(w) \le |w|$。因此对被积函数有：
 
-$$\text{Re} \left( e^{-i\theta} \mathbf{f} \right) \le \left| e^{-i\theta} \mathbf{f} \right| = \left|e^{-i\theta}\right| \cdot |\mathbf{f}| = 1 \cdot |\mathbf{f}| = |\mathbf{f}|$$
+$$\text{Re} \left( \lambda \mathbf{f} \right) \le \left| \lambda \mathbf{f} \right| = |\lambda| \cdot |\mathbf{f}| = |\mathbf{f}|$$
 
 由于上述不等式处处成立，利用实值 $L$ 积分的单调性：
 
-$$|z| = \int \text{Re} \left( e^{-i\theta} \mathbf{f} \right) d\mu \le \int |\mathbf{f}| d\mu$$
+$$|z| = \int \text{Re} \left( \lambda \mathbf{f} \right) d\mu \le \int |\mathbf{f}| d\mu$$
 
 将 $z = \int \mathbf{f} d\mu$ 代回，最终得到：
 
