@@ -15,9 +15,13 @@ title: Rn与代数与格
 ### 2.1. 代数结构的定义与验证
 
 设 $x, y \in \mathbb{R}^n$。我们定义 $\mathbb{R}^n$ 上的逐点乘法（或称分量乘法）为：
+
 $$x \cdot y = (x_1 y_1, x_2 y_2, \dots, x_n y_n)$$
+
 显然，对任意 $x, y \in \mathbb{R}^n$，其乘积 $x \cdot y \in \mathbb{R}^n$ 依然成立（对乘法封闭）。验证代数公理：结合律：
+
 $$((x \cdot y) \cdot z)_i = (x_i y_i) z_i = x_i (y_i z_i) = (x \cdot (y \cdot z))_i$$
+
 分配律：
 $$(x \cdot (y + z))_i = x_i (y_i + z_i) = x_i y_i + x_i z_i = (x \cdot y + x \cdot z)_i$$
 （同理可证左分配律）与标量乘法相容（设 $c \in \mathbb{R}$）：
@@ -50,7 +54,14 @@ $$
 
 $$
 \sum_{i=1}^n |x_i|^p |y_i|^p \le \sum_{i=1}^n |x_i|^p \cdot \|y\|_p^p
-$$因为 $\|y\|_p^p$ 是一个与求和指标 $i$ 无关的常数，可以把它提到求和号外面：$$\sum_{i=1}^n |x_i|^p \cdot \|y\|_p^p = \|y\|_p^p \left( \sum_{i=1}^n |x_i|^p \right) = \|y\|_p^p \cdot \|x\|_p^p$$两边同时开 $p$ 次方根（因为 $p \ge 1$ 且所有项非负，开方保持不等号方向）：
+$$
+
+因为 $\|y\|_p^p$ 是一个与求和指标 $i$ 无关的常数，可以把它提到求和号外面：
+
+$$\sum_{i=1}^n |x_i|^p \cdot \|y\|_p^p = \|y\|_p^p \left( \sum_{i=1}^n |x_i|^p \right) = \|y\|_p^p \cdot \|x\|_p^p$$
+
+两边同时开 $p$ 次方根（因为 $p \ge 1$ 且所有项非负，开方保持不等号方向）：
+
 $$\|x \cdot y\|_p \le \|x\|_p \|y\|_p$$
 
 Q.E.D.
@@ -58,10 +69,15 @@ Q.E.D.
 #### 2.2.2. $\ell^\infty$ 范数（上确界范数）的证明
 
 $\|x\|_\infty = \max_{1 \le i \le n} |x_i|$。
+
 $$\|x \cdot y\|_\infty = \max_{1 \le i \le n} |x_i y_i| = \max_{1 \le i \le n} (|x_i| \cdot |y_i|)$$
+
 由于对任意 $i$，都有 $|x_i| \le \max_j |x_j| = \|x\|_\infty$ 且 $|y_i| \le \max_j |y_j| = \|y\|_\infty$，因此：
+
 $$|x_i| \cdot |y_i| \le \|x\|_\infty \cdot \|y\|_\infty$$
+
 取最大值后，次可乘性依然成立：
+
 $$\|x \cdot y\|_\infty \le \|x\|_\infty \|y\|_\infty$$
 因此，$(\mathbb{R}^n, \|\cdot\|_\infty)$ 是一个赋范代数。
 
@@ -79,27 +95,20 @@ Q.E.D.
 
 首先，将 $\mathbb{R}^n$ 视为实向量空间，并赋予**逐点序**（即分量序）：
 
-
 $$
-
 x \le y \iff x_i \le y_i \quad \text{对每个 } i = 1, \dots, n
-
 $$
 
 在这个偏序下，对任意 $x, y \in \mathbb{R}^n$：
 
 - **上确界** 是**逐点取 $\max$**：
-$$
-
-x \vee y = (\max(x_1, y_1), \dots, \max(x_n, y_n))
-
-$$
+  $$
+  x \vee y = (\max(x_1, y_1), \dots, \max(x_n, y_n))
+  $$
 - **下确界** 是**逐点取 $\min$**：
-$$
-
-x \wedge y = (\min(x_1, y_1), \dots, \min(x_n, y_n))
-
-$$
+  $$
+  x \wedge y = (\min(x_1, y_1), \dots, \min(x_n, y_n))
+  $$
 
 显然这两个运算的结果仍在 $\mathbb{R}^n$ 中，所以 $\mathbb{R}^n$ 是一个格。
 
@@ -108,20 +117,14 @@ $$
 
 在向量格中，绝对值被定义为：
 
-
 $$
-
 |x| = x \vee (-x)
-
 $$
 
 在 $\mathbb{R}^n$ 的逐点序下，这正好是逐点取绝对值：
 
-
 $$
-
 (|x|)\_i = |x_i|
-
 $$
 
 这正是我们熟悉的绝对值函数。
@@ -130,11 +133,8 @@ $$
 
 $\mathbb{R}^n$ 是一个 Banach 格
 
-
 $$
-
 \text{若 } |x| \le |y|, \quad \text{则 } \|x\| \le \|y\|
-
 $$
 
 这里 $|x| \le |y|$ 的意思是**逐点** $|x_i| \le |y_i|$ 对所有 $i$ 成立。
@@ -152,4 +152,6 @@ $$
   （因为每个分量 $|x_i|^p \le |y_i|^p$）
 
 由于 $\mathbb{R}^n$ 是有限维的，在这些范数下都是完备的，因此它是一个 Banach 格。
+
+$$
 $$
