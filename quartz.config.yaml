@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: zh-CN
+  locale: en-US
   baseUrl: zeroDtree.github.io
   ignorePatterns:
     - private
@@ -98,8 +98,13 @@ plugins:
       renderEngine: katex
     order: 80
   - source: github:quartz-community/citations
-    enabled: false
+    enabled: true
     order: 85
+    options:
+      bibliographyFile: ./bibliography.bib
+      suppressBibliography: false
+      linkCitations: false
+      csl: apa
   - source: github:quartz-community/hard-line-breaks
     enabled: true
     order: 90
