@@ -2,12 +2,34 @@
 title: Forever young
 ---
 
+- [Overview](#overview)
+- [Folders with clear dependencies (math)](#folders-with-clear-dependencies-math)
 - [Notation](#notation)
   - [1. Math Symbols](#1-math-symbols)
   - [2. Logic Symbols](#2-logic-symbols)
   - [3. Computer Symbols](#3-computer-symbols)
-- [Folders with clear dependencies](#folders-with-clear-dependencies)
 - [友链](#友链)
+
+# Overview
+
+此博客源于学习中的个人笔记，也是我试图搭建的一座可检索、可回溯的「知识仓库」。
+
+此博客的目的为：
+
+1. 整理定义与性质，理清依赖链条，使自己确信其正确性，从而安心地使用这些知识。
+2. AI 辅助证明。
+
+# Folders with clear dependencies (math)
+
+这里，“有清晰的依赖”是指：以朴素集合论为起点，沿依赖关系可到达当前节点。
+
+- linear-algebra
+- 数学分析
+- 抽象代数
+- 数理逻辑
+- 朴素集合论
+- 测度论与概率论
+- 点集拓扑
 
 # Notation
 
@@ -63,16 +85,6 @@ title: Forever young
 - Host in local network is denoted as small letter, e.g. $a$,$b$,$c$ located in local network $A$,$B$,$C$
 - Public ip is denoted as Greek letter, e.g. $\alpha$,$\gamma$,$\beta$
 - Hosts in the same local network are distinguished by subscripts, e.g. $a_1$,$a_2$,$a_5$ located in local network $A$.
-
-# Folders with clear dependencies
-
-- linear-algebra
-- 数学分析
-- 抽象代数
-- 数理逻辑
-- 朴素集合论
-- 测度论与概率论
-- 点集拓扑
 
 # 友链
 
