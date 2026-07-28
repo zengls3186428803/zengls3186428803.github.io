@@ -1,8 +1,15 @@
-- [1. 图灵机的(等价)变体](#1-图灵机的等价变体)
-  - [1.1. 逗留(stay)图灵机](#11-逗留stay图灵机)
-  - [1.2. 不同符号图灵机](#12-不同符号图灵机)
+- [Turing machine](#turing-machine)
+  - [1. 图灵机（普通图灵机）](#1-图灵机普通图灵机)
+  - [2. 图灵机的(等价)变体：逗留(stay)图灵机](#2-图灵机的等价变体逗留stay图灵机)
+- [非确定性图灵机](#非确定性图灵机)
+  - [3. 形式定义](#3-形式定义)
+  - [4. 非确定性转移函数](#4-非确定性转移函数)
+  - [5. 配置与计算树](#5-配置与计算树)
+  - [6. 接受、拒绝与判定](#6-接受拒绝与判定)
 
-#### 1. Turing machine
+# Turing machine
+
+## 1. 图灵机（普通图灵机）
 
 A $\textit{Turing machine}$ is a 7-tuple, $(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{accept}},q_{\text{reject}})$, where $Q,\Sigma,\Gamma$ are all finite sets and
 
@@ -45,15 +52,7 @@ flowchart TD
     style regular fill:none,stroke:#333
 ```
 
-## 1. 图灵机的(等价)变体
-
-$\pi$表示投影映射，$\pi_i$表示取第一个分量
-
-例如，若$\delta(q,a)=(q',b,R)$，则$\pi_1(\delta(q,a))=\pi_1(q',b,R)=q'$
-
-$I_Q$表示$Q$的指标集
-
-#### 1.1. 逗留(stay)图灵机
+## 2. 图灵机的(等价)变体：逗留(stay)图灵机
 
 A $\textit{Turing machine}$ is a 7-tuple, $(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{accept}},q_{\text{reject}})$, where $Q,\Sigma,\Gamma$ are all finite sets and
 
@@ -65,38 +64,90 @@ A $\textit{Turing machine}$ is a 7-tuple, $(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{
 6. $q_{\text{accept}} \in Q$ is the accept state, and
 7. $q_{\text{reject}} \in Q$ is the reject state, where $q_{\text{reject}} \neq q_{\text{accept}}$.
 
-任意逗留图灵机都可用一个原始图灵机模拟。
+任意逗留图灵机都可由一个普通图灵机模拟。
 
-构造等价的原始图灵机：
+构造等价的普通图灵机：
 
-对于任意状态$q_i$和符号$x\in \Gamma$，定义新的状态$q_{i,x,S}$，转移函数如下
+$\pi$表示投影映射，$\pi_i$表示取第一个分量
 
-- $\forall a,x \in \Gamma,i\in I_Q, \delta'(q_{1,a,S},x):=(\pi_1(\delta(q_1,a)),x,L)$
-- if $\delta(q_{1},a)=(q_{2},b,S)$
-  - $\delta'(q_{1},a):=(q_{1,a,S},b,R)$
-- if $\delta(q_{1},a)=(q_{2},b,L)$
-  - $\delta'(q_{1},a):=(q_{2},b,L)$
-- if $\delta(q_{1},a)=(q_{2},b,R)$
-  - $\delta'(q_{1},a):=(q_{2},b,R)$
+例如，若$\delta(q,a)=(q',b,R)$，则$\pi_1(\delta(q,a))=\pi_1(q',b,R)=q'$
 
-#### 1.2. 不同符号图灵机
+$I_Q$表示$Q$的指标集
 
-将设有两个图灵机$M_1$和$M_2$，它们有不同符号集$\Gamma_1$和$\Gamma_2$
+对于任意状态 $q_i\in Q$ 和符号 $a\in\Gamma$，定义新状态 $q_{i,a,S}$。转移函数如下：
 
-有不同符号集的图灵机$M_1$和$M_2$是可以互相模拟。
+- 对任意 $a,x\in\Gamma$ 和 $i\in I_Q$，令 $\delta'(q_{i,a,S},x):=(\pi_1(\delta(q_i,a)),x,L)$。
+- 若 $\delta(q_i,a)=(q_j,b,S)$，则
+  - $\delta'(q_i,a):=(q_{i,a,S},b,R)$。
+- 若 $\delta(q_i,a)=(q_j,b,L)$，则
+  - $\delta'(q_i,a):=(q_j,b,L)$。
+- 若 $\delta(q_i,a)=(q_j,b,R)$，则
+  - $\delta'(q_i,a):=(q_j,b,R)$。
 
-不失一般地，用$M_1$模拟$M_2$
+# 非确定性图灵机
 
-若$|\Gamma_1|=b$,则可将$\omega \in \Gamma_1^*$看作$b$进制数，并用$b$进制数编码$\Gamma_1$的符号。
+## 3. 形式定义
 
-至多使用$k = \lceil \log_b(|\Gamma_1|) \rceil$个符号，即可编码$\Gamma_1$的符号。
+非确定性图灵机（nondeterministic Turing machine，NTM）$M$ 是一个 7-元组
 
-定义集合$[k]=\{0,1,2,\cdots,k-1\}$
+$$
+M=(Q,\Sigma,\Gamma,\delta,q_0,q_{\text{accept}},q_{\text{reject}}),
+$$
 
-定义集合$A=\{\omega \in \Gamma_1^* \mid |\omega|=k\}$
+其中：
 
-定义集合$B=\{read, right,left\}$
+1. $Q$ 是有限状态集；
+2. $\Sigma$ 是不包含空白符 $\sqcup$ 的输入字母表；
+3. $\Gamma$ 是纸带字母表，满足 $\sqcup\in\Gamma$ 且 $\Sigma\subseteq\Gamma$；
+4. $\delta$ 是转移函数；
+5. $q_0\in Q$ 是起始状态；
+6. $q_{\text{accept}}\in Q$ 是接受状态；
+7. $q_{\text{reject}}\in Q$ 是拒绝状态，且 $q_{\text{reject}}\ne q_{\text{accept}}$。
 
-定义状态$q_{i,\omega,stage,j}$，其中$i\in I_Q,\omega \in A,stage \in B,j\in [k]$
+## 4. 非确定性转移函数
 
-定义转移函数$\delta'$
+确定性图灵机的每个“状态—纸带符号”对恰好确定一个后继动作；非确定性图灵机则允许有限个可能的后继动作。其转移函数定义为
+
+$$
+\delta:Q\times\Gamma
+\longrightarrow
+\mathcal P\bigl(Q\times\Gamma\times\{L,R\}\bigr),
+$$
+
+其中 $\mathcal P(S)$ 表示集合 $S$ 的幂集。因为 $Q$ 和 $\Gamma$ 都是有限集，所以 $\delta(q,a)$ 也是有限集。
+
+若机器当前处于状态 $q\in Q$，读写头扫描到符号 $a\in\Gamma$，则每个
+
+$$
+(q',b,D)\in\delta(q,a)
+$$
+
+都表示一种合法的后继动作：进入状态 $q'$，将当前位置改写为 $b$，并令读写头向方向 $D\in\{L,R\}$ 移动一格。一次具体计算只选择其中一个动作；不同选择形成不同的计算分支。
+
+## 5. 配置与计算树
+
+- **配置（configuration）**：与确定性图灵机相同，一个配置由当前状态、纸带内容和读写头位置组成。
+- **一步产生关系（yield）**：若应用 $\delta$ 中的某个合法动作可使配置 $C_1$ 一步变为 $C_2$，则记作
+
+  $$
+  C_1\vdash_M C_2.
+  $$
+
+- **计算分支（computation branch）**：从初始配置开始，连续选择合法后继配置所得到的配置序列。
+- **计算树（computation tree）**：给定输入 $w$，以初始配置为根、以所有合法后继配置为子节点形成的树。它同时描述 $M$ 在 $w$ 上的所有可能计算分支。
+
+## 6. 接受、拒绝与判定
+
+对于输入 $w\in\Sigma^*$：
+
+- 若计算树中**至少存在一条**有限分支到达 $q_{\text{accept}}$，则称 $M$ 接受 $w$；
+- 若所有计算分支都在有限步内停机且没有任何分支接受（通常均到达 $q_{\text{reject}}$），则称 $M$ 拒绝 $w$；
+- 若所有计算分支都会在有限步内停机，则称 $M$ 为非确定性判定器。
+
+$M$ 所识别的语言定义为
+
+$$
+L(M)=\{w\in\Sigma^*\mid M\text{ 接受 }w\}.
+$$
+
+因此，非确定性的接受语义是“存在一个接受分支”，而不是要求所有分支都接受。
