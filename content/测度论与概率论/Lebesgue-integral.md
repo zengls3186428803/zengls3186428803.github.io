@@ -122,3 +122,9 @@ $\mathbf{f}$可积 $\iff$ $Re\mathbf{f},Im\mathbf{f}$都可积$\iff |\mathbf{f}|
     (3) $f$ 可积当且仅当 $\sum_{n=1}^{\infty} |a_n| \mu(A_n) < \infty$.
 20. 积分存在可以传递到任意可测子集：若 $\int_{\Omega} f d\mu$ 存在，则对任意 $A \in \mathcal{F}$，$\int_{A} f d\mu$ 也存在。
 21. 可积性也可以传递到任意可测子集：若 $f$ 在 $\Omega$ 上可积，则对任意 $A \in \mathcal{F}$，$f$ 在 $A$ 上也可积。
+22. 设 $f, g \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$ 关于 $\mu$ 的积分都存在, 且对一切 $A \in \mathcal{F}$ 都有 $\int_A f \mathrm{d}\mu \leqslant \int_A g \mathrm{d}\mu$.
+    (1) 若 $f,g$ 都可积, 则 $f \leqslant g \text{ a.e.}$;
+    (2) 若 $\mu$ 为 $\sigma$-有限测度, 则 $f \leqslant g \text{ a.e.}$.
+23. 设广义实值函数 $f, g$ 的积分都存在, 且对一切 $A \in \mathcal{F}$ 都有 $\int_A f \mathrm{d}\mu = \int_A g \mathrm{d}\mu$.则
+    (1) 若 $f,g$ 都可积, 则 $f = g \text{ a.e.}$;
+    (2) 若 $\mu$ 为 $\sigma$-有限测度, 则 $f = g \text{ a.e.}$.
