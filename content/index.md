@@ -3,37 +3,38 @@ title: Forever young
 ---
 
 - [Overview](#overview)
-- [Folders with clear dependencies (math)](#folders-with-clear-dependencies-math)
 - [Notation](#notation)
-  - [1. Math Symbols](#1-math-symbols)
-  - [2. Logic Symbols](#2-logic-symbols)
-  - [3. Computer Symbols](#3-computer-symbols)
+  - [Math Symbols](#math-symbols)
+  - [Logic Symbols](#logic-symbols)
+  - [Computer Symbols](#computer-symbols)
 - [友链](#友链)
 
 # Overview
 
-此博客源于学习中的个人笔记，也是我试图搭建的一座可检索、可回溯的「知识仓库」。
+- 故事
+  - [故事](故事/index.md)
+- 计算机
+  - [计算机](计算机/index.md)
+  - [机器学习](机器学习/index.md)
+- 数学
+  - 可回溯的：对于下面这些目录里的内容，从任意一个节点出发，沿着“前置”依赖路径可回溯到“朴素集合论”。
+    - [linear-algebra](linear-algebra/index.md)
+    - [数学分析](数学分析/index.md)
+    - [抽象代数](抽象代数/index.md)
+    - [数理逻辑](数理逻辑/index.md)
+    - [朴素集合论](朴素集合论/index.md)
+    - [测度论与概率论](测度论与概率论/index.md)
+    - [点集拓扑](点集拓扑/index.md)
 
-此博客的目的为：
-
-1. 整理定义与性质，理清依赖链条，使自己确信其正确性，从而安心地使用这些知识。
-2. AI 辅助证明。
-
-# Folders with clear dependencies (math)
-
-这里，“有清晰的依赖”是指：以朴素集合论为起点，沿依赖关系可到达当前节点。
-
-- linear-algebra
-- 数学分析
-- 抽象代数
-- 数理逻辑
-- 朴素集合论
-- 测度论与概率论
-- 点集拓扑
+  - 零散的：下面这些目录里的内容，是一些的零散的数学知识，尚未形成清晰的依赖关系。
+    - [复分析](复分析/index.md)
+    - [微分方程](微分方程/index.md)
+    - [流形](流形/index.md)
+    - [范畴论](范畴/index.md)
 
 # Notation
 
-## 1. Math Symbols
+## Math Symbols
 
 - Vector is denoted as bold lowercase letter, e.g. $\mathbf{a}$, Matrix is denoted as bold capital letter, e.g. $\mathbf{A}$, $a_i$ means the $i$th element of $\mathbf{a}$, $a_{ij}$ means the $(i,j)$th element of $\mathbf{A}$
 - All vectors are column vectors
@@ -65,7 +66,7 @@ title: Forever young
 - $\nabla \cdot \phi(\mathbf{x})$: $\phi: \mathbb{R}^d \to \mathbb{R}^d $ 的散度
 - $\nabla \cdot \phi(\mathbf{x})$: $\phi: \mathbb{R}^d \to \mathbb{R}^{d \times d} $ 逐行散度所组成的列向量
 
-## 2. Logic Symbols
+## Logic Symbols
 
 - Little letters (e.g. $p,q,r$) are used to represent propostional variables
 - $\neg$ is used to represent negation
@@ -79,7 +80,7 @@ title: Forever young
 - $\mathscr{L}$ is used to represent a first-order language
 - `mathscr` upper letters (e.g. $\mathscr{A},\mathscr{B},\mathscr{C}$) are used to represent the formulas (well-formed formulas,wfs) of a language $\mathscr{L}$ and $\mathscr{L}_0$
 
-## 3. Computer Symbols
+## Computer Symbols
 
 - Local network is denoted as capital letter, e.g. $A$,$B$,$C$
 - Host in local network is denoted as small letter, e.g. $a$,$b$,$c$ located in local network $A$,$B$,$C$
