@@ -4,7 +4,7 @@ title: Lebesgue 测度
 
 ## Preliminary
 
-- [[测度论与概率论/L-S-measure]]
+- [[测度论/L-S-measure]]
 
 ## Definitions
 

@@ -4,7 +4,7 @@ title: 与R相关的Borel集
 
 ## 1. Prerequisites
 
-- [[测度论与概率论/class-of-sets]]
+- [[测度论/class-of-sets]]
 - [[点集拓扑/序拓扑]]
 
 ## 2. $\mathcal{B}(\mathbb{R})$的生成元

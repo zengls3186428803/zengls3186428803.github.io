@@ -4,7 +4,7 @@ title: 复值可测函数的L积分
 
 ## 前置
 
-- [[测度论与概率论/Lebesgue-integral]]
+- [[测度论/Lebesgue-integral]]
 
 ## 复值可测函数 $L$ 积分的性质
 

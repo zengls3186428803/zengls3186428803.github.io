@@ -6,7 +6,7 @@ title: Lebesgue-Stieltjes测度
 
 ## Prerequisites
 
-- [[测度论与概率论/measure]]
+- [[测度论/measure]]
 
 ## 定义
 
@@ -160,7 +160,7 @@ $$
 $$
 
 首先对于$\mathcal{B}(\mathbb{R})$上的测度，容易验证上式成立。示意图如下，$\pm$的部分被抵消掉。
-![[测度论与概率论/images/mu_a_b.png]]
+![[测度论/images/mu_a_b.png]]
 
 对与$d$维情况，我们需要先发现如下事实：一个$\mathcal{B}(\mathbb{R}^d)$上的测度，固定其中$d-1$个分量，则以剩下的一个分量为变量的函数为$\mathcal{B}(\mathbb{R})$上的测度。形式化地，若$\mu$为$\mathcal{B}(\mathbb{R}^d)$上的测度，则$\mu^{(i)}_{\mathbf{a},\mathbf{b}}((x,y]):=\mu(((a_1, a_2, \cdots, a_{i-1}, x, a_{i+1}, \cdots, a_d),(b_1, b_2, \cdots, b_{i-1}, y, b_{i+1}, \cdots, b_d)])$为$\mathcal{B}(\mathbb{R})$上的测度。
 
@@ -177,4 +177,4 @@ $\forall k \in [d], D_k:=\{c \mid \exists i \text{ s.t. } c = b^{(i)}_k\}$
 
 反例如下：
 
-![[测度论与概率论/images/rect_example.png]]
+![[测度论/images/rect_example.png]]

@@ -10,7 +10,7 @@ title: Lebesgue 积分（L积分）
 
 ## 前置
 
-- [[测度论与概率论/almost-everywhere]]
+- [[测度论/almost-everywhere]]
 
 ## 非负简单可测函数的$L$积分
 

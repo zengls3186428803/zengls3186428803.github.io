@@ -4,7 +4,7 @@ title: 积空间sigma代数
 
 ## 前置
 
-- [[测度论与概率论/measurable-mapping]]
+- [[测度论/measurable-mapping]]
 
 ## 定义
 

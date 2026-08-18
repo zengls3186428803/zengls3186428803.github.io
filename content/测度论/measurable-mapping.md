@@ -4,7 +4,7 @@ title: 可测映射与随机变量
 
 ## Prerequisites
 
-- [[测度论与概率论/class-of-sets]]
+- [[测度论/class-of-sets]]
 
 ## 定义
 

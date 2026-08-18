@@ -4,7 +4,7 @@ title: 可测函数
 
 ## Prerequisites
 
-- [[测度论与概率论/measurable-mapping]]
+- [[测度论/measurable-mapping]]
 - [[数学分析/converge]]
 
 ## 定义
