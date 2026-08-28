@@ -2,20 +2,13 @@
 title: Stieltjes积分
 ---
 
-- [1. 前置](#1-前置)
-- [2. 定义](#2-定义)
-  - [2.1. L-S 积分](#21-l-s-积分)
-  - [2.2. R-S 积分](#22-r-s-积分)
-  - [2.3. 反常R-积分](#23-反常r-积分)
-- [3. 性质](#3-性质)
-
-## 1. 前置
+## 前置
 
 - [[测度论/三大积分收敛定理]]
 
-## 2. 定义
+## 定义
 
-### 2.1. L-S 积分
+### L-S 积分
 
 设 $F$ 是 $\mathbb{R}^d$ 上的 L-S 函数，$\mu_F$ 是由 $F$ 诱导的 L-S 测度，$g$ 是 Borel 可测函数，若
 
@@ -32,7 +25,7 @@ $$(\text{L}) \int_{\mathbb{R}^d} g(\boldsymbol{x}) \mathrm{d} \boldsymbol{x} := 
 - 当 $d=1, a, b \in \mathbb{R}, a < b$ 时，通常将 $(\text{L-S}) \displaystyle \int_{(a, b]} g(x) \mathrm{d} \mu_F(x)$ 写成 $\displaystyle \int_a^b g(x) \mathrm{d} F(x)$。
 - 当 $d=1, a, b \in \mathbb{R}, a < b$ 时，通常将 $(\text{L}) \displaystyle \int_{(a, b]} g(x) \mathrm{d} x$ 写成 $\displaystyle \int_a^b g(x) \mathrm{d} x$。因为单点集的 L 测度为 0，所以还可以把 $\displaystyle \int_a^b g(x) \mathrm{d} x$ 理解为 $\displaystyle \int_{[a, b]} g(x) \mathrm{d} x, \int_{[a, b)} g(x) \mathrm{d} x$ 或 $\displaystyle \int_{(a, b)} g(x) \mathrm{d} x$。
 
-### 2.2. R-S 积分
+### R-S 积分
 
 本段恒设 $g:(\mathbf{a}, \mathbf{b}] \to \mathbb{R}$ 为有界函数，$F:(\mathbf{a}, \mathbf{b}] \to \mathbb{R}$为Lebesgue-Stieltjes函数（L-S函数）。
 
@@ -65,7 +58,7 @@ $$l(g, F, \mathbb{P}_1) \leqslant l(g, F, \mathbb{P}_2), \quad u(g, F, \mathbb{P
   $$\underline{\int_\mathbf{a}^\mathbf{b}} g(x) \mathrm{d} F(x) = \overline{\int_\mathbf{a}^\mathbf{b}} g(x) \mathrm{d} F(x),$$
   则称 $g$ 在 $(\mathbf{a}, \mathbf{b}]$ 上关于 $F$ Riemann-Stieltjes 可积，简称 **R-S 可积**，并称此共同值为 $g$ 在 $(\mathbf{a}, \mathbf{b}]$ 上关于 $F$ 的 **R-S 积分**，记为 $(\text{R-S}) \int_\mathbf{a}^\mathbf{b} g(x) \mathrm{d} F(x)$, 其中 $g$ 称为**被积函数** (integrand), $F$ 称为**积分函数** (integrator).
 
-### 2.3. 反常R-积分
+### 反常R-积分
 
 当 $g$ 在 $\mathbb{R}^d$ 上 L 可积时,
 
@@ -85,7 +78,7 @@ $$\lim_{\mathbf{a} \to -\infty, \mathbf{b} \to \infty} (\text{R-S}) \int_{(\math
 
 若此积分为一实数, 则进一步称 $g$ 在 $\mathbb{R}^d$ 上关于 $F$ R-S 可积.
 
-## 3. 性质
+## 性质
 
 1. 设 r.v. $X \sim F(x)$, 则对任意的 Borel 可测函数 $g$, 若 $g(X)$ 可积, 则 $$\mathrm{E}g(X) = (\text{L-S}) \int_{-\infty}^{\infty} g(x) \mathrm{d}F(x).$$
 2. 设 $g, h : (\mathbf{a}, \mathbf{b}] \to \mathbb{R}$ 都是有界函数，且在 $(\mathbf{a}, \mathbf{b}]$ 上关于 $F$ 都 R-S 可积，则

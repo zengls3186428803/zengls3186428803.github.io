@@ -1,5 +1,7 @@
 ## 前置
 
+- [[测度论/绝对连续与Radon-Nikodým定理]]
+
 ## 定义
 
 - **定义 8.26** 设 $\nu, \varphi$ 都是 $\mathcal{F}$ 上的符号测度，称 $\nu$ 与 $\varphi$ 相互奇异 (mutually singular)，记作 $\nu \perp \varphi$，如果 $\exists N \in \mathcal{F}$，s.t.

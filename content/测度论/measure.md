@@ -1,5 +1,5 @@
 ---
-title: 测度论
+title: 测度
 ---
 
 ## Prerequisites
