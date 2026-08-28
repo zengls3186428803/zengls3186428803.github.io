@@ -36,11 +36,10 @@ title: 绝对连续与Radon-Nikodým定理
    $$\alpha = \sup \left\{ \int_\Omega g \mathrm{d}\mu : g \in \mathcal{H} \right\}. $$
 
 5. **定理 8.21 (Radon-Nikodým 定理)** 设 $\mu$ 为 $\mathcal{F}$ 上的 $\sigma$-有限测度.
-   1. 若 $\nu$ 是 $\mathcal{F}$ 上 $\sigma$-有限的符号测度, $\nu \ll \mu$, 则存在一个 $\mu\text{-a.e.}$ 有限的且关于 $\mu$ 积分存在的 $f \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$, 使得
-
+   1. 若 $\nu$ 是 $\mathcal{F}$ 上 $\sigma$-有限的符号测度, $\nu \ll \mu$, 则存在一个 $\mu\text{-a.e.}$ 有限的且关于 $\mu$ **积分存在**的 $f \in \overline{\mathcal{L}}(\Omega, \mathcal{F})$, 使得
    $$\nu(A) = \int_A f \mathrm{d}\mu, \quad A \in \mathcal{F}$$
-
-   另外, 上述 $f$ 在等价意义下是唯一的, 即若 $f, g$ 都满足上述等式, 则 $f = g \text{ }\mu\text{-a.e.}$ 2. 若存在一个关于 $\mu$ 可积的函数 $f$ 使上述等式成立, 则 $\nu$ 是 $\mathcal{F}$ 上 $\sigma$-有限的符号测度, 且 $\nu \ll \mu$.
+   另外, 上述 $f$ 在等价意义下是唯一的, 即若 $f, g$ 都满足上述等式, 则 $f = g \text{ }\mu\text{-a.e.}$ 
+   2. 若存在一个关于 $\mu$ **可积**的函数 $f$ 使上述等式成立, 则 $\nu$ 是 $\mathcal{F}$ 上 $\sigma$-有限的符号测度, 且 $\nu \ll \mu$.
 
 6. **定理 8.22 (Radon-Nikodým 定理的推广)** 设 $\mu$ 为 $\mathcal{F}$ 上的 $\sigma$-有限测度, $\nu$ 是 $\mathcal{F}$ 上的符号测度 (不必 $\sigma$-有限). 若 $\nu \ll \mu$, 则存在一个在 $\mu\text{-a.e.}$ 意义下唯一的, 且关于 $\mu$ 的积分存在 (不必 $\mu\text{-a.e.}$ 有限) 的广义实值可测函数 $f$ 使
    $$
