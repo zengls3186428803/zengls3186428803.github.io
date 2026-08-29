@@ -6,12 +6,6 @@ title: semi-ring (in measure theory)
 
 - [[测度论/class-of-sets]]
 
-- 称集类$\mathcal{E}$为半环，若
-
-- $\emptyset \in \mathcal{E}$
-- 若$A,B \in \mathcal{E}$，则$A \cap B \in \mathcal{E}$
-- 若$A,B \in \mathcal{E}$，则$A \setminus B = \bigcup_{i=1}^n C_i$，其中$C_i \in \mathcal{E}$
-
 #### 有限个半环的笛卡尔积(Cartesian product, or direct product)是半环
 
 $\mathcal{E}_i$为$\Omega_i$上的半环，则$\mathcal{S} = \mathcal{E}_1 \times \mathcal{E}_2 \times \cdots \times \mathcal{E}_n$为半环.

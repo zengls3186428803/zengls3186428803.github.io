@@ -4,7 +4,6 @@ title: 集类
 
 ## Prerequisites
 
--
 - [[点集拓扑/拓扑空间]]
 
 ### 定义

@@ -49,7 +49,7 @@ $\mathcal{E}$为$\Omega$上的集类，$\mu:\mathcal{E}\to \overline{\mathbb{R}}
 - 有研究价值：存在$A_0\in \mathcal{E}$，使得$\mu(A_0)<\infty$
 
 有限 : $\forall A\in \mathcal{E}, \mu(A)<\infty$
-$\sigma$ 有限：$\forall A\in \mathcal{E}, \exists \{A_n\}_{n=1}^{\infty}\in \mathcal{E}, s.t. A \subseteq \cup_{n=1}^{\infty}A_n \wedge \mu(A_n)<\infty$
+$\sigma$ 有限（$\sigma$-有限，sigma有限）：$\forall A\in \mathcal{E}, \exists \{A_n\}_{n=1}^{\infty}\in \mathcal{E}, s.t. A \subseteq \cup_{n=1}^{\infty}A_n \wedge \mu(A_n)<\infty$
 
 #### 性质
 
